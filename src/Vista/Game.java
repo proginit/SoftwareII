@@ -88,9 +88,11 @@ public class Game extends javax.swing.JFrame implements Runnable{
         jpvista4 = new javax.swing.JPanel();
         lbl_puntuacion2 = new javax.swing.JLabel();
         jpvista5 = new javax.swing.JPanel();
+        btn_minJ1 = new javax.swing.JButton();
+        btn_minJ2 = new javax.swing.JButton();
         jpvista7 = new javax.swing.JPanel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jpvista1.setBackground(new java.awt.Color(255, 255, 255));
@@ -359,15 +361,31 @@ public class Game extends javax.swing.JFrame implements Runnable{
 
         jpvista5.setBackground(new java.awt.Color(255, 255, 102));
 
+        btn_minJ1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cronometro.png"))); // NOI18N
+        btn_minJ1.setText("T");
+
+        btn_minJ2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cronometro.png"))); // NOI18N
+        btn_minJ2.setText("T");
+
         javax.swing.GroupLayout jpvista5Layout = new javax.swing.GroupLayout(jpvista5);
         jpvista5.setLayout(jpvista5Layout);
         jpvista5Layout.setHorizontalGroup(
             jpvista5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
+            .addGroup(jpvista5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btn_minJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                .addComponent(btn_minJ2)
+                .addContainerGap())
         );
         jpvista5Layout.setVerticalGroup(
             jpvista5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGroup(jpvista5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jpvista5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_minJ1)
+                    .addComponent(btn_minJ2))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(jpvista5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 260, 50));
@@ -519,6 +537,8 @@ public class Game extends javax.swing.JFrame implements Runnable{
     private javax.swing.JButton btn_MasIzq;
     private javax.swing.JButton btn_MenDer;
     private javax.swing.JButton btn_MenIzq;
+    private javax.swing.JButton btn_minJ1;
+    private javax.swing.JButton btn_minJ2;
     private javax.swing.JButton btn_play;
     private javax.swing.JButton btn_tarjeta;
     private javax.swing.JLabel jLabel1;
