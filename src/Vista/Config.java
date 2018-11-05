@@ -6,6 +6,7 @@
 package Vista;
 
 import javax.swing.JOptionPane;
+import Vista.Arbitro;
 
 /**
  *
@@ -18,6 +19,7 @@ public class Config extends javax.swing.JFrame {
      */
     public Config() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -138,6 +140,11 @@ public class Config extends javax.swing.JFrame {
 
         btn_cancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/boton-cancelar.png"))); // NOI18N
         btn_cancelar.setText("Cancelar");
+        btn_cancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_cancelarActionPerformed(evt);
+            }
+        });
 
         btn_agregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/agregar-nuevo-documento.png"))); // NOI18N
         btn_agregar.setText("Agregar");
@@ -277,8 +284,9 @@ public class Config extends javax.swing.JFrame {
     private void btn_iniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_iniciarActionPerformed
         //Game g = new Game();
         //g.setVisible(true);
+        //new Arbitro();
         if(txt_nombreJ1.getText().isEmpty()||txt_apellidoJ1.getText().isEmpty()||txt_nombreJ2.getText().isEmpty()||txt_apellidoJ2.getText().isEmpty()){
-            JOptionPane.showMessageDialog(this, "Llenar los campos POR FAVOR");
+            JOptionPane.showMessageDialog(this, "Llenar todo los campos POR FAVOR");
         }else{
             Game g = new Game();
             g.setVisible(true);
@@ -320,6 +328,11 @@ public class Config extends javax.swing.JFrame {
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
         // TODO add your handling code here:
     }//GEN-LAST:event_formWindowClosed
+
+    private void btn_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cancelarActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_btn_cancelarActionPerformed
 
     /**
      * @param args the command line arguments

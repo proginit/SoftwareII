@@ -129,6 +129,11 @@ public class Game extends javax.swing.JFrame implements Runnable{
         lbl_segC.setText("00");
 
         btn_tarjeta.setText("M");
+        btn_tarjeta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_tarjetaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpvista1Layout = new javax.swing.GroupLayout(jpvista1);
         jpvista1.setLayout(jpvista1Layout);
@@ -462,6 +467,12 @@ public class Game extends javax.swing.JFrame implements Runnable{
         i = new Cronometro_Partido(this);
         i.start();
     }//GEN-LAST:event_btn_playActionPerformed
+
+    private void btn_tarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_tarjetaActionPerformed
+        // TODO add your handling code here:
+        tarjetas t = new tarjetas();
+        t.setVisible(true);
+    }//GEN-LAST:event_btn_tarjetaActionPerformed
 
     public synchronized int aumentSeg(){
         seg++;
