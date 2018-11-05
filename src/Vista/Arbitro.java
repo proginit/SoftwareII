@@ -51,18 +51,21 @@ public class Arbitro extends javax.swing.JFrame {
 
         jLabel3.setText("CATEGORIA:");
 
-        cb_categoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cb_categoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Principiantes", "Avanzados", "Categoria Unica 1ra. Division", "Categoria Unica 2da. Division", "Categoria Unica 3ra. Division", "Categoria Unica 4ta. Division", "Categoria Damas", "Categoria Senior", "Categoria Infantil(sub-15)", "Categoria Juvenil(sub-18)" }));
 
         jLabel4.setText("ARBITRO:");
 
         jLabel5.setText("FASE:");
 
-        cb_fase.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cb_fase.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sin Fase", "Final", "Semi-Final", "Cuartos-Final", "Octavos-Final", "16-Final", "32-Final" }));
 
+        btn_borrarT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/basura.png"))); // NOI18N
         btn_borrarT.setText("Borrar Todo");
 
+        btn_cancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/boton-cancelar.png"))); // NOI18N
         btn_cancelar.setText("Cancelar");
 
+        btn_guardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/guardar-archivo-opcion.png"))); // NOI18N
         btn_guardar.setText("GUARDAR");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -89,9 +92,9 @@ public class Arbitro extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btn_cancelar)
                             .addComponent(cb_fase, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(60, 60, 60)
+                        .addGap(18, 18, 18)
                         .addComponent(btn_guardar)))
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,7 +119,7 @@ public class Arbitro extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(cb_fase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_borrarT)
                     .addComponent(btn_cancelar)
@@ -124,7 +127,7 @@ public class Arbitro extends javax.swing.JFrame {
                 .addGap(66, 66, 66))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ProgInit
@@ -50,15 +52,22 @@ public class Config extends javax.swing.JFrame {
         btn_iniciar = new javax.swing.JButton();
         btn_cancelar = new javax.swing.JButton();
         btn_agregar = new javax.swing.JButton();
+        btn_agregarFlecha = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
 
         btn_jugador1.setText("Jugador 1");
 
-        btn_arbitro.setText("Arbitro datos Partido");
+        btn_arbitro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/arbitro.png"))); // NOI18N
+        btn_arbitro.setText("Datos Del Arbitro");
         btn_arbitro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_arbitroActionPerformed(evt);
@@ -69,11 +78,35 @@ public class Config extends javax.swing.JFrame {
 
         jLabel2.setText("Apellido:");
 
+        txt_nombreJ1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_nombreJ1KeyTyped(evt);
+            }
+        });
+
+        txt_apellidoJ1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_apellidoJ1KeyTyped(evt);
+            }
+        });
+
         jButton1.setText("Jugador 2");
 
         jLabel3.setText("Nombre:");
 
         jLabel4.setText("Apellido:");
+
+        txt_nombreJ2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_nombreJ2KeyTyped(evt);
+            }
+        });
+
+        txt_apellidoJ2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_apellidoJ2KeyTyped(evt);
+            }
+        });
 
         btn_masJ1.setText("+");
 
@@ -90,17 +123,26 @@ public class Config extends javax.swing.JFrame {
 
         jLabel5.setText("Juegos");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "3", "5", "7" }));
 
         jLabel6.setText("SERVIDOR");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2" }));
 
         btn_iniciar.setText("INICIAR");
+        btn_iniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_iniciarActionPerformed(evt);
+            }
+        });
 
+        btn_cancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/boton-cancelar.png"))); // NOI18N
         btn_cancelar.setText("Cancelar");
 
+        btn_agregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/agregar-nuevo-documento.png"))); // NOI18N
         btn_agregar.setText("Agregar");
+
+        btn_agregarFlecha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/descargar.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -114,7 +156,7 @@ public class Config extends javax.swing.JFrame {
                         .addComponent(btn_jugador1)
                         .addGap(58, 58, 58)
                         .addComponent(btn_arbitro)))
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(82, 82, 82)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,29 +178,31 @@ public class Config extends javax.swing.JFrame {
                     .addComponent(btn_masJ1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(31, 31, 31))
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(rdb_partido)
+                            .addGap(43, 43, 43)
+                            .addComponent(jLabel5))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(rdb_grupo)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel6)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(rdb_partido)
-                                .addGap(43, 43, 43)
-                                .addComponent(jLabel5))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(rdb_grupo)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel6))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(btn_agregar)))
-                .addGap(18, 18, 18)
+                        .addGap(11, 11, 11)
+                        .addComponent(btn_agregar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_agregarFlecha)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(203, Short.MAX_VALUE))
+                        .addContainerGap(236, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
                         .addComponent(btn_iniciar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btn_cancelar)
@@ -199,17 +243,18 @@ public class Config extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(rdb_partido)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rdb_grupo)
                     .addComponent(jLabel6)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_iniciar)
-                    .addComponent(btn_cancelar)
-                    .addComponent(btn_agregar))
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_agregarFlecha, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btn_iniciar)
+                        .addComponent(btn_cancelar)
+                        .addComponent(btn_agregar)))
+                .addContainerGap(126, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 500));
@@ -228,6 +273,53 @@ public class Config extends javax.swing.JFrame {
         Arbitro a = new Arbitro();
         a.setVisible(true);
     }//GEN-LAST:event_btn_arbitroActionPerformed
+
+    private void btn_iniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_iniciarActionPerformed
+        //Game g = new Game();
+        //g.setVisible(true);
+        if(txt_nombreJ1.getText().isEmpty()||txt_apellidoJ1.getText().isEmpty()||txt_nombreJ2.getText().isEmpty()||txt_apellidoJ2.getText().isEmpty()){
+            JOptionPane.showMessageDialog(this, "Llenar los campos POR FAVOR");
+        }else{
+            Game g = new Game();
+            g.setVisible(true);
+        }
+    }//GEN-LAST:event_btn_iniciarActionPerformed
+
+    private void txt_nombreJ1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_nombreJ1KeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if((c<'a'|| c>'z')&&(c<'A'|| c>'Z')){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_nombreJ1KeyTyped
+
+    private void txt_apellidoJ1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_apellidoJ1KeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if((c<'a'||c>'z')&&(c<'A'||c>'Z')){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_apellidoJ1KeyTyped
+
+    private void txt_nombreJ2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_nombreJ2KeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if((c<'a'||c>'z')&&(c<'A'||c>'Z')){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_nombreJ2KeyTyped
+
+    private void txt_apellidoJ2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_apellidoJ2KeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if((c<'a'||c>'z')&&(c<'A'||c>'Z')){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_apellidoJ2KeyTyped
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowClosed
 
     /**
      * @param args the command line arguments
@@ -266,6 +358,7 @@ public class Config extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_agregar;
+    private javax.swing.JButton btn_agregarFlecha;
     private javax.swing.JButton btn_arbitro;
     private javax.swing.JButton btn_añadirJ2;
     private javax.swing.JButton btn_cancelar;
