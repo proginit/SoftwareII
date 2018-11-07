@@ -20,6 +20,8 @@ public class Game extends javax.swing.JFrame implements Runnable{
     private int hor = 0;
     private boolean continuar = true;
     private Cronometro_Partido i;
+    public int n=0;
+    public int count = 0;
 
     /**
      * Creates new form Game
@@ -36,7 +38,14 @@ public class Game extends javax.swing.JFrame implements Runnable{
         lbl_minC.setText(String.valueOf(min));
         lbl_segC.setText(String.valueOf(seg));
         btn_play.setEnabled(true);
+        
+        if(n==0){
+            lbl_pelota1.setVisible(true);
+            lbl_pelota2.setVisible(false);
+        }
+        
     }
+    
     
     public void hora(){
         Calendar calendario = new GregorianCalendar();
@@ -75,17 +84,20 @@ public class Game extends javax.swing.JFrame implements Runnable{
         lbl_hora1 = new javax.swing.JLabel();
         lbl_segC = new javax.swing.JLabel();
         btn_tarjeta = new javax.swing.JButton();
+        prueba = new javax.swing.JLabel();
         jpvista2 = new javax.swing.JPanel();
         lbl_jugador1 = new javax.swing.JLabel();
         lbl_jugador2 = new javax.swing.JLabel();
         jpvistaIzq = new javax.swing.JPanel();
-        btn_MasIzq = new javax.swing.JButton();
         btn_MenIzq = new javax.swing.JButton();
         lbl_NumIzq = new javax.swing.JLabel();
+        lbl_pelota1 = new javax.swing.JLabel();
+        btn_MasIzq = new javax.swing.JButton();
         jpvistaDerech = new javax.swing.JPanel();
         btn_MenDer = new javax.swing.JButton();
         btn_MasDer1 = new javax.swing.JButton();
         lbl_NumDer = new javax.swing.JLabel();
+        lbl_pelota2 = new javax.swing.JLabel();
         jpvista3 = new javax.swing.JPanel();
         lbl_puntuacion1 = new javax.swing.JLabel();
         jpvista4 = new javax.swing.JPanel();
@@ -138,6 +150,8 @@ public class Game extends javax.swing.JFrame implements Runnable{
             }
         });
 
+        prueba.setText("jLabel3");
+
         javax.swing.GroupLayout jpvista1Layout = new javax.swing.GroupLayout(jpvista1);
         jpvista1.setLayout(jpvista1Layout);
         jpvista1Layout.setHorizontalGroup(
@@ -158,27 +172,30 @@ public class Game extends javax.swing.JFrame implements Runnable{
                 .addComponent(lbl_hora1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbl_segC)
+                .addGap(12, 12, 12)
                 .addGroup(jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jpvista1Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
                         .addComponent(btn_play)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 412, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(102, 102, 102))
-                    .addGroup(jpvista1Layout.createSequentialGroup()
-                        .addGap(135, 135, 135)
-                        .addComponent(btn_tarjeta)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(72, 72, 72)
+                        .addComponent(prueba))
+                    .addComponent(btn_tarjeta))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 221, Short.MAX_VALUE)
+                .addGroup(jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvista1Layout.createSequentialGroup()
                         .addComponent(lbl_horaAct)
-                        .addGap(29, 29, 29))))
+                        .addGap(29, 29, 29))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvista1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(102, 102, 102))))
         );
         jpvista1Layout.setVerticalGroup(
             jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpvista1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addGap(13, 13, 13)
                 .addGroup(jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel2))
+                    .addComponent(jLabel2)
+                    .addComponent(prueba))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_minC)
@@ -231,13 +248,6 @@ public class Game extends javax.swing.JFrame implements Runnable{
 
         jpvistaIzq.setBackground(new java.awt.Color(204, 204, 204));
 
-        btn_MasIzq.setText("+");
-        btn_MasIzq.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_MasIzqActionPerformed(evt);
-            }
-        });
-
         btn_MenIzq.setText("-");
         btn_MenIzq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -245,8 +255,17 @@ public class Game extends javax.swing.JFrame implements Runnable{
             }
         });
 
-        lbl_NumIzq.setFont(new java.awt.Font("Arial", 1, 250)); // NOI18N
+        lbl_NumIzq.setFont(new java.awt.Font("Arial", 1, 150)); // NOI18N
         lbl_NumIzq.setText("0");
+
+        lbl_pelota1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/tenis.png"))); // NOI18N
+
+        btn_MasIzq.setText("+");
+        btn_MasIzq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_MasIzqActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpvistaIzqLayout = new javax.swing.GroupLayout(jpvistaIzq);
         jpvistaIzq.setLayout(jpvistaIzqLayout);
@@ -257,19 +276,28 @@ public class Game extends javax.swing.JFrame implements Runnable{
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btn_MasIzq))
             .addGroup(jpvistaIzqLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(lbl_NumIzq)
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addGroup(jpvistaIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpvistaIzqLayout.createSequentialGroup()
+                        .addGap(129, 129, 129)
+                        .addComponent(lbl_pelota1))
+                    .addGroup(jpvistaIzqLayout.createSequentialGroup()
+                        .addGap(101, 101, 101)
+                        .addComponent(lbl_NumIzq)))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
         jpvistaIzqLayout.setVerticalGroup(
             jpvistaIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaIzqLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(lbl_NumIzq, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addGap(25, 25, 25)
+                .addComponent(lbl_NumIzq)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addComponent(lbl_pelota1)
+                .addGap(56, 56, 56))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaIzqLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jpvistaIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_MasIzq)
-                    .addComponent(btn_MenIzq)))
+                    .addComponent(btn_MenIzq)
+                    .addComponent(btn_MasIzq)))
         );
 
         getContentPane().add(jpvistaIzq, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 300, 330));
@@ -290,8 +318,10 @@ public class Game extends javax.swing.JFrame implements Runnable{
             }
         });
 
-        lbl_NumDer.setFont(new java.awt.Font("Arial", 1, 250)); // NOI18N
+        lbl_NumDer.setFont(new java.awt.Font("Arial", 1, 150)); // NOI18N
         lbl_NumDer.setText("0");
+
+        lbl_pelota2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/tenis.png"))); // NOI18N
 
         javax.swing.GroupLayout jpvistaDerechLayout = new javax.swing.GroupLayout(jpvistaDerech);
         jpvistaDerech.setLayout(jpvistaDerechLayout);
@@ -303,15 +333,22 @@ public class Game extends javax.swing.JFrame implements Runnable{
                 .addComponent(btn_MenDer))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaDerechLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbl_NumDer)
-                .addGap(74, 74, 74))
+                .addGroup(jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaDerechLayout.createSequentialGroup()
+                        .addComponent(lbl_pelota2)
+                        .addGap(122, 122, 122))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaDerechLayout.createSequentialGroup()
+                        .addComponent(lbl_NumDer)
+                        .addGap(99, 99, 99))))
         );
         jpvistaDerechLayout.setVerticalGroup(
             jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaDerechLayout.createSequentialGroup()
-                .addContainerGap(48, Short.MAX_VALUE)
-                .addComponent(lbl_NumDer, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addGap(42, 42, 42)
+                .addComponent(lbl_NumDer, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addComponent(lbl_pelota2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_MenDer)
                     .addComponent(btn_MasDer1)))
@@ -427,13 +464,61 @@ public class Game extends javax.swing.JFrame implements Runnable{
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_MasDer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_MasDer1ActionPerformed
-        // TODO add your handling code here:
+        count++;
+        String numero = String.valueOf(count);
+        prueba.setText(numero);
+        
+        if(count==2){
+            lbl_pelota1.setVisible(false);
+            lbl_pelota2.setVisible(true);
+        }
+        if(count==4){
+            lbl_pelota1.setVisible(true);
+            lbl_pelota2.setVisible(false);
+        }
+         if(count==6){
+            lbl_pelota1.setVisible(false);
+            lbl_pelota2.setVisible(true);
+        }
+          if(count==8){
+            lbl_pelota1.setVisible(true);
+            lbl_pelota2.setVisible(false);
+        }
+         if(count==10){
+            lbl_pelota1.setVisible(false);
+            lbl_pelota2.setVisible(true);
+        } 
+         if(count==12){
+            lbl_pelota1.setVisible(true);
+            lbl_pelota2.setVisible(false);
+        }
+         if(count==14){
+            lbl_pelota1.setVisible(false);
+            lbl_pelota2.setVisible(true);
+        }  
+         if(count==16){
+            lbl_pelota1.setVisible(true);
+            lbl_pelota2.setVisible(false);
+        }
+         if(count==18){
+            lbl_pelota1.setVisible(false);
+            lbl_pelota2.setVisible(true);
+        }  
+         if(count==20){
+            lbl_pelota1.setVisible(true);
+            lbl_pelota2.setVisible(false);
+         }
+          
         Punto p = new Punto();
         String a = lbl_NumDer.getText();
         int b = p.Mas(Integer.parseInt(a));
         
         if(b<=11){
             lbl_NumDer.setText(Integer.toString(b));
+            if(b==11){
+                JOptionPane.showMessageDialog(null, "PUNTO!!"+lbl_jugador2);
+            }
+            
         }
     }//GEN-LAST:event_btn_MasDer1ActionPerformed
 
@@ -450,12 +535,59 @@ public class Game extends javax.swing.JFrame implements Runnable{
 
     private void btn_MasIzqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_MasIzqActionPerformed
         // TODO add your handling code here:
+        count++;
+        String numero = String.valueOf(count);
+        prueba.setText(numero);
+        if(count==2){
+            lbl_pelota1.setVisible(false);
+            lbl_pelota2.setVisible(true);
+        }
+        if(count==4){
+            lbl_pelota1.setVisible(true);
+            lbl_pelota2.setVisible(false);
+        }
+        if(count==6){
+            lbl_pelota1.setVisible(false);
+            lbl_pelota2.setVisible(true);
+        }
+          if(count==8){
+            lbl_pelota1.setVisible(true);
+            lbl_pelota2.setVisible(false);
+        }
+         if(count==10){
+            lbl_pelota1.setVisible(false);
+            lbl_pelota2.setVisible(true);
+        }
+         if(count==12){
+            lbl_pelota1.setVisible(true);
+            lbl_pelota2.setVisible(false);
+        }
+         if(count==14){
+            lbl_pelota1.setVisible(false);
+            lbl_pelota2.setVisible(true);
+        }  
+         if(count==16){
+            lbl_pelota1.setVisible(true);
+            lbl_pelota2.setVisible(false);
+        }
+         if(count==18){
+            lbl_pelota1.setVisible(false);
+            lbl_pelota2.setVisible(true);
+        }  
+         if(count==20){
+            lbl_pelota1.setVisible(true);
+            lbl_pelota2.setVisible(false);
+         }
+        
         Punto p = new Punto();
         String a = lbl_NumIzq.getText();
         int b = p.Mas(Integer.parseInt(a));
         
         if(b<=11){
             lbl_NumIzq.setText(Integer.toString(b));
+            if(b==11){
+                JOptionPane.showMessageDialog(null, "PUNTO!!"+lbl_jugador1);
+            }
         }
     }//GEN-LAST:event_btn_MasIzqActionPerformed
 
@@ -614,9 +746,12 @@ public class Game extends javax.swing.JFrame implements Runnable{
     public javax.swing.JLabel lbl_jugador1;
     public javax.swing.JLabel lbl_jugador2;
     private javax.swing.JLabel lbl_minC;
+    private javax.swing.JLabel lbl_pelota1;
+    private javax.swing.JLabel lbl_pelota2;
     private javax.swing.JLabel lbl_puntuacion1;
     private javax.swing.JLabel lbl_puntuacion2;
     private javax.swing.JLabel lbl_segC;
+    private javax.swing.JLabel prueba;
     // End of variables declaration//GEN-END:variables
 }
 
