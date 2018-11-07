@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 import javax.swing.Action;
+import javax.swing.JOptionPane;
 import javax.swing.Timer;
 
 /**
@@ -68,7 +69,7 @@ public class Cronometro extends javax.swing.JFrame {
         btnIniciar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         lblCronometro.setFont(new java.awt.Font("Charlemagne Std", 1, 48)); // NOI18N
         lblCronometro.setText("00:00:00");
@@ -132,6 +133,7 @@ public class Cronometro extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
@@ -143,7 +145,11 @@ public class Cronometro extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        timer.stop();
+        int ax = JOptionPane.showConfirmDialog(null, "¿Esta Seguro de finalizar?");
+        if(ax == JOptionPane.YES_OPTION){
+            // Instancia al formulario cronometro..
+            this.dispose();
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
     
     

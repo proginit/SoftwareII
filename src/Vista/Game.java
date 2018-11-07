@@ -4,6 +4,9 @@ import Clases.Punto;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 /**
  *
  * @author ProgInit
@@ -376,6 +379,11 @@ public class Game extends javax.swing.JFrame implements Runnable{
 
         btn_minJ2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cronometro.png"))); // NOI18N
         btn_minJ2.setText("T");
+        btn_minJ2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_minJ2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpvista5Layout = new javax.swing.GroupLayout(jpvista5);
         jpvista5.setLayout(jpvista5Layout);
@@ -488,9 +496,25 @@ public class Game extends javax.swing.JFrame implements Runnable{
 
     private void btn_minJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_minJ1ActionPerformed
         // TODO add your handling code here:
-        Cronometro cr = new Cronometro();
-        cr.setVisible(true);
+        int ax = JOptionPane.showConfirmDialog(null, "Esta Seguro de solicitar minuto");
+        if(ax == JOptionPane.YES_OPTION){
+            // Instancia al formulario cronometro..
+            Cronometro cr = new Cronometro();
+            cr.setVisible(true);
+            btn_minJ1.setEnabled(false);
+        }
     }//GEN-LAST:event_btn_minJ1ActionPerformed
+
+    private void btn_minJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_minJ2ActionPerformed
+        // TODO add your handling code here:
+        int ax = JOptionPane.showConfirmDialog(null, "Esta Seguro de solicitar minuto");
+        if(ax == JOptionPane.YES_OPTION){
+            // Instancia al formulario cronometro..
+            Cronometro cr = new Cronometro();
+            cr.setVisible(true);
+            btn_minJ2.setEnabled(false);
+        }
+    }//GEN-LAST:event_btn_minJ2ActionPerformed
 
     public synchronized int aumentSeg(){
         seg++;
@@ -566,7 +590,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
     private javax.swing.JButton btn_MasIzq;
     private javax.swing.JButton btn_MenDer;
     private javax.swing.JButton btn_MenIzq;
-    private javax.swing.JButton btn_minJ1;
+    public javax.swing.JButton btn_minJ1;
     private javax.swing.JButton btn_minJ2;
     private javax.swing.JButton btn_play;
     private javax.swing.JButton btn_tarjeta;
