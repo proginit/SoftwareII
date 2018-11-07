@@ -128,7 +128,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
         lbl_segC.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         lbl_segC.setText("00");
 
-        btn_tarjeta.setText("M");
+        btn_tarjeta.setText("F");
         btn_tarjeta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_tarjetaActionPerformed(evt);
@@ -242,7 +242,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
             }
         });
 
-        lbl_NumIzq.setFont(new java.awt.Font("Arial", 1, 72)); // NOI18N
+        lbl_NumIzq.setFont(new java.awt.Font("Arial", 1, 250)); // NOI18N
         lbl_NumIzq.setText("0");
 
         javax.swing.GroupLayout jpvistaIzqLayout = new javax.swing.GroupLayout(jpvistaIzq);
@@ -251,17 +251,19 @@ public class Game extends javax.swing.JFrame implements Runnable{
             jpvistaIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpvistaIzqLayout.createSequentialGroup()
                 .addComponent(btn_MenIzq)
-                .addGap(77, 77, 77)
-                .addComponent(lbl_NumIzq)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btn_MasIzq))
+            .addGroup(jpvistaIzqLayout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addComponent(lbl_NumIzq)
+                .addContainerGap(81, Short.MAX_VALUE))
         );
         jpvistaIzqLayout.setVerticalGroup(
             jpvistaIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaIzqLayout.createSequentialGroup()
-                .addGap(97, 97, 97)
-                .addComponent(lbl_NumIzq)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
+                .addGap(22, 22, 22)
+                .addComponent(lbl_NumIzq, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(jpvistaIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_MasIzq)
                     .addComponent(btn_MenIzq)))
@@ -285,7 +287,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
             }
         });
 
-        lbl_NumDer.setFont(new java.awt.Font("Arial", 1, 72)); // NOI18N
+        lbl_NumDer.setFont(new java.awt.Font("Arial", 1, 250)); // NOI18N
         lbl_NumDer.setText("0");
 
         javax.swing.GroupLayout jpvistaDerechLayout = new javax.swing.GroupLayout(jpvistaDerech);
@@ -294,19 +296,19 @@ public class Game extends javax.swing.JFrame implements Runnable{
             jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaDerechLayout.createSequentialGroup()
                 .addComponent(btn_MasDer1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
-                .addGroup(jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpvistaDerechLayout.createSequentialGroup()
-                        .addGap(132, 132, 132)
-                        .addComponent(btn_MenDer))
-                    .addComponent(lbl_NumDer)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 229, Short.MAX_VALUE)
+                .addComponent(btn_MenDer))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaDerechLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbl_NumDer)
+                .addGap(74, 74, 74))
         );
         jpvistaDerechLayout.setVerticalGroup(
             jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaDerechLayout.createSequentialGroup()
-                .addGap(98, 98, 98)
-                .addComponent(lbl_NumDer)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
+                .addContainerGap(48, Short.MAX_VALUE)
+                .addComponent(lbl_NumDer, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
                 .addGroup(jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_MenDer)
                     .addComponent(btn_MasDer1)))
