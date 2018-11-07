@@ -94,11 +94,13 @@ public class Game extends javax.swing.JFrame implements Runnable{
         lbl_NumIzq = new javax.swing.JLabel();
         lbl_pelota1 = new javax.swing.JLabel();
         btn_MasIzq = new javax.swing.JButton();
+        btn_tarjetaIzq = new javax.swing.JButton();
         jpvistaDerech = new javax.swing.JPanel();
         btn_MenDer = new javax.swing.JButton();
         btn_MasDer1 = new javax.swing.JButton();
         lbl_NumDer = new javax.swing.JLabel();
         lbl_pelota2 = new javax.swing.JLabel();
+        btn_tarjetaDer = new javax.swing.JButton();
         jpvista3 = new javax.swing.JPanel();
         lbl_puntuacion1 = new javax.swing.JLabel();
         jpvista4 = new javax.swing.JPanel();
@@ -280,11 +282,14 @@ public class Game extends javax.swing.JFrame implements Runnable{
                 .addGroup(jpvistaIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpvistaIzqLayout.createSequentialGroup()
                         .addGap(129, 129, 129)
-                        .addComponent(lbl_pelota1))
+                        .addComponent(lbl_pelota1)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jpvistaIzqLayout.createSequentialGroup()
                         .addGap(101, 101, 101)
-                        .addComponent(lbl_NumIzq)))
-                .addContainerGap(116, Short.MAX_VALUE))
+                        .addComponent(lbl_NumIzq)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                        .addComponent(btn_tarjetaIzq, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         jpvistaIzqLayout.setVerticalGroup(
             jpvistaIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -295,7 +300,9 @@ public class Game extends javax.swing.JFrame implements Runnable{
                 .addComponent(lbl_pelota1)
                 .addGap(56, 56, 56))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaIzqLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(btn_tarjetaIzq, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jpvistaIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_MenIzq)
                     .addComponent(btn_MasIzq)))
@@ -328,13 +335,15 @@ public class Game extends javax.swing.JFrame implements Runnable{
         jpvistaDerech.setLayout(jpvistaDerechLayout);
         jpvistaDerechLayout.setHorizontalGroup(
             jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaDerechLayout.createSequentialGroup()
-                .addComponent(btn_MasDer1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 229, Short.MAX_VALUE)
-                .addComponent(btn_MenDer))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaDerechLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jpvistaDerechLayout.createSequentialGroup()
                 .addGroup(jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_MasDer1)
+                    .addGroup(jpvistaDerechLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btn_tarjetaDer, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addGroup(jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_MenDer, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaDerechLayout.createSequentialGroup()
                         .addComponent(lbl_pelota2)
                         .addGap(122, 122, 122))
@@ -345,8 +354,13 @@ public class Game extends javax.swing.JFrame implements Runnable{
         jpvistaDerechLayout.setVerticalGroup(
             jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaDerechLayout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addComponent(lbl_NumDer, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpvistaDerechLayout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(lbl_NumDer, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jpvistaDerechLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btn_tarjetaDer, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addComponent(lbl_pelota2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -519,7 +533,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
             if(b==11){
                 p2++;
                 JOptionPane.showMessageDialog(null, "PUNTO!!"+lbl_jugador2);
-                lbl_puntuacion2.setText(Integer.toString(ne));
+                lbl_puntuacion2.setText(Integer.toString(p2));
             }
             
         }
@@ -590,7 +604,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
             lbl_NumIzq.setText(Integer.toString(b));
             if(b==11){
                 ne++;
-                JOptionPane.showMessageDialog(null, "PUNTO!!"+lbl_jugador1);
+                JOptionPane.showMessageDialog(null, "PUNTO!!");
                 lbl_puntuacion1.setText(Integer.toString(ne));
             }
         }
@@ -629,7 +643,15 @@ public class Game extends javax.swing.JFrame implements Runnable{
     private void btn_tarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_tarjetaActionPerformed
         // TODO add your handling code here:
         tarjetas t = new tarjetas();
+        
+        String nt = lbl_jugador1.getText();
+        String nn = lbl_jugador2.getText();
+        
+        t.lbl_jugadorT1.setText(nt);
+        t.lbl_jugadorT2.setText(nn);
+        btn_tarjeta.setEnabled(false);
         t.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btn_tarjetaActionPerformed
 
     private void btn_minJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_minJ1ActionPerformed
@@ -732,6 +754,8 @@ public class Game extends javax.swing.JFrame implements Runnable{
     private javax.swing.JButton btn_minJ2;
     public javax.swing.JButton btn_play;
     private javax.swing.JButton btn_tarjeta;
+    private javax.swing.JButton btn_tarjetaDer;
+    public javax.swing.JButton btn_tarjetaIzq;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jpvista1;

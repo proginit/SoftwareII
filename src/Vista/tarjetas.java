@@ -27,10 +27,10 @@ public class tarjetas extends javax.swing.JFrame {
         jInternalFrame1 = new javax.swing.JInternalFrame();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jugador1 = new javax.swing.JLabel();
-        jugador2 = new javax.swing.JLabel();
+        lbl_jugadorT1 = new javax.swing.JLabel();
+        lbl_jugadorT2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        arbitro = new javax.swing.JLabel();
+        lbl_arbitroT = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -67,24 +67,24 @@ public class tarjetas extends javax.swing.JFrame {
         jLabel2.setText("Aplicar tarjeta a:");
         jInternalFrame1.getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, -1, -1));
 
-        jugador1.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
-        jugador1.setForeground(new java.awt.Color(0, 102, 102));
-        jugador1.setText("jugador1");
-        jInternalFrame1.getContentPane().add(jugador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 57, -1, -1));
+        lbl_jugadorT1.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
+        lbl_jugadorT1.setForeground(new java.awt.Color(0, 102, 102));
+        lbl_jugadorT1.setText("jugador1");
+        jInternalFrame1.getContentPane().add(lbl_jugadorT1, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 57, -1, -1));
 
-        jugador2.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
-        jugador2.setForeground(new java.awt.Color(0, 102, 102));
-        jugador2.setText("jugador2");
-        jInternalFrame1.getContentPane().add(jugador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 256, -1, -1));
+        lbl_jugadorT2.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
+        lbl_jugadorT2.setForeground(new java.awt.Color(0, 102, 102));
+        lbl_jugadorT2.setText("jugador2");
+        jInternalFrame1.getContentPane().add(lbl_jugadorT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 256, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Arbitro:");
         jInternalFrame1.getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 17, -1, -1));
 
-        arbitro.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
-        arbitro.setForeground(new java.awt.Color(51, 153, 0));
-        arbitro.setText("jLabel6");
-        jInternalFrame1.getContentPane().add(arbitro, new org.netbeans.lib.awtextra.AbsoluteConstraints(104, 13, -1, -1));
+        lbl_arbitroT.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
+        lbl_arbitroT.setForeground(new java.awt.Color(51, 153, 0));
+        lbl_arbitroT.setText("jLabel6");
+        jInternalFrame1.getContentPane().add(lbl_arbitroT, new org.netbeans.lib.awtextra.AbsoluteConstraints(104, 13, -1, -1));
 
         jButton3.setFont(new java.awt.Font("Agency FB", 1, 48)); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -154,7 +154,12 @@ public class tarjetas extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        Game g = new Game();
+        
         jButton3.setBackground(Color.YELLOW);
+        g.btn_tarjetaIzq.setBackground(Color.yellow);
+        
+        
         if(count<=2){
             String n= String.valueOf(count);
             jButton3.setText(n);
@@ -162,6 +167,8 @@ public class tarjetas extends javax.swing.JFrame {
                 jButton4.setBackground(Color.red);
             }
         }  count++;
+        jButton3.setEnabled(false);
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private int count=1;    
@@ -202,7 +209,6 @@ public class tarjetas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel arbitro;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -215,7 +221,8 @@ public class tarjetas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jugador1;
-    private javax.swing.JLabel jugador2;
+    public javax.swing.JLabel lbl_arbitroT;
+    public javax.swing.JLabel lbl_jugadorT1;
+    public javax.swing.JLabel lbl_jugadorT2;
     // End of variables declaration//GEN-END:variables
 }
