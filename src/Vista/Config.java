@@ -290,6 +290,7 @@ public class Config extends javax.swing.JFrame {
         }else{
             Game g = new Game();
             g.setVisible(true);
+            g.IniciarConometor();
         }
     }//GEN-LAST:event_btn_iniciarActionPerformed
 

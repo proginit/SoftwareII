@@ -249,21 +249,19 @@ public class Game extends javax.swing.JFrame implements Runnable{
         jpvistaIzq.setLayout(jpvistaIzqLayout);
         jpvistaIzqLayout.setHorizontalGroup(
             jpvistaIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaIzqLayout.createSequentialGroup()
-                .addComponent(btn_MenIzq)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_MasIzq))
             .addGroup(jpvistaIzqLayout.createSequentialGroup()
-                .addGap(114, 114, 114)
+                .addComponent(btn_MenIzq)
+                .addGap(77, 77, 77)
                 .addComponent(lbl_NumIzq)
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
+                .addComponent(btn_MasIzq))
         );
         jpvistaIzqLayout.setVerticalGroup(
             jpvistaIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaIzqLayout.createSequentialGroup()
                 .addGap(97, 97, 97)
                 .addComponent(lbl_NumIzq)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
                 .addGroup(jpvistaIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_MasIzq)
                     .addComponent(btn_MenIzq)))
@@ -296,19 +294,19 @@ public class Game extends javax.swing.JFrame implements Runnable{
             jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaDerechLayout.createSequentialGroup()
                 .addComponent(btn_MasDer1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_MenDer))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaDerechLayout.createSequentialGroup()
-                .addContainerGap(131, Short.MAX_VALUE)
-                .addComponent(lbl_NumDer)
-                .addGap(129, 129, 129))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                .addGroup(jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpvistaDerechLayout.createSequentialGroup()
+                        .addGap(132, 132, 132)
+                        .addComponent(btn_MenDer))
+                    .addComponent(lbl_NumDer)))
         );
         jpvistaDerechLayout.setVerticalGroup(
             jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaDerechLayout.createSequentialGroup()
                 .addGap(98, 98, 98)
                 .addComponent(lbl_NumDer)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
                 .addGroup(jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_MenDer)
                     .addComponent(btn_MasDer1)))
@@ -463,11 +461,18 @@ public class Game extends javax.swing.JFrame implements Runnable{
         c.setVisible(true);
         btn_play.setEnabled(false);
         //seguir();
-        i=null;
+        //i=null;
+        //i = new Cronometro_Partido(this);
+        //i.start();
+    }//GEN-LAST:event_btn_playActionPerformed
+    //Inicializa el cronometro
+    public void IniciarConometor(){
+        i = null;
         i = new Cronometro_Partido(this);
         i.start();
-    }//GEN-LAST:event_btn_playActionPerformed
-
+    }
+    
+    
     private void btn_tarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_tarjetaActionPerformed
         // TODO add your handling code here:
         tarjetas t = new tarjetas();
