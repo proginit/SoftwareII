@@ -366,6 +366,11 @@ public class Game extends javax.swing.JFrame implements Runnable{
 
         btn_minJ1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cronometro.png"))); // NOI18N
         btn_minJ1.setText("T");
+        btn_minJ1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_minJ1ActionPerformed(evt);
+            }
+        });
 
         btn_minJ2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cronometro.png"))); // NOI18N
         btn_minJ2.setText("T");
@@ -478,6 +483,12 @@ public class Game extends javax.swing.JFrame implements Runnable{
         tarjetas t = new tarjetas();
         t.setVisible(true);
     }//GEN-LAST:event_btn_tarjetaActionPerformed
+
+    private void btn_minJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_minJ1ActionPerformed
+        // TODO add your handling code here:
+        Cronometro cr = new Cronometro();
+        cr.setVisible(true);
+    }//GEN-LAST:event_btn_minJ1ActionPerformed
 
     public synchronized int aumentSeg(){
         seg++;
