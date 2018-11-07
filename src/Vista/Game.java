@@ -22,6 +22,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
     private Cronometro_Partido i;
     public int n=0;
     public int count = 0;
+    public int ne,p2;
 
     /**
      * Creates new form Game
@@ -516,7 +517,9 @@ public class Game extends javax.swing.JFrame implements Runnable{
         if(b<=11){
             lbl_NumDer.setText(Integer.toString(b));
             if(b==11){
+                p2++;
                 JOptionPane.showMessageDialog(null, "PUNTO!!"+lbl_jugador2);
+                lbl_puntuacion2.setText(Integer.toString(ne));
             }
             
         }
@@ -586,7 +589,9 @@ public class Game extends javax.swing.JFrame implements Runnable{
         if(b<=11){
             lbl_NumIzq.setText(Integer.toString(b));
             if(b==11){
+                ne++;
                 JOptionPane.showMessageDialog(null, "PUNTO!!"+lbl_jugador1);
+                lbl_puntuacion1.setText(Integer.toString(ne));
             }
         }
     }//GEN-LAST:event_btn_MasIzqActionPerformed
