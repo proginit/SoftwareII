@@ -289,8 +289,16 @@ public class Config extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Llenar todo los campos POR FAVOR");
         }else{
             Game g = new Game();
-            g.setVisible(true);
+            //g.setVisible(true);
+            String jugadorN1 = txt_nombreJ1.getText();
+            String jugadorA1 = txt_apellidoJ1.getText();
+            String jugadorN2 = txt_nombreJ2.getText();
+            String jugadorA2 = txt_apellidoJ2.getText();
+            g.lbl_jugador1.setText(jugadorN1+" "+jugadorA1);
+            g.lbl_jugador2.setText(jugadorN2+" "+jugadorA2);
             g.IniciarConometor();
+            g.btn_play.setEnabled(false);
+            this.dispose();
         }
     }//GEN-LAST:event_btn_iniciarActionPerformed
 

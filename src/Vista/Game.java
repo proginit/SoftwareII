@@ -475,6 +475,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
         Config c = new Config();
         c.setVisible(true);
         btn_play.setEnabled(false);
+        this.dispose();
         //seguir();
         //i=null;
         //i = new Cronometro_Partido(this);
@@ -592,7 +593,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
     private javax.swing.JButton btn_MenIzq;
     public javax.swing.JButton btn_minJ1;
     private javax.swing.JButton btn_minJ2;
-    private javax.swing.JButton btn_play;
+    public javax.swing.JButton btn_play;
     private javax.swing.JButton btn_tarjeta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -610,8 +611,8 @@ public class Game extends javax.swing.JFrame implements Runnable{
     private javax.swing.JLabel lbl_hora1;
     private javax.swing.JLabel lbl_horaAct;
     private javax.swing.JLabel lbl_horaC;
-    private javax.swing.JLabel lbl_jugador1;
-    private javax.swing.JLabel lbl_jugador2;
+    public javax.swing.JLabel lbl_jugador1;
+    public javax.swing.JLabel lbl_jugador2;
     private javax.swing.JLabel lbl_minC;
     private javax.swing.JLabel lbl_puntuacion1;
     private javax.swing.JLabel lbl_puntuacion2;
