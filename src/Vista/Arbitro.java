@@ -55,6 +55,12 @@ public class Arbitro extends javax.swing.JFrame {
 
         jLabel4.setText("ARBITRO:");
 
+        txt_arbitro.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_arbitroKeyTyped(evt);
+            }
+        });
+
         jLabel5.setText("FASE:");
 
         cb_fase.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sin Fase", "Final", "Semi-Final", "Cuartos-Final", "Octavos-Final", "16-Final", "32-Final" }));
@@ -64,6 +70,11 @@ public class Arbitro extends javax.swing.JFrame {
 
         btn_cancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/boton-cancelar.png"))); // NOI18N
         btn_cancelar.setText("Cancelar");
+        btn_cancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_cancelarActionPerformed(evt);
+            }
+        });
 
         btn_guardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/guardar-archivo-opcion.png"))); // NOI18N
         btn_guardar.setText("GUARDAR");
@@ -131,6 +142,19 @@ public class Arbitro extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cancelarActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_btn_cancelarActionPerformed
+
+    private void txt_arbitroKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_arbitroKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if((c<'a'|| c>'z')&&(c<'A'|| c>'Z')){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_arbitroKeyTyped
 
     /**
      * @param args the command line arguments
