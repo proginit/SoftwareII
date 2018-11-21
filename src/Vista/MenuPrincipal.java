@@ -4,20 +4,24 @@
  * and open the template in the editor.
  */
 package Vista;
-
+import Clases.CambiaPanel;
+import paneles.inicio;
 /**
  *
  * @author ProgInit
  */
 public class MenuPrincipal extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form MenuPrincipal
      */
     public MenuPrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
+        
+        new CambiaPanel(jp_centro, new paneles.inicio());
     }
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,93 +32,153 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        txt_menu = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jp_n1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        btn_menusv = new javax.swing.JButton();
+        jp_n2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
+        btn_inicio = new javax.swing.JButton();
+        btn_registro = new javax.swing.JButton();
+        btn_diagrama = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jp_centro = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setForeground(new java.awt.Color(0, 51, 51));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txt_menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/menu.png"))); // NOI18N
-        jPanel2.add(txt_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 8, -1, -1));
+        jp_n1.setBackground(new java.awt.Color(0, 51, 51));
+        jp_n1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jp_n1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/hombre-jugando-al-ping-pong.png"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, -1, -1));
+        jp_n1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/dos-raquetas-de-ping-pong.png"))); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, -1, -1));
+        jp_n1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/man-jugando-ping-pong.png"))); // NOI18N
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 10, -1, -1));
+        jp_n1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 10, -1, -1));
 
+        jButton5.setBackground(new java.awt.Color(0, 51, 51));
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/menos.png"))); // NOI18N
         jButton5.setBorder(null);
-        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 0, 30, 20));
+        jButton5.setBorderPainted(false);
+        jButton5.setContentAreaFilled(false);
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jp_n1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 10, 20, 20));
 
+        jButton6.setBackground(new java.awt.Color(0, 51, 51));
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cancelar.png"))); // NOI18N
         jButton6.setBorder(null);
+        jButton6.setBorderPainted(false);
+        jButton6.setContentAreaFilled(false);
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, 30, 20));
+        jp_n1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 10, 20, 20));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 50));
+        btn_menusv.setBackground(new java.awt.Color(0, 51, 51));
+        btn_menusv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/menu.png"))); // NOI18N
+        btn_menusv.setBorder(null);
+        btn_menusv.setBorderPainted(false);
+        btn_menusv.setContentAreaFilled(false);
+        btn_menusv.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_menusv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_menusvActionPerformed(evt);
+            }
+        });
+        jp_n1.add(btn_menusv, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 40, -1));
 
-        jPanel1.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel4.add(jp_n1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 50));
 
-        jButton1.setText("jButton1");
+        jp_n2.setBackground(new java.awt.Color(0, 51, 51));
+        jp_n2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 51, 51));
+        jButton1.setText("Administrar");
         jButton1.setBorder(null);
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 140, 40));
+        jp_n2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 140, 40));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/boton-de-inicio.png"))); // NOI18N
-        jButton2.setText("Inicio");
-        jButton2.setBorder(null);
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 32, 140, 40));
+        btn_inicio.setBackground(new java.awt.Color(0, 51, 51));
+        btn_inicio.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
+        btn_inicio.setForeground(new java.awt.Color(204, 204, 204));
+        btn_inicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/boton-de-inicio.png"))); // NOI18N
+        btn_inicio.setText("Inicio");
+        btn_inicio.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        btn_inicio.setContentAreaFilled(false);
+        btn_inicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_inicio.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_inicio.setIconTextGap(18);
+        btn_inicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_inicioActionPerformed(evt);
+            }
+        });
+        jp_n2.add(btn_inicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 140, 40));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/formulario.png"))); // NOI18N
-        jButton3.setText("Formulario");
-        jButton3.setBorder(null);
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 140, 40));
+        btn_registro.setBackground(new java.awt.Color(255, 255, 255));
+        btn_registro.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
+        btn_registro.setForeground(new java.awt.Color(255, 255, 255));
+        btn_registro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/formulario.png"))); // NOI18N
+        btn_registro.setText("Registros");
+        btn_registro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        btn_registro.setContentAreaFilled(false);
+        btn_registro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_registro.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_registro.setIconTextGap(18);
+        btn_registro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_registroActionPerformed(evt);
+            }
+        });
+        jp_n2.add(btn_registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 140, 40));
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/diagrama.png"))); // NOI18N
-        jButton4.setText("Diagrama");
-        jButton4.setBorder(null);
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 140, 40));
+        btn_diagrama.setBackground(new java.awt.Color(255, 255, 255));
+        btn_diagrama.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
+        btn_diagrama.setForeground(new java.awt.Color(255, 255, 255));
+        btn_diagrama.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/diagrama.png"))); // NOI18N
+        btn_diagrama.setText("Diagrama");
+        btn_diagrama.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        btn_diagrama.setContentAreaFilled(false);
+        btn_diagrama.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_diagrama.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_diagrama.setIconTextGap(15);
+        jp_n2.add(btn_diagrama, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 140, 40));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 140, 390));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/trabpc.png"))); // NOI18N
+        jp_n2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 70, 70));
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Poor Richard", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("ADMIN");
+        jp_n2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 640, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 390, Short.MAX_VALUE)
-        );
+        jPanel4.add(jp_n2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 140, 390));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 640, 390));
+        jp_centro.setBackground(new java.awt.Color(255, 255, 255));
+        jp_centro.setForeground(new java.awt.Color(0, 51, 51));
+        jp_centro.setLayout(new javax.swing.BoxLayout(jp_centro, javax.swing.BoxLayout.LINE_AXIS));
+        jPanel4.add(jp_centro, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 640, 390));
+
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -123,6 +187,27 @@ public class MenuPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void btn_menusvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_menusvActionPerformed
+        // TODO add your handling code here:
+        int posicion = this.jp_n2.getX();
+        if(posicion > -1){
+            Animacion.Animacion.mover_izquierda(0, -140, 2, 2, jp_n2);
+        }else{
+            Animacion.Animacion.mover_derecha(-140, 0, 2, 2, jp_n2);
+        }
+    }//GEN-LAST:event_btn_menusvActionPerformed
+
+    private void btn_inicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inicioActionPerformed
+        // TODO add your handling code here:
+        new CambiaPanel(jp_centro, new paneles.inicio());
+        System.out.println("hola mundo");
+    }//GEN-LAST:event_btn_inicioActionPerformed
+
+    private void btn_registroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registroActionPerformed
+        // TODO add your handling code here:
+        new CambiaPanel(jp_centro, new paneles.registro());
+    }//GEN-LAST:event_btn_registroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,18 +245,21 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_diagrama;
+    private javax.swing.JButton btn_inicio;
+    private javax.swing.JButton btn_menusv;
+    private javax.swing.JButton btn_registro;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel txt_menu;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    public javax.swing.JPanel jPanel4;
+    public javax.swing.JPanel jp_centro;
+    private javax.swing.JPanel jp_n1;
+    private javax.swing.JPanel jp_n2;
     // End of variables declaration//GEN-END:variables
 }

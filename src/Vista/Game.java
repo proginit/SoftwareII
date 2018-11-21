@@ -74,6 +74,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jpvista1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -113,18 +114,28 @@ public class Game extends javax.swing.JFrame implements Runnable{
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jpvista1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 51, 51));
+        jPanel1.setForeground(new java.awt.Color(0, 51, 51));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jpvista1.setBackground(new java.awt.Color(0, 51, 51));
+        jpvista1.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("HORA");
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("CRONOMETRO");
 
         lbl_minC.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        lbl_minC.setForeground(new java.awt.Color(255, 255, 255));
         lbl_minC.setText("00");
 
         lbl_horaAct.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        lbl_horaAct.setForeground(new java.awt.Color(255, 255, 255));
         lbl_horaAct.setText("00:00:00");
 
         btn_play.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/boton-de-reproduccion.png"))); // NOI18N
@@ -135,17 +146,24 @@ public class Game extends javax.swing.JFrame implements Runnable{
         });
 
         lbl_hora.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        lbl_hora.setForeground(new java.awt.Color(255, 255, 255));
         lbl_hora.setText(":");
 
+        lbl_horaC.setBackground(new java.awt.Color(255, 255, 255));
         lbl_horaC.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        lbl_horaC.setForeground(new java.awt.Color(255, 255, 255));
         lbl_horaC.setText("00");
 
         lbl_hora1.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        lbl_hora1.setForeground(new java.awt.Color(255, 255, 255));
         lbl_hora1.setText(":");
 
         lbl_segC.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        lbl_segC.setForeground(new java.awt.Color(255, 255, 255));
         lbl_segC.setText("00");
 
+        btn_tarjeta.setBackground(new java.awt.Color(0, 51, 51));
+        btn_tarjeta.setForeground(new java.awt.Color(255, 255, 255));
         btn_tarjeta.setText("F");
         btn_tarjeta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,14 +234,17 @@ public class Game extends javax.swing.JFrame implements Runnable{
                 .addContainerGap())
         );
 
-        getContentPane().add(jpvista1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, -1));
+        jPanel1.add(jpvista1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, -1));
 
-        jpvista2.setBackground(new java.awt.Color(153, 204, 255));
+        jpvista2.setBackground(new java.awt.Color(255, 255, 255));
+        jpvista2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 51), 2));
 
         lbl_jugador1.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        lbl_jugador1.setForeground(new java.awt.Color(0, 51, 51));
         lbl_jugador1.setText("Jugador 1");
 
         lbl_jugador2.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        lbl_jugador2.setForeground(new java.awt.Color(0, 51, 51));
         lbl_jugador2.setText("Jugador 2");
 
         javax.swing.GroupLayout jpvista2Layout = new javax.swing.GroupLayout(jpvista2);
@@ -233,7 +254,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
             .addGroup(jpvista2Layout.createSequentialGroup()
                 .addGap(87, 87, 87)
                 .addComponent(lbl_jugador1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 487, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 483, Short.MAX_VALUE)
                 .addComponent(lbl_jugador2)
                 .addGap(120, 120, 120))
         );
@@ -244,13 +265,17 @@ public class Game extends javax.swing.JFrame implements Runnable{
                 .addGroup(jpvista2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_jugador1)
                     .addComponent(lbl_jugador2))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jpvista2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 860, 50));
+        jPanel1.add(jpvista2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 860, 50));
 
-        jpvistaIzq.setBackground(new java.awt.Color(204, 204, 204));
+        jpvistaIzq.setBackground(new java.awt.Color(255, 255, 255));
+        jpvistaIzq.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 51), 2));
+        jpvistaIzq.setForeground(new java.awt.Color(0, 51, 51));
 
+        btn_MenIzq.setBackground(new java.awt.Color(0, 51, 51));
+        btn_MenIzq.setForeground(new java.awt.Color(255, 255, 255));
         btn_MenIzq.setText("-");
         btn_MenIzq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -259,16 +284,21 @@ public class Game extends javax.swing.JFrame implements Runnable{
         });
 
         lbl_NumIzq.setFont(new java.awt.Font("Arial", 1, 150)); // NOI18N
+        lbl_NumIzq.setForeground(new java.awt.Color(0, 51, 51));
         lbl_NumIzq.setText("0");
 
-        lbl_pelota1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/tenis.png"))); // NOI18N
+        lbl_pelota1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/tenisp.png"))); // NOI18N
 
+        btn_MasIzq.setBackground(new java.awt.Color(0, 51, 51));
+        btn_MasIzq.setForeground(new java.awt.Color(255, 255, 255));
         btn_MasIzq.setText("+");
         btn_MasIzq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_MasIzqActionPerformed(evt);
             }
         });
+
+        btn_tarjetaIzq.setBackground(new java.awt.Color(0, 51, 51));
 
         javax.swing.GroupLayout jpvistaIzqLayout = new javax.swing.GroupLayout(jpvistaIzq);
         jpvistaIzq.setLayout(jpvistaIzqLayout);
@@ -287,7 +317,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
                     .addGroup(jpvistaIzqLayout.createSequentialGroup()
                         .addGap(101, 101, 101)
                         .addComponent(lbl_NumIzq)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                         .addComponent(btn_tarjetaIzq, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -296,7 +326,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaIzqLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(lbl_NumIzq)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addComponent(lbl_pelota1)
                 .addGap(56, 56, 56))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaIzqLayout.createSequentialGroup()
@@ -308,10 +338,14 @@ public class Game extends javax.swing.JFrame implements Runnable{
                     .addComponent(btn_MasIzq)))
         );
 
-        getContentPane().add(jpvistaIzq, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 300, 330));
+        jPanel1.add(jpvistaIzq, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 300, 330));
 
-        jpvistaDerech.setBackground(new java.awt.Color(204, 204, 204));
+        jpvistaDerech.setBackground(new java.awt.Color(255, 255, 255));
+        jpvistaDerech.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 51), 2));
+        jpvistaDerech.setForeground(new java.awt.Color(0, 51, 51));
 
+        btn_MenDer.setBackground(new java.awt.Color(0, 51, 51));
+        btn_MenDer.setForeground(new java.awt.Color(255, 255, 255));
         btn_MenDer.setText("-");
         btn_MenDer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -319,6 +353,8 @@ public class Game extends javax.swing.JFrame implements Runnable{
             }
         });
 
+        btn_MasDer1.setBackground(new java.awt.Color(0, 51, 51));
+        btn_MasDer1.setForeground(new java.awt.Color(255, 255, 255));
         btn_MasDer1.setText("+");
         btn_MasDer1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -327,9 +363,12 @@ public class Game extends javax.swing.JFrame implements Runnable{
         });
 
         lbl_NumDer.setFont(new java.awt.Font("Arial", 1, 150)); // NOI18N
+        lbl_NumDer.setForeground(new java.awt.Color(0, 51, 51));
         lbl_NumDer.setText("0");
 
-        lbl_pelota2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/tenis.png"))); // NOI18N
+        lbl_pelota2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/tenisp.png"))); // NOI18N
+
+        btn_tarjetaDer.setBackground(new java.awt.Color(0, 51, 51));
 
         javax.swing.GroupLayout jpvistaDerechLayout = new javax.swing.GroupLayout(jpvistaDerech);
         jpvistaDerech.setLayout(jpvistaDerechLayout);
@@ -341,7 +380,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
                     .addGroup(jpvistaDerechLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btn_tarjetaDer, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                 .addGroup(jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_MenDer, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaDerechLayout.createSequentialGroup()
@@ -361,7 +400,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
                     .addGroup(jpvistaDerechLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btn_tarjetaDer, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addComponent(lbl_pelota2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -369,11 +408,13 @@ public class Game extends javax.swing.JFrame implements Runnable{
                     .addComponent(btn_MasDer1)))
         );
 
-        getContentPane().add(jpvistaDerech, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 150, 300, 330));
+        jPanel1.add(jpvistaDerech, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 150, 300, 330));
 
-        jpvista3.setBackground(new java.awt.Color(255, 153, 255));
+        jpvista3.setBackground(new java.awt.Color(0, 51, 51));
+        jpvista3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         lbl_puntuacion1.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        lbl_puntuacion1.setForeground(new java.awt.Color(255, 255, 255));
         lbl_puntuacion1.setText("0");
 
         javax.swing.GroupLayout jpvista3Layout = new javax.swing.GroupLayout(jpvista3);
@@ -383,21 +424,23 @@ public class Game extends javax.swing.JFrame implements Runnable{
             .addGroup(jpvista3Layout.createSequentialGroup()
                 .addGap(56, 56, 56)
                 .addComponent(lbl_puntuacion1)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         jpvista3Layout.setVerticalGroup(
             jpvista3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpvista3Layout.createSequentialGroup()
                 .addGap(52, 52, 52)
                 .addComponent(lbl_puntuacion1)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jpvista3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 130, 140));
+        jPanel1.add(jpvista3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 130, 140));
 
-        jpvista4.setBackground(new java.awt.Color(204, 255, 255));
+        jpvista4.setBackground(new java.awt.Color(0, 51, 51));
+        jpvista4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         lbl_puntuacion2.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        lbl_puntuacion2.setForeground(new java.awt.Color(255, 255, 255));
         lbl_puntuacion2.setText("0");
 
         javax.swing.GroupLayout jpvista4Layout = new javax.swing.GroupLayout(jpvista4);
@@ -405,22 +448,24 @@ public class Game extends javax.swing.JFrame implements Runnable{
         jpvista4Layout.setHorizontalGroup(
             jpvista4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvista4Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(51, Short.MAX_VALUE)
                 .addComponent(lbl_puntuacion2)
                 .addGap(51, 51, 51))
         );
         jpvista4Layout.setVerticalGroup(
             jpvista4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvista4Layout.createSequentialGroup()
-                .addContainerGap(49, Short.MAX_VALUE)
+                .addContainerGap(47, Short.MAX_VALUE)
                 .addComponent(lbl_puntuacion2)
                 .addGap(39, 39, 39))
         );
 
-        getContentPane().add(jpvista4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, 130, 140));
+        jPanel1.add(jpvista4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, 130, 140));
 
-        jpvista5.setBackground(new java.awt.Color(255, 255, 102));
+        jpvista5.setBackground(new java.awt.Color(255, 255, 255));
+        jpvista5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 51)));
 
+        btn_minJ1.setBackground(new java.awt.Color(0, 51, 51));
         btn_minJ1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cronometro.png"))); // NOI18N
         btn_minJ1.setText("T");
         btn_minJ1.addActionListener(new java.awt.event.ActionListener() {
@@ -429,6 +474,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
             }
         });
 
+        btn_minJ2.setBackground(new java.awt.Color(0, 51, 51));
         btn_minJ2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cronometro.png"))); // NOI18N
         btn_minJ2.setText("T");
         btn_minJ2.addActionListener(new java.awt.event.ActionListener() {
@@ -444,7 +490,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
             .addGroup(jpvista5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btn_minJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
                 .addComponent(btn_minJ2)
                 .addContainerGap())
         );
@@ -458,9 +504,9 @@ public class Game extends javax.swing.JFrame implements Runnable{
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jpvista5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 260, 50));
+        jPanel1.add(jpvista5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 260, 50));
 
-        jpvista7.setBackground(new java.awt.Color(204, 255, 204));
+        jpvista7.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jpvista7Layout = new javax.swing.GroupLayout(jpvista7);
         jpvista7.setLayout(jpvista7Layout);
@@ -473,7 +519,9 @@ public class Game extends javax.swing.JFrame implements Runnable{
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jpvista7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 430, 260, 50));
+        jPanel1.add(jpvista7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 430, 260, 50));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -758,6 +806,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
     public javax.swing.JButton btn_tarjetaIzq;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jpvista1;
     private javax.swing.JPanel jpvista2;
     private javax.swing.JPanel jpvista3;
