@@ -45,6 +45,7 @@ public class torneo extends javax.swing.JFrame {
         txtNombre = new javax.swing.JTextField();
         txtModalidad = new javax.swing.JTextField();
         txtPais = new javax.swing.JTextField();
+        btnSelecJuga = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -70,7 +71,7 @@ public class torneo extends javax.swing.JFrame {
                 btnNuevoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, 76, -1));
+        jPanel1.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 76, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         jLabel1.setText("Datos del Torneo");
@@ -84,20 +85,23 @@ public class torneo extends javax.swing.JFrame {
 
         jLabel4.setText("Lugar:");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 154, -1, -1));
-
-        txtNombre.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 51, 157, -1));
-
-        txtModalidad.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.add(txtModalidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 100, 157, -1));
 
-        txtPais.setBackground(new java.awt.Color(255, 255, 255));
         txtPais.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtPaisKeyTyped(evt);
             }
         });
         jPanel1.add(txtPais, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 150, 157, -1));
+
+        btnSelecJuga.setText("Seleccionar Jugadores");
+        btnSelecJuga.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSelecJugaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnSelecJuga, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 160, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 230));
 
@@ -135,6 +139,12 @@ public class torneo extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_txtPaisKeyTyped
+
+    private void btnSelecJugaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelecJugaActionPerformed
+        seleccionarJugador se = new seleccionarJugador();
+        se.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnSelecJugaActionPerformed
     
     /**
      * @param args the command line arguments
@@ -174,6 +184,7 @@ public class torneo extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnNuevo;
+    private javax.swing.JButton btnSelecJuga;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
