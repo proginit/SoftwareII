@@ -52,6 +52,26 @@ public class Conexion {
         }
     }
     
+     public void Inseratar1(String insertar){
+        try {
+            PreparedStatement ps = con.prepareStatement(insertar);
+            ps.executeUpdate();
+            //JOptionPane.showMessageDialog(null,"Datos Guardados \n   Exitosamente");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Error al Insertar: "+e.getMessage());
+        }
+    }
+    
+    public void Eliminar(String eliminar){
+        try {
+            PreparedStatement ps = con.prepareStatement(eliminar);
+            ps.executeUpdate();
+            //JOptionPane.showMessageDialog(null,"Datos Guardados \n   Exitosamente");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Error al Insertar: "+e.getMessage());
+        }
+    }
+    
     public static void main(String[]args){
         Conexion c = new Conexion();
         c.getConexion();
