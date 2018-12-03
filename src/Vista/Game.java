@@ -111,7 +111,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
         btn_minJ2 = new javax.swing.JButton();
         jpvista7 = new javax.swing.JPanel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 51));
@@ -265,7 +265,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
                 .addGroup(jpvista2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_jugador1)
                     .addComponent(lbl_jugador2))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.add(jpvista2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 860, 50));

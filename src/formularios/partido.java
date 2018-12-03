@@ -20,6 +20,7 @@ import java.util.logging.Logger;
 public class partido extends javax.swing.JFrame {
     
     Conexion cn = new Conexion();
+    public int n = 0;
 
     /**
      * Creates new form partido
@@ -27,11 +28,11 @@ public class partido extends javax.swing.JFrame {
     public partido() {
         this.setLocationRelativeTo(null);
         initComponents();
-        llenarCombo1();
-        llenarCombo2();
-        llenarCombo3();
-        llenarCombo4();
-        actions();
+        //llenarCombo1();
+        //llenarCombo2();
+        //llenarCombo3();
+       // llenarCombo4();
+       // actions();
     }
 
     /**
@@ -54,91 +55,64 @@ public class partido extends javax.swing.JFrame {
         txtDirec = new javax.swing.JTextField();
         cbxFase = new javax.swing.JComboBox<>();
         cbxTorneo = new javax.swing.JComboBox<>();
-        cbxMesa = new javax.swing.JComboBox<>();
         ftxtFecha = new javax.swing.JFormattedTextField();
         FtxtHora = new javax.swing.JFormattedTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         btnGuardar = new javax.swing.JButton();
         btnNuevo = new javax.swing.JButton();
-        jcbArbitro = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jcbJugador1 = new javax.swing.JComboBox<>();
-        jcbJugador2 = new javax.swing.JComboBox<>();
+        LbNumMesa = new javax.swing.JLabel();
+        jlbArbitro = new javax.swing.JLabel();
+        jlbJugador1 = new javax.swing.JLabel();
+        jlbJugador2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         jLabel1.setText("Datos del Partido");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(186, 6, 129, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel2.setText("Mesa:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 50, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel3.setText("Fecha:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 119, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel4.setText("Hora:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 119, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel5.setText("Direccion:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 165, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel6.setText("Fase:");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 50, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel7.setText("Torneo:");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 217, -1, -1));
 
-        txtDirec.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(txtDirec, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 160, 274, -1));
-
-        cbxFase.setBackground(new java.awt.Color(255, 255, 255));
         cbxFase.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sin Fase", "Final", "Semi-Final", "Cuartos_Final", "Octavos_Final", "16_Final", "32_Final" }));
-        jPanel1.add(cbxFase, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 44, 127, -1));
 
-        cbxTorneo.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(cbxTorneo, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 211, 274, -1));
-
-        cbxMesa.setBackground(new java.awt.Color(255, 255, 255));
-        cbxMesa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
-        jPanel1.add(cbxMesa, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 44, -1, -1));
-
-        ftxtFecha.setBackground(new java.awt.Color(255, 255, 255));
         try {
             ftxtFecha.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        jPanel1.add(ftxtFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 116, 93, -1));
 
-        FtxtHora.setBackground(new java.awt.Color(255, 255, 255));
         try {
             FtxtHora.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##:##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        jPanel1.add(FtxtHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 116, 124, -1));
 
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("DD/MM/AAAA");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 88, 93, -1));
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("HH:MM:SS 24Hr.");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 88, 124, -1));
 
         btnGuardar.setBackground(new java.awt.Color(255, 255, 255));
         btnGuardar.setForeground(new java.awt.Color(0, 51, 51));
@@ -148,61 +122,207 @@ public class partido extends javax.swing.JFrame {
                 btnGuardarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 110, -1, -1));
 
         btnNuevo.setBackground(new java.awt.Color(255, 255, 255));
         btnNuevo.setForeground(new java.awt.Color(0, 51, 51));
         btnNuevo.setText("Nuevo");
-        jPanel1.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 173, 76, -1));
-
-        jcbArbitro.setBackground(new java.awt.Color(255, 255, 255));
-        jcbArbitro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Arbitro", "Nuevo Arbitro" }));
-        jPanel1.add(jcbArbitro, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 255, 274, -1));
 
         jLabel10.setText("Arbitro:");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 260, -1, -1));
 
         jLabel11.setText("Jugador 1:");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 304, -1, -1));
 
         jLabel12.setText("Jugador 2:");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 348, -1, -1));
 
-        jcbJugador1.setBackground(new java.awt.Color(255, 255, 255));
-        jcbJugador1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Jugador", "Nuevo Jugador", "1", "2", "3", "4" }));
-        jPanel1.add(jcbJugador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 299, 274, -1));
+        LbNumMesa.setText("jLabel13");
 
-        jcbJugador2.setBackground(new java.awt.Color(255, 255, 255));
-        jcbJugador2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Jugador", "Nuevo Jugador", "1", "2", "3", "4", "5" }));
-        jPanel1.add(jcbJugador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 343, 274, -1));
+        jlbArbitro.setText("jLabel13");
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 390));
+        jlbJugador1.setText("jLabel13");
+
+        jlbJugador2.setText("jLabel13");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(186, 186, 186)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(LbNumMesa)
+                        .addGap(63, 63, 63)
+                        .addComponent(jLabel6)
+                        .addGap(20, 20, 20)
+                        .addComponent(cbxFase, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel3)
+                        .addGap(20, 20, 20)
+                        .addComponent(ftxtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel4)
+                        .addGap(22, 22, 22)
+                        .addComponent(FtxtHora, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(btnGuardar))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addComponent(jLabel5)
+                        .addGap(24, 24, 24)
+                        .addComponent(txtDirec, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(btnNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(19, 19, 19)
+                                .addComponent(jLabel7))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addComponent(jLabel10))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jLabel11))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jLabel12)))
+                        .addGap(21, 21, 21)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlbJugador2)
+                            .addComponent(jlbJugador1)
+                            .addComponent(jlbArbitro)
+                            .addComponent(cbxTorneo, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(57, 57, 57))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jLabel1)
+                .addGap(21, 21, 21)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cbxFase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(LbNumMesa)
+                            .addComponent(jLabel6))))
+                .addGap(23, 23, 23)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9))
+                .addGap(8, 8, 8)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(jLabel3))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(ftxtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(jLabel4))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(FtxtHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnGuardar))
+                .addGap(24, 24, 24)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(jLabel5))
+                    .addComponent(txtDirec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addComponent(btnNuevo)))
+                .addGap(15, 15, 15)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel7))
+                    .addComponent(cbxTorneo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(jlbArbitro))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(jlbJugador1))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(jlbJugador2))
+                .addGap(2, 2, 2))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        int NumMesa = Integer.parseInt((String) cbxMesa.getSelectedItem());
-        String fase = (String) cbxFase.getSelectedItem();
-        String fecha = ftxtFecha.getText();
-        String hora = FtxtHora.getText();
-        String direc = txtDirec.getText();
-        String ci_a = (String) jcbArbitro.getSelectedItem();
-        String ci_j1 = (String) jcbJugador1.getSelectedItem();
-        String ci_j2 = (String) jcbJugador2.getSelectedItem();
-        String torneo = (String) cbxTorneo.getSelectedItem();
-        int numIndexA = ci_a.indexOf("-");
-        int numIndexJ1 = ci_j1.indexOf("-");
-        int numIndexJ2 = ci_j2.indexOf("-");
-        int numIndexT = torneo.indexOf("-");
-        String ci_a1 = ci_a.substring(0,numIndexA-1);
-        String ci_j11 = ci_j1.substring(0,numIndexJ1-1);
-        String ci_j21 = ci_j2.substring(0, numIndexJ2-1);
-        int torneo1 = Integer.parseInt(torneo.substring(0, numIndexT-1));
-        cn.getConexion();
-        cn.Inseratar("insert into PARTIDO (NUMMESA,FECHA,HORA,DIRECCION,FASE,CI_A,CI_J1,CI_J2,ID_T) values("+NumMesa+",'"+fecha+"','"+hora+"','"+direc+"','"+fase+"','"+ci_a1+"','"+ci_j11+"','"+ci_j21+"',"+torneo1+")");
-        System.out.println(NumMesa+" "+fase+" "+hora+" "+fecha+" "+torneo1+" "+ci_a1+" "+ci_j11+" "+ci_j21);
+        switch(n){
+            case 1 : {
+                GruposDe4.jlbFecha1.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora1.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            case 2 : {
+                GruposDe4.jlbFecha2.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora2.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            case 3 : {
+                GruposDe4.jlbFecha3.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora3.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            case 4 : {
+                GruposDe4.jlbFecha4.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora4.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            case 5 : {
+                GruposDe4.jlbFecha5.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora5.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            case 6 : {
+                GruposDe4.jlbFecha6.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora6.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+        }
+        
     }//GEN-LAST:event_btnGuardarActionPerformed
+    
     
     //Llena el comboBox Torneo 
     private void llenarCombo1(){
@@ -221,7 +341,7 @@ public class partido extends javax.swing.JFrame {
     }
     
     //Llena comboBox Arbitro
-    private void llenarCombo2(){
+    /*private void llenarCombo2(){
         String sql = "select CI_A,NOMBRE from Arbitro";
         cn.getConexion();
         ResultSet rs = cn.consulta(sql);
@@ -258,9 +378,9 @@ public class partido extends javax.swing.JFrame {
         } catch (Exception e) {
             Logger.getLogger(partido.class.getName()).log(Level.SEVERE, null, e);
         }
-    }
+    } */
     
-    public void actions(){
+    /*public void actions(){
         final ItemListener changeClick = new ItemListener() {
           @Override
           public void itemStateChanged(ItemEvent ie) {
@@ -287,13 +407,13 @@ public class partido extends javax.swing.JFrame {
                         jugador ju = new jugador();
                         ju.setVisible(true);
                     }
-                }*/
+                }*/ /*
             }
         };
         this.jcbArbitro.addItemListener(changeClick);
         this.jcbJugador1.addItemListener(changeClick); 
         this.jcbJugador2.addItemListener(changeClick); 
-    }
+    } */
     /**
      * @param args the command line arguments
      */
@@ -331,10 +451,10 @@ public class partido extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFormattedTextField FtxtHora;
+    public javax.swing.JLabel LbNumMesa;
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnNuevo;
     private javax.swing.JComboBox<String> cbxFase;
-    private javax.swing.JComboBox<String> cbxMesa;
     private javax.swing.JComboBox<String> cbxTorneo;
     private javax.swing.JFormattedTextField ftxtFecha;
     private javax.swing.JLabel jLabel1;
@@ -350,9 +470,9 @@ public class partido extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JComboBox<String> jcbArbitro;
-    private javax.swing.JComboBox<String> jcbJugador1;
-    private javax.swing.JComboBox<String> jcbJugador2;
+    public javax.swing.JLabel jlbArbitro;
+    public javax.swing.JLabel jlbJugador1;
+    public javax.swing.JLabel jlbJugador2;
     private javax.swing.JTextField txtDirec;
     // End of variables declaration//GEN-END:variables
 }
