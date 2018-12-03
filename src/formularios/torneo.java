@@ -5,12 +5,14 @@
  */
 package formularios;
 
+import Vista.MenuPrincipal;
 import com.sun.glass.events.KeyEvent;
 import conexion.Conexion;
 import java.sql.ResultSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
+import paneles.inicio;
 
 /**
  *
@@ -48,9 +50,7 @@ public class torneo extends javax.swing.JFrame {
         btnSelecJuga = new javax.swing.JButton();
         btn_salir = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -111,14 +111,29 @@ public class torneo extends javax.swing.JFrame {
         btn_salir.setBorderPainted(false);
         btn_salir.setContentAreaFilled(false);
         btn_salir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_salir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_salirMouseClicked(evt);
+            }
+        });
         btn_salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_salirActionPerformed(evt);
             }
         });
         jPanel1.add(btn_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 20, 20));
+        btn_salir.getAccessibleContext().setAccessibleParent(this);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -163,8 +178,14 @@ public class torneo extends javax.swing.JFrame {
 
     private void btn_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salirActionPerformed
         // TODO add your handling code here:
-        dispose();
+       dispose();
+       
     }//GEN-LAST:event_btn_salirActionPerformed
+
+    private void btn_salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_salirMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btn_salirMouseClicked
     
     /**
      * @param args the command line arguments
@@ -205,7 +226,7 @@ public class torneo extends javax.swing.JFrame {
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnNuevo;
     private javax.swing.JButton btnSelecJuga;
-    private javax.swing.JButton btn_salir;
+    public javax.swing.JButton btn_salir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

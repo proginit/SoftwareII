@@ -1,6 +1,7 @@
 package Vista;
 import Clases.Cronometro_Partido;
 import Clases.Punto;
+import java.awt.Color;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -23,6 +24,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
     public int n=0;
     public int count = 0;
     public int ne,p2;
+    
 
     /**
      * Creates new form Game
@@ -85,23 +87,25 @@ public class Game extends javax.swing.JFrame implements Runnable{
         lbl_horaC = new javax.swing.JLabel();
         lbl_hora1 = new javax.swing.JLabel();
         lbl_segC = new javax.swing.JLabel();
-        btn_tarjeta = new javax.swing.JButton();
         prueba = new javax.swing.JLabel();
+        btn_salir = new javax.swing.JButton();
         jpvista2 = new javax.swing.JPanel();
         lbl_jugador1 = new javax.swing.JLabel();
         lbl_jugador2 = new javax.swing.JLabel();
         jpvistaIzq = new javax.swing.JPanel();
         btn_MenIzq = new javax.swing.JButton();
-        lbl_NumIzq = new javax.swing.JLabel();
         lbl_pelota1 = new javax.swing.JLabel();
         btn_MasIzq = new javax.swing.JButton();
-        btn_tarjetaIzq = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        lbl_NumIzq = new javax.swing.JLabel();
+        jp_tarjetaIzq = new javax.swing.JPanel();
         jpvistaDerech = new javax.swing.JPanel();
         btn_MenDer = new javax.swing.JButton();
         btn_MasDer1 = new javax.swing.JButton();
-        lbl_NumDer = new javax.swing.JLabel();
         lbl_pelota2 = new javax.swing.JLabel();
-        btn_tarjetaDer = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        lbl_NumDer = new javax.swing.JLabel();
+        jp_tarjetaDer = new javax.swing.JPanel();
         jpvista3 = new javax.swing.JPanel();
         lbl_puntuacion1 = new javax.swing.JLabel();
         jpvista4 = new javax.swing.JPanel();
@@ -112,6 +116,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
         jpvista7 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 51));
@@ -162,79 +167,83 @@ public class Game extends javax.swing.JFrame implements Runnable{
         lbl_segC.setForeground(new java.awt.Color(255, 255, 255));
         lbl_segC.setText("00");
 
-        btn_tarjeta.setBackground(new java.awt.Color(0, 51, 51));
-        btn_tarjeta.setForeground(new java.awt.Color(255, 255, 255));
-        btn_tarjeta.setText("F");
-        btn_tarjeta.addActionListener(new java.awt.event.ActionListener() {
+        prueba.setText("jLabel3");
+
+        btn_salir.setBackground(new java.awt.Color(0, 51, 51));
+        btn_salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cancelar.png"))); // NOI18N
+        btn_salir.setBorder(null);
+        btn_salir.setBorderPainted(false);
+        btn_salir.setContentAreaFilled(false);
+        btn_salir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_tarjetaActionPerformed(evt);
+                btn_salirActionPerformed(evt);
             }
         });
-
-        prueba.setText("jLabel3");
 
         javax.swing.GroupLayout jpvista1Layout = new javax.swing.GroupLayout(jpvista1);
         jpvista1.setLayout(jpvista1Layout);
         jpvista1Layout.setHorizontalGroup(
             jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpvista1Layout.createSequentialGroup()
-                .addGroup(jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpvista1Layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addComponent(jLabel2))
-                    .addGroup(jpvista1Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(lbl_horaC)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lbl_hora)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lbl_minC)))
+                .addGap(82, 82, 82)
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(102, 102, 102)
+                .addComponent(btn_play, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(72, 72, 72)
+                .addComponent(prueba, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(299, 299, 299)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(68, 68, 68)
+                .addComponent(btn_salir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jpvista1Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(lbl_horaC, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
                 .addGap(6, 6, 6)
-                .addComponent(lbl_hora1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbl_segC)
-                .addGap(12, 12, 12)
-                .addGroup(jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jpvista1Layout.createSequentialGroup()
-                        .addComponent(btn_play)
-                        .addGap(72, 72, 72)
-                        .addComponent(prueba))
-                    .addComponent(btn_tarjeta))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 221, Short.MAX_VALUE)
-                .addGroup(jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvista1Layout.createSequentialGroup()
-                        .addComponent(lbl_horaAct)
-                        .addGap(29, 29, 29))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvista1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(102, 102, 102))))
+                .addComponent(lbl_hora, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                .addGap(6, 6, 6)
+                .addComponent(lbl_minC, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
+                .addGap(6, 6, 6)
+                .addComponent(lbl_hora1, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addGap(6, 6, 6)
+                .addComponent(lbl_segC, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
+                .addGap(416, 416, 416)
+                .addComponent(lbl_horaAct, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
+                .addGap(29, 29, 29))
         );
         jpvista1Layout.setVerticalGroup(
             jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpvista1Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addGroup(jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(prueba))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_minC)
-                    .addComponent(lbl_horaAct)
-                    .addComponent(lbl_hora)
-                    .addComponent(lbl_horaC)
-                    .addComponent(lbl_hora1)
-                    .addComponent(lbl_segC))
-                .addContainerGap(15, Short.MAX_VALUE))
-            .addGroup(jpvista1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btn_play)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_tarjeta)
-                .addContainerGap())
+                .addGroup(jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpvista1Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(6, 6, 6))
+                    .addGroup(jpvista1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(btn_play, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jpvista1Layout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addComponent(prueba, javax.swing.GroupLayout.DEFAULT_SIZE, 21, Short.MAX_VALUE)
+                        .addGap(11, 11, 11))
+                    .addGroup(jpvista1Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(6, 6, 6))
+                    .addGroup(jpvista1Layout.createSequentialGroup()
+                        .addComponent(btn_salir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(15, 15, 15)))
+                .addGroup(jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_horaC, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
+                    .addComponent(lbl_hora, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lbl_minC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lbl_hora1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lbl_segC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lbl_horaAct, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(9, 9, 9))
         );
 
-        jPanel1.add(jpvista1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, -1));
+        jPanel1.add(jpvista1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, -1));
 
         jpvista2.setBackground(new java.awt.Color(255, 255, 255));
         jpvista2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 51), 2));
@@ -253,26 +262,26 @@ public class Game extends javax.swing.JFrame implements Runnable{
             jpvista2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpvista2Layout.createSequentialGroup()
                 .addGap(87, 87, 87)
-                .addComponent(lbl_jugador1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 483, Short.MAX_VALUE)
-                .addComponent(lbl_jugador2)
-                .addGap(120, 120, 120))
+                .addComponent(lbl_jugador1, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
+                .addGap(483, 483, 483)
+                .addComponent(lbl_jugador2, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jpvista2Layout.setVerticalGroup(
             jpvista2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpvista2Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addGroup(jpvista2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_jugador1)
-                    .addComponent(lbl_jugador2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jpvista2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_jugador1, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(lbl_jugador2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        jPanel1.add(jpvista2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 860, 50));
+        jPanel1.add(jpvista2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1030, 50));
 
         jpvistaIzq.setBackground(new java.awt.Color(255, 255, 255));
         jpvistaIzq.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 51), 2));
         jpvistaIzq.setForeground(new java.awt.Color(0, 51, 51));
+        jpvistaIzq.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn_MenIzq.setBackground(new java.awt.Color(0, 51, 51));
         btn_MenIzq.setForeground(new java.awt.Color(255, 255, 255));
@@ -282,12 +291,10 @@ public class Game extends javax.swing.JFrame implements Runnable{
                 btn_MenIzqActionPerformed(evt);
             }
         });
-
-        lbl_NumIzq.setFont(new java.awt.Font("Arial", 1, 150)); // NOI18N
-        lbl_NumIzq.setForeground(new java.awt.Color(0, 51, 51));
-        lbl_NumIzq.setText("0");
+        jpvistaIzq.add(btn_MenIzq, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 40, -1));
 
         lbl_pelota1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/tenisp.png"))); // NOI18N
+        jpvistaIzq.add(lbl_pelota1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, -1, 40));
 
         btn_MasIzq.setBackground(new java.awt.Color(0, 51, 51));
         btn_MasIzq.setForeground(new java.awt.Color(255, 255, 255));
@@ -297,52 +304,61 @@ public class Game extends javax.swing.JFrame implements Runnable{
                 btn_MasIzqActionPerformed(evt);
             }
         });
+        jpvistaIzq.add(btn_MasIzq, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, 40, -1));
 
-        btn_tarjetaIzq.setBackground(new java.awt.Color(0, 51, 51));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout jpvistaIzqLayout = new javax.swing.GroupLayout(jpvistaIzq);
-        jpvistaIzq.setLayout(jpvistaIzqLayout);
-        jpvistaIzqLayout.setHorizontalGroup(
-            jpvistaIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpvistaIzqLayout.createSequentialGroup()
-                .addComponent(btn_MenIzq)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_MasIzq))
-            .addGroup(jpvistaIzqLayout.createSequentialGroup()
-                .addGroup(jpvistaIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpvistaIzqLayout.createSequentialGroup()
-                        .addGap(129, 129, 129)
-                        .addComponent(lbl_pelota1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jpvistaIzqLayout.createSequentialGroup()
-                        .addGap(101, 101, 101)
-                        .addComponent(lbl_NumIzq)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
-                        .addComponent(btn_tarjetaIzq, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-        jpvistaIzqLayout.setVerticalGroup(
-            jpvistaIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaIzqLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
+        lbl_NumIzq.setFont(new java.awt.Font("Arial", 0, 80)); // NOI18N
+        lbl_NumIzq.setForeground(new java.awt.Color(0, 51, 51));
+        lbl_NumIzq.setText("0");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
                 .addComponent(lbl_NumIzq)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addComponent(lbl_pelota1)
-                .addGap(56, 56, 56))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaIzqLayout.createSequentialGroup()
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btn_tarjetaIzq, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jpvistaIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_MenIzq)
-                    .addComponent(btn_MasIzq)))
+                .addComponent(lbl_NumIzq, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jpvistaIzq, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 300, 330));
+        jpvistaIzq.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, -1, -1));
+
+        jp_tarjetaIzq.setBackground(new java.awt.Color(255, 255, 255));
+        jp_tarjetaIzq.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 51)));
+        jp_tarjetaIzq.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jp_tarjetaIzqMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jp_tarjetaIzqLayout = new javax.swing.GroupLayout(jp_tarjetaIzq);
+        jp_tarjetaIzq.setLayout(jp_tarjetaIzqLayout);
+        jp_tarjetaIzqLayout.setHorizontalGroup(
+            jp_tarjetaIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 28, Short.MAX_VALUE)
+        );
+        jp_tarjetaIzqLayout.setVerticalGroup(
+            jp_tarjetaIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 38, Short.MAX_VALUE)
+        );
+
+        jpvistaIzq.add(jp_tarjetaIzq, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 40));
+
+        jPanel1.add(jpvistaIzq, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 350, 430));
 
         jpvistaDerech.setBackground(new java.awt.Color(255, 255, 255));
         jpvistaDerech.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 51), 2));
         jpvistaDerech.setForeground(new java.awt.Color(0, 51, 51));
+        jpvistaDerech.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn_MenDer.setBackground(new java.awt.Color(0, 51, 51));
         btn_MenDer.setForeground(new java.awt.Color(255, 255, 255));
@@ -352,6 +368,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
                 btn_MenDerActionPerformed(evt);
             }
         });
+        jpvistaDerech.add(btn_MenDer, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 390, -1, -1));
 
         btn_MasDer1.setBackground(new java.awt.Color(0, 51, 51));
         btn_MasDer1.setForeground(new java.awt.Color(255, 255, 255));
@@ -361,54 +378,59 @@ public class Game extends javax.swing.JFrame implements Runnable{
                 btn_MasDer1ActionPerformed(evt);
             }
         });
+        jpvistaDerech.add(btn_MasDer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, -1, -1));
 
-        lbl_NumDer.setFont(new java.awt.Font("Arial", 1, 150)); // NOI18N
+        lbl_pelota2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/tenisp.png"))); // NOI18N
+        jpvistaDerech.add(lbl_pelota2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, -1, 40));
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setForeground(new java.awt.Color(255, 255, 255));
+
+        lbl_NumDer.setFont(new java.awt.Font("Arial", 0, 80)); // NOI18N
         lbl_NumDer.setForeground(new java.awt.Color(0, 51, 51));
         lbl_NumDer.setText("0");
 
-        lbl_pelota2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/tenisp.png"))); // NOI18N
-
-        btn_tarjetaDer.setBackground(new java.awt.Color(0, 51, 51));
-
-        javax.swing.GroupLayout jpvistaDerechLayout = new javax.swing.GroupLayout(jpvistaDerech);
-        jpvistaDerech.setLayout(jpvistaDerechLayout);
-        jpvistaDerechLayout.setHorizontalGroup(
-            jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpvistaDerechLayout.createSequentialGroup()
-                .addGroup(jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_MasDer1)
-                    .addGroup(jpvistaDerechLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btn_tarjetaDer, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
-                .addGroup(jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_MenDer, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaDerechLayout.createSequentialGroup()
-                        .addComponent(lbl_pelota2)
-                        .addGap(122, 122, 122))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaDerechLayout.createSequentialGroup()
-                        .addComponent(lbl_NumDer)
-                        .addGap(99, 99, 99))))
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(lbl_NumDer)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
-        jpvistaDerechLayout.setVerticalGroup(
-            jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvistaDerechLayout.createSequentialGroup()
-                .addGroup(jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpvistaDerechLayout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(lbl_NumDer, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jpvistaDerechLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btn_tarjetaDer, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
-                .addComponent(lbl_pelota2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpvistaDerechLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_MenDer)
-                    .addComponent(btn_MasDer1)))
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbl_NumDer, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jpvistaDerech, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 150, 300, 330));
+        jpvistaDerech.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, -1, -1));
+
+        jp_tarjetaDer.setBackground(new java.awt.Color(255, 255, 255));
+        jp_tarjetaDer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 51)));
+        jp_tarjetaDer.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jp_tarjetaDerMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jp_tarjetaDerLayout = new javax.swing.GroupLayout(jp_tarjetaDer);
+        jp_tarjetaDer.setLayout(jp_tarjetaDerLayout);
+        jp_tarjetaDerLayout.setHorizontalGroup(
+            jp_tarjetaDerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 28, Short.MAX_VALUE)
+        );
+        jp_tarjetaDerLayout.setVerticalGroup(
+            jp_tarjetaDerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 38, Short.MAX_VALUE)
+        );
+
+        jpvistaDerech.add(jp_tarjetaDer, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 30, 40));
+
+        jPanel1.add(jpvistaDerech, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 150, 350, 430));
 
         jpvista3.setBackground(new java.awt.Color(0, 51, 51));
         jpvista3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
@@ -422,19 +444,19 @@ public class Game extends javax.swing.JFrame implements Runnable{
         jpvista3Layout.setHorizontalGroup(
             jpvista3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpvista3Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
+                .addGap(64, 64, 64)
                 .addComponent(lbl_puntuacion1)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
         jpvista3Layout.setVerticalGroup(
             jpvista3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpvista3Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvista3Layout.createSequentialGroup()
+                .addContainerGap(54, Short.MAX_VALUE)
                 .addComponent(lbl_puntuacion1)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addGap(52, 52, 52))
         );
 
-        jPanel1.add(jpvista3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 130, 140));
+        jPanel1.add(jpvista3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, 160, 160));
 
         jpvista4.setBackground(new java.awt.Color(0, 51, 51));
         jpvista4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
@@ -448,19 +470,19 @@ public class Game extends javax.swing.JFrame implements Runnable{
         jpvista4Layout.setHorizontalGroup(
             jpvista4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvista4Layout.createSequentialGroup()
-                .addContainerGap(51, Short.MAX_VALUE)
+                .addContainerGap(64, Short.MAX_VALUE)
                 .addComponent(lbl_puntuacion2)
-                .addGap(51, 51, 51))
+                .addGap(58, 58, 58))
         );
         jpvista4Layout.setVerticalGroup(
             jpvista4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpvista4Layout.createSequentialGroup()
-                .addContainerGap(47, Short.MAX_VALUE)
-                .addComponent(lbl_puntuacion2)
-                .addGap(39, 39, 39))
+            .addGroup(jpvista4Layout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addComponent(lbl_puntuacion2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jpvista4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, 130, 140));
+        jPanel1.add(jpvista4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, 150, 160));
 
         jpvista5.setBackground(new java.awt.Color(255, 255, 255));
         jpvista5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 51)));
@@ -488,23 +510,22 @@ public class Game extends javax.swing.JFrame implements Runnable{
         jpvista5Layout.setHorizontalGroup(
             jpvista5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpvista5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btn_minJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
-                .addComponent(btn_minJ2)
-                .addContainerGap())
+                .addGap(16, 16, 16)
+                .addComponent(btn_minJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(134, 134, 134)
+                .addComponent(btn_minJ2, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
+                .addGap(18, 18, 18))
         );
         jpvista5Layout.setVerticalGroup(
             jpvista5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpvista5Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(6, 6, 6)
                 .addGroup(jpvista5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_minJ1)
-                    .addComponent(btn_minJ2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btn_minJ1, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                    .addComponent(btn_minJ2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        jPanel1.add(jpvista5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 260, 50));
+        jPanel1.add(jpvista5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, 330, 60));
 
         jpvista7.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -512,14 +533,14 @@ public class Game extends javax.swing.JFrame implements Runnable{
         jpvista7.setLayout(jpvista7Layout);
         jpvista7Layout.setHorizontalGroup(
             jpvista7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
+            .addGap(0, 330, Short.MAX_VALUE)
         );
         jpvista7Layout.setVerticalGroup(
             jpvista7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGap(0, 80, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jpvista7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 430, 260, 50));
+        jPanel1.add(jpvista7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 440, 330, 80));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -580,7 +601,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
             lbl_NumDer.setText(Integer.toString(b));
             if(b==11){
                 p2++;
-                JOptionPane.showMessageDialog(null, "PUNTO!!"+lbl_jugador2);
+                JOptionPane.showMessageDialog(null, "PUNTO!!");
                 lbl_puntuacion2.setText(Integer.toString(p2));
             }
             
@@ -688,20 +709,6 @@ public class Game extends javax.swing.JFrame implements Runnable{
     }
     
     
-    private void btn_tarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_tarjetaActionPerformed
-        // TODO add your handling code here:
-        tarjetas t = new tarjetas();
-        
-        String nt = lbl_jugador1.getText();
-        String nn = lbl_jugador2.getText();
-        
-        t.lbl_jugadorT1.setText(nt);
-        t.lbl_jugadorT2.setText(nn);
-        btn_tarjeta.setEnabled(false);
-        t.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_btn_tarjetaActionPerformed
-
     private void btn_minJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_minJ1ActionPerformed
         // TODO add your handling code here:
         int ax = JOptionPane.showConfirmDialog(null, "Esta Seguro de solicitar minuto");
@@ -724,6 +731,47 @@ public class Game extends javax.swing.JFrame implements Runnable{
         }
     }//GEN-LAST:event_btn_minJ2ActionPerformed
 
+    private void btn_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salirActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_btn_salirActionPerformed
+
+    private void jp_tarjetaIzqMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jp_tarjetaIzqMouseClicked
+        // TODO add your handling code here:
+        String r = "0";
+        
+        if(cont<=2){
+            
+            jp_tarjetaIzq.setBackground(Color.YELLOW);
+            if(cont==2){
+                jp_tarjetaIzq.setBackground(Color.red);
+                JOptionPane.showMessageDialog(this, "EXPULSADO");
+                jp_tarjetaDer.setBackground(Color.WHITE);
+                jp_tarjetaIzq.setBackground(Color.WHITE);
+                lbl_NumIzq.setText(r);
+                lbl_NumDer.setText(r);
+            }
+        }  cont++;
+    }//GEN-LAST:event_jp_tarjetaIzqMouseClicked
+
+    private void jp_tarjetaDerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jp_tarjetaDerMouseClicked
+        // TODO add your handling code here:
+        String r = "0";
+        
+        if(coun<=2){
+            
+            jp_tarjetaDer.setBackground(Color.YELLOW);
+            if(coun==2){
+                jp_tarjetaDer.setBackground(Color.red);
+                JOptionPane.showMessageDialog(this, "EXPULSADO");
+                jp_tarjetaDer.setBackground(Color.WHITE);
+                jp_tarjetaIzq.setBackground(Color.WHITE);
+                lbl_NumIzq.setText(r);
+                lbl_NumDer.setText(r);
+            }
+        }  coun++;
+    }//GEN-LAST:event_jp_tarjetaDerMouseClicked
+
     public synchronized int aumentSeg(){
         seg++;
         lbl_segC.setText(String.valueOf(seg));
@@ -735,6 +783,8 @@ public class Game extends javax.swing.JFrame implements Runnable{
         lbl_minC.setText(String.valueOf(min));
         return min;
     }
+    
+    
     
     public synchronized int aumentHor(){
         hor++;
@@ -757,6 +807,10 @@ public class Game extends javax.swing.JFrame implements Runnable{
     public synchronized boolean isContinuar(){
         return continuar;
     }
+    
+    private int coun=1;    
+    private int cont=1;
+    
     /**
      * @param args the command line arguments
      */
@@ -801,12 +855,14 @@ public class Game extends javax.swing.JFrame implements Runnable{
     public javax.swing.JButton btn_minJ1;
     private javax.swing.JButton btn_minJ2;
     public javax.swing.JButton btn_play;
-    private javax.swing.JButton btn_tarjeta;
-    private javax.swing.JButton btn_tarjetaDer;
-    public javax.swing.JButton btn_tarjetaIzq;
+    private javax.swing.JButton btn_salir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel4;
+    public javax.swing.JPanel jp_tarjetaDer;
+    public javax.swing.JPanel jp_tarjetaIzq;
     private javax.swing.JPanel jpvista1;
     private javax.swing.JPanel jpvista2;
     private javax.swing.JPanel jpvista3;
@@ -814,7 +870,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
     private javax.swing.JPanel jpvista5;
     private javax.swing.JPanel jpvista7;
     private javax.swing.JPanel jpvistaDerech;
-    private javax.swing.JPanel jpvistaIzq;
+    public javax.swing.JPanel jpvistaIzq;
     private javax.swing.JLabel lbl_NumDer;
     private javax.swing.JLabel lbl_NumIzq;
     private javax.swing.JLabel lbl_hora;

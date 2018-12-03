@@ -66,11 +66,12 @@ public class inicio extends javax.swing.JPanel {
         // TODO add your handling code here:
         torneo t = new torneo();
         t.setVisible(true);
+        //dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
