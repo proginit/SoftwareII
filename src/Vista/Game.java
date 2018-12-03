@@ -1,5 +1,4 @@
 package Vista;
-import Clases.Cronometro_Partido;
 import Clases.Punto;
 import java.awt.Color;
 import java.util.Date;
@@ -20,7 +19,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
     private int min = 0;
     private int hor = 0;
     private boolean continuar = true;
-    private Cronometro_Partido i;
+//    private Cronometro_Partido i;
     public int n=0;
     public int count = 0;
     public int ne,p2;
@@ -37,9 +36,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
         setVisible(true);
         
         this.setTitle("Cronometro");
-        lbl_horaC.setText(String.valueOf(hor));
-        lbl_minC.setText(String.valueOf(min));
-        lbl_segC.setText(String.valueOf(seg));
+     
         btn_play.setEnabled(true);
         
         if(n==0){
@@ -49,6 +46,64 @@ public class Game extends javax.swing.JFrame implements Runnable{
         
     }
     
+    //Thread hilo;
+    boolean cronometroActivo;
+    
+    /*public void run(){
+        Integer minutos = 0 , segundos = 0, milesimas = 0;
+        //min es minutos, seg es segundos y mil es milesimas de segundo
+        String min="", seg="", mil="";
+        Game g = new Game();
+        try
+        {
+            //Mientras cronometroActivo sea verdadero entonces seguira
+            //aumentando el tiempo
+            while( cronometroActivo )
+            {
+                Thread.sleep( 4 );
+                //Incrementamos 4 milesimas de segundo
+                milesimas += 4;
+                 
+                //Cuando llega a 1000 osea 1 segundo aumenta 1 segundo
+                //y las milesimas de segundo de nuevo a 0
+                if( milesimas == 1000 )
+                {
+                    milesimas = 0;
+                    segundos += 1;
+                    //Si los segundos llegan a 60 entonces aumenta 1 los minutos
+                    //y los segundos vuelven a 0
+                    if( segundos == 60 )
+                    {
+                        segundos = 0;
+                        minutos++;
+                    }
+                }
+ 
+                //Esto solamente es estetica para que siempre este en formato
+                //00:00:000
+                if( minutos < 10 ) min = "0" + minutos;
+                else min = minutos.toString();
+                if( segundos < 10 ) seg = "0" + segundos;
+                else seg = segundos.toString();
+                 
+                if( milesimas < 10 ) mil = "00" + milesimas;
+                else if( milesimas < 100 ) mil = "0" + milesimas;
+                else mil = milesimas.toString();
+                 
+                //Colocamos en la etiqueta la informacion
+                g.lbl_horaAct1.setText(min + ":" + seg + ":" + mil);
+                //lbl_cronoPartido.setText( min + ":" + seg + ":" + mil );                
+            }
+        }catch(Exception e){}
+        //Cuando se reincie se coloca nuevamente en 00:00:000
+        g.lbl_horaAct1.setText( "00:00:000" );
+    }*/
+    
+    public void iniciarCronometro() {
+        cronometroActivo = true;
+        hilo = new Thread( (Runnable) this);
+        hilo.start();
+    }
     
     public void hora(){
         Calendar calendario = new GregorianCalendar();
@@ -63,8 +118,56 @@ public class Game extends javax.swing.JFrame implements Runnable{
         Thread current = Thread.currentThread();
         while(current == hilo){
             hora();
-            lbl_horaAct.setText(hora+":"+minutos+":"+segundos);
+            lbl_horaAct1.setText(hora+":"+minutos+":"+segundos);
         }
+        
+        Integer minutos = 0 , segundos = 0, milesimas = 0;
+        //min es minutos, seg es segundos y mil es milesimas de segundo
+        String min="", seg="", mil="";
+        Game g = new Game();
+        try
+        {
+            //Mientras cronometroActivo sea verdadero entonces seguira
+            //aumentando el tiempo
+            while( cronometroActivo )
+            {
+                Thread.sleep( 4 );
+                //Incrementamos 4 milesimas de segundo
+                milesimas += 4;
+                 
+                //Cuando llega a 1000 osea 1 segundo aumenta 1 segundo
+                //y las milesimas de segundo de nuevo a 0
+                if( milesimas == 1000 )
+                {
+                    milesimas = 0;
+                    segundos += 1;
+                    //Si los segundos llegan a 60 entonces aumenta 1 los minutos
+                    //y los segundos vuelven a 0
+                    if( segundos == 60 )
+                    {
+                        segundos = 0;
+                        minutos++;
+                    }
+                }
+ 
+                //Esto solamente es estetica para que siempre este en formato
+                //00:00:000
+                if( minutos < 10 ) min = "0" + minutos;
+                else min = minutos.toString();
+                if( segundos < 10 ) seg = "0" + segundos;
+                else seg = segundos.toString();
+                 
+                if( milesimas < 10 ) mil = "00" + milesimas;
+                else if( milesimas < 100 ) mil = "0" + milesimas;
+                else mil = milesimas.toString();
+                 
+                //Colocamos en la etiqueta la informacion
+                g.lbl_cronoPartido.setText(min + ":" + seg + ":" + mil);
+                //lbl_cronoPartido.setText( min + ":" + seg + ":" + mil );                
+            }
+        }catch(Exception e){}
+        //Cuando se reincie se coloca nuevamente en 00:00:000
+        g.lbl_cronoPartido.setText( "00:00:000" );
     }
 
     /**
@@ -80,15 +183,10 @@ public class Game extends javax.swing.JFrame implements Runnable{
         jpvista1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        lbl_minC = new javax.swing.JLabel();
-        lbl_horaAct = new javax.swing.JLabel();
+        lbl_horaAct1 = new javax.swing.JLabel();
         btn_play = new javax.swing.JButton();
-        lbl_hora = new javax.swing.JLabel();
-        lbl_horaC = new javax.swing.JLabel();
-        lbl_hora1 = new javax.swing.JLabel();
-        lbl_segC = new javax.swing.JLabel();
-        prueba = new javax.swing.JLabel();
         btn_salir = new javax.swing.JButton();
+        lbl_cronoPartido = new javax.swing.JLabel();
         jpvista2 = new javax.swing.JPanel();
         lbl_jugador1 = new javax.swing.JLabel();
         lbl_jugador2 = new javax.swing.JLabel();
@@ -135,13 +233,9 @@ public class Game extends javax.swing.JFrame implements Runnable{
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("CRONOMETRO");
 
-        lbl_minC.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
-        lbl_minC.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_minC.setText("00");
-
-        lbl_horaAct.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
-        lbl_horaAct.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_horaAct.setText("00:00:00");
+        lbl_horaAct1.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        lbl_horaAct1.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_horaAct1.setText("00:00:00");
 
         btn_play.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/boton-de-reproduccion.png"))); // NOI18N
         btn_play.addActionListener(new java.awt.event.ActionListener() {
@@ -149,25 +243,6 @@ public class Game extends javax.swing.JFrame implements Runnable{
                 btn_playActionPerformed(evt);
             }
         });
-
-        lbl_hora.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
-        lbl_hora.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_hora.setText(":");
-
-        lbl_horaC.setBackground(new java.awt.Color(255, 255, 255));
-        lbl_horaC.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
-        lbl_horaC.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_horaC.setText("00");
-
-        lbl_hora1.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
-        lbl_hora1.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_hora1.setText(":");
-
-        lbl_segC.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
-        lbl_segC.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_segC.setText("00");
-
-        prueba.setText("jLabel3");
 
         btn_salir.setBackground(new java.awt.Color(0, 51, 51));
         btn_salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cancelar.png"))); // NOI18N
@@ -181,69 +256,63 @@ public class Game extends javax.swing.JFrame implements Runnable{
             }
         });
 
+        lbl_cronoPartido.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        lbl_cronoPartido.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_cronoPartido.setText("00:00:000");
+
         javax.swing.GroupLayout jpvista1Layout = new javax.swing.GroupLayout(jpvista1);
         jpvista1.setLayout(jpvista1Layout);
         jpvista1Layout.setHorizontalGroup(
             jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpvista1Layout.createSequentialGroup()
-                .addGap(82, 82, 82)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(102, 102, 102)
-                .addComponent(btn_play, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(72, 72, 72)
-                .addComponent(prueba, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(299, 299, 299)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(68, 68, 68)
-                .addComponent(btn_salir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jpvista1Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(lbl_horaC, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
-                .addGap(6, 6, 6)
-                .addComponent(lbl_hora, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                .addGap(6, 6, 6)
-                .addComponent(lbl_minC, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
-                .addGap(6, 6, 6)
-                .addComponent(lbl_hora1, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-                .addGap(6, 6, 6)
-                .addComponent(lbl_segC, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
-                .addGap(416, 416, 416)
-                .addComponent(lbl_horaAct, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
-                .addGap(29, 29, 29))
+                .addGroup(jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpvista1Layout.createSequentialGroup()
+                        .addGap(82, 82, 82)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
+                        .addGap(199, 199, 199))
+                    .addGroup(jpvista1Layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addComponent(lbl_cronoPartido, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpvista1Layout.createSequentialGroup()
+                        .addGap(438, 438, 438)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                        .addGap(68, 68, 68)
+                        .addComponent(btn_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(jpvista1Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(btn_play, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbl_horaAct1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(55, 55, 55))))
         );
         jpvista1Layout.setVerticalGroup(
             jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpvista1Layout.createSequentialGroup()
-                .addGroup(jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jpvista1Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(6, 6, 6))
+                        .addGroup(jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jpvista1Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(btn_play, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jpvista1Layout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(prueba, javax.swing.GroupLayout.DEFAULT_SIZE, 21, Short.MAX_VALUE)
-                        .addGap(11, 11, 11))
-                    .addGroup(jpvista1Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(6, 6, 6))
-                    .addGroup(jpvista1Layout.createSequentialGroup()
-                        .addComponent(btn_salir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(15, 15, 15)))
+                        .addContainerGap()
+                        .addComponent(btn_salir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(6, 6, 6)
                 .addGroup(jpvista1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl_horaC, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
-                    .addComponent(lbl_hora, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lbl_minC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lbl_hora1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lbl_segC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lbl_horaAct, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(9, 9, 9))
+                    .addGroup(jpvista1Layout.createSequentialGroup()
+                        .addComponent(lbl_horaAct1, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+                        .addGap(9, 9, 9))
+                    .addGroup(jpvista1Layout.createSequentialGroup()
+                        .addComponent(lbl_cronoPartido, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(jpvista1Layout.createSequentialGroup()
+                        .addComponent(btn_play, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        jPanel1.add(jpvista1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, -1));
+        jPanel1.add(jpvista1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 100));
 
         jpvista2.setBackground(new java.awt.Color(255, 255, 255));
         jpvista2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 51), 2));
@@ -550,7 +619,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
     private void btn_MasDer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_MasDer1ActionPerformed
         count++;
         String numero = String.valueOf(count);
-        prueba.setText(numero);
+        //prueba.setText(numero);
         
         if(count==2){
             lbl_pelota1.setVisible(false);
@@ -628,7 +697,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
         // TODO add your handling code here:
         count++;
         String numero = String.valueOf(count);
-        prueba.setText(numero);
+        //prueba.setText(numero);
         if(count==2){
             lbl_pelota1.setVisible(false);
             lbl_pelota2.setVisible(true);
@@ -702,21 +771,17 @@ public class Game extends javax.swing.JFrame implements Runnable{
 
     private void btn_playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_playActionPerformed
         // TODO add your handling code here:
+        
         Config c = new Config();
         c.setVisible(true);
         btn_play.setEnabled(false);
         this.dispose();
-        //seguir();
-        //i=null;
-        //i = new Cronometro_Partido(this);
-        //i.start();
+        String j1 = lbl_jugador1.getText();
+        String j2 = lbl_jugador2.getText();
+        c.lbl_jug1.setText(j1);
+        c.lbl_jug2.setText(j2);
     }//GEN-LAST:event_btn_playActionPerformed
     //Inicializa el cronometro
-    public void IniciarConometor(){
-        i = null;
-        i = new Cronometro_Partido(this);
-        i.start();
-    }
     
     
     private void btn_minJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_minJ1ActionPerformed
@@ -782,44 +847,9 @@ public class Game extends javax.swing.JFrame implements Runnable{
         }  coun++;
     }//GEN-LAST:event_jp_tarjetaDerMouseClicked
 
-    public synchronized int aumentSeg(){
-        seg++;
-        lbl_segC.setText(String.valueOf(seg));
-        return seg;
-    }
-    
-    public synchronized int aumentMin(){
-        min++;
-        lbl_minC.setText(String.valueOf(min));
-        return min;
-    }
-    
-    
-    
-    public synchronized int aumentHor(){
-        hor++;
-        lbl_horaC.setText(String.valueOf(hor));
-        return hor;
-    }
-    
-    public synchronized int getMin(){
-        return min;
-    }
-    
-    public synchronized int getSeg(){
-        return seg;
-    }
-    
-    public synchronized int getHor(){
-        return hor;
-    }
-    
-    public synchronized boolean isContinuar(){
-        return continuar;
-    }
-    
     private int coun=1;    
     private int cont=1;
+    
     
     /**
      * @param args the command line arguments
@@ -883,19 +913,14 @@ public class Game extends javax.swing.JFrame implements Runnable{
     public javax.swing.JPanel jpvistaIzq;
     private javax.swing.JLabel lbl_NumDer;
     private javax.swing.JLabel lbl_NumIzq;
-    private javax.swing.JLabel lbl_hora;
-    private javax.swing.JLabel lbl_hora1;
-    private javax.swing.JLabel lbl_horaAct;
-    private javax.swing.JLabel lbl_horaC;
+    private javax.swing.JLabel lbl_cronoPartido;
+    public javax.swing.JLabel lbl_horaAct1;
     public javax.swing.JLabel lbl_jugador1;
     public javax.swing.JLabel lbl_jugador2;
-    private javax.swing.JLabel lbl_minC;
     private javax.swing.JLabel lbl_pelota1;
     private javax.swing.JLabel lbl_pelota2;
     private javax.swing.JLabel lbl_puntuacion1;
     private javax.swing.JLabel lbl_puntuacion2;
-    private javax.swing.JLabel lbl_segC;
-    private javax.swing.JLabel prueba;
     // End of variables declaration//GEN-END:variables
 }
 
