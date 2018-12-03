@@ -14,6 +14,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 import static jdk.nashorn.internal.objects.NativeString.indexOf;
 
 /**
@@ -313,9 +314,9 @@ public class GruposDe4 extends javax.swing.JFrame {
             }
         });
 
-        jlbFecha7.setText("jLabel4");
+        jlbFecha7.setText("Fecha");
 
-        jlbHora7.setText("jLabel5");
+        jlbHora7.setText("Hora");
 
         jButton11.setText("Definir Partido 2");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
@@ -325,10 +326,15 @@ public class GruposDe4 extends javax.swing.JFrame {
         });
 
         jButton12.setText("Iniciar Partido 2");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
-        jlbFecha8.setText("jLabel4");
+        jlbFecha8.setText("Fecha");
 
-        jlbHora8.setText("jLabel5");
+        jlbHora8.setText("Hora");
 
         jButton13.setText("Definir Partido3");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
@@ -338,14 +344,19 @@ public class GruposDe4 extends javax.swing.JFrame {
         });
 
         jButton14.setText("Iniciar Partido 3");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
 
-        jlbFecha9.setText("jLabel4");
+        jlbFecha9.setText("Fecha");
 
-        jlbHora9.setText("jLabel5");
+        jlbHora9.setText("Hora");
 
-        jlbFecha10.setText("jLabel4");
+        jlbFecha10.setText("Fecha");
 
-        jlbHora10.setText("jLabel5");
+        jlbHora10.setText("Hora");
 
         jButton15.setText("Definir Partido 4");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
@@ -355,6 +366,11 @@ public class GruposDe4 extends javax.swing.JFrame {
         });
 
         jButton16.setText("Iniciar Partido 4");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
 
         jButton17.setText("Definir Partido 5");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
@@ -363,11 +379,16 @@ public class GruposDe4 extends javax.swing.JFrame {
             }
         });
 
-        jlbFecha11.setText("jLabel4");
+        jlbFecha11.setText("Fecha");
 
-        jlbHora11.setText("jLabel5");
+        jlbHora11.setText("Hora");
 
         jButton18.setText("Iniciar Partido 5");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
 
         jButton19.setText("Definir Partido 6");
         jButton19.addActionListener(new java.awt.event.ActionListener() {
@@ -376,11 +397,16 @@ public class GruposDe4 extends javax.swing.JFrame {
             }
         });
 
-        jlbFecha12.setText("jLabel4");
+        jlbFecha12.setText("Fecha");
 
-        jlbHora12.setText("jLabel5");
+        jlbHora12.setText("Hora");
 
         jButton20.setText("Iniciar Partido 6");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -576,13 +602,13 @@ public class GruposDe4 extends javax.swing.JFrame {
 
         jScrollPane4.setViewportView(listaG4);
 
-        jlbFecha19.setText("jLabel4");
+        jlbFecha19.setText("Fecha");
 
-        jlbFecha20.setText("jLabel4");
+        jlbFecha20.setText("Fecha");
 
-        jlbHora19.setText("jLabel5");
+        jlbHora19.setText("Hora");
 
-        jlbHora20.setText("jLabel5");
+        jlbHora20.setText("Hora");
 
         jButton31.setText("Definir Partido 6");
         jButton31.addActionListener(new java.awt.event.ActionListener() {
@@ -599,6 +625,11 @@ public class GruposDe4 extends javax.swing.JFrame {
         });
 
         jButton33.setText("Iniciar Partido 5");
+        jButton33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton33ActionPerformed(evt);
+            }
+        });
 
         J222G4.setText("jLabel7");
 
@@ -606,9 +637,9 @@ public class GruposDe4 extends javax.swing.JFrame {
 
         J22G4.setText("jLabel5");
 
-        jlbHora21.setText("jLabel5");
+        jlbHora21.setText("Hora");
 
-        jlbFecha21.setText("jLabel4");
+        jlbFecha21.setText("Fecha");
 
         jLabel31.setText("VS");
 
@@ -625,11 +656,16 @@ public class GruposDe4 extends javax.swing.JFrame {
 
         jLabel10.setText("Mesa :");
 
-        jlbHora22.setText("jLabel5");
+        jlbHora22.setText("Hora");
 
         jButton34.setText("Iniciar Partido 4");
+        jButton34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton34ActionPerformed(evt);
+            }
+        });
 
-        jlbHora23.setText("jLabel5");
+        jlbHora23.setText("Hora");
 
         btnPartido3.setText("Definir Partido 1");
         btnPartido3.addActionListener(new java.awt.event.ActionListener() {
@@ -642,13 +678,18 @@ public class GruposDe4 extends javax.swing.JFrame {
 
         jLabel34.setText("VS");
 
-        jlbHora24.setText("jLabel5");
+        jlbHora24.setText("Hora");
 
         J33G4.setText("jLabel8");
 
         J1G4.setText("jLabel1");
 
         jButton35.setText("Iniciar Partido 3");
+        jButton35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton35ActionPerformed(evt);
+            }
+        });
 
         jButton36.setText("Definir Partido 5");
         jButton36.addActionListener(new java.awt.event.ActionListener() {
@@ -658,20 +699,25 @@ public class GruposDe4 extends javax.swing.JFrame {
         });
 
         jButton37.setText("Iniciar Partido 2");
+        jButton37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton37ActionPerformed(evt);
+            }
+        });
 
-        jlbFecha22.setText("jLabel4");
+        jlbFecha22.setText("Fecha");
 
         J3G4.setText("jLabel6");
 
         jLabel11.setText("Programacion de Partidos");
 
-        jlbFecha23.setText("jLabel4");
+        jlbFecha23.setText("Fecha");
 
         jLabel12.setText("Arbitro :");
 
         J4G4.setText("jLabel9");
 
-        jlbFecha24.setText("jLabel4");
+        jlbFecha24.setText("Fecha");
 
         jcbxArbitro3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar Arbitro", "Nuevo Arbitro" }));
 
@@ -704,6 +750,11 @@ public class GruposDe4 extends javax.swing.JFrame {
         jLabel36.setText("VS");
 
         jButton40.setText("Iniciar Partido 6");
+        jButton40.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton40ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -899,13 +950,13 @@ public class GruposDe4 extends javax.swing.JFrame {
 
         jScrollPane3.setViewportView(listaG3);
 
-        jlbFecha13.setText("jLabel4");
+        jlbFecha13.setText("Fecha");
 
-        jlbFecha14.setText("jLabel4");
+        jlbFecha14.setText("Fecha");
 
-        jlbHora13.setText("jLabel5");
+        jlbHora13.setText("Hora");
 
-        jlbHora14.setText("jLabel5");
+        jlbHora14.setText("Hora");
 
         jButton21.setText("Definir Partido 6");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
@@ -922,6 +973,11 @@ public class GruposDe4 extends javax.swing.JFrame {
         });
 
         jButton23.setText("Iniciar Partido 5");
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton23ActionPerformed(evt);
+            }
+        });
 
         J222G3.setText("jLabel7");
 
@@ -929,9 +985,9 @@ public class GruposDe4 extends javax.swing.JFrame {
 
         J22G3.setText("jLabel5");
 
-        jlbHora15.setText("jLabel5");
+        jlbHora15.setText("Hora");
 
-        jlbFecha15.setText("jLabel4");
+        jlbFecha15.setText("Fecha");
 
         jLabel25.setText("VS");
 
@@ -948,11 +1004,16 @@ public class GruposDe4 extends javax.swing.JFrame {
 
         jLabel7.setText("Mesa :");
 
-        jlbHora16.setText("jLabel5");
+        jlbHora16.setText("Hora");
 
         jButton24.setText("Iniciar Partido 4");
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton24ActionPerformed(evt);
+            }
+        });
 
-        jlbHora17.setText("jLabel5");
+        jlbHora17.setText("Hora");
 
         btnPartido2.setText("Definir Partido 1");
         btnPartido2.addActionListener(new java.awt.event.ActionListener() {
@@ -965,13 +1026,18 @@ public class GruposDe4 extends javax.swing.JFrame {
 
         jLabel28.setText("VS");
 
-        jlbHora18.setText("jLabel5");
+        jlbHora18.setText("Hora");
 
         J33G3.setText("jLabel8");
 
         J1G3.setText("jLabel1");
 
         jButton25.setText("Iniciar Partido 3");
+        jButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton25ActionPerformed(evt);
+            }
+        });
 
         jButton26.setText("Definir Partido 5");
         jButton26.addActionListener(new java.awt.event.ActionListener() {
@@ -981,20 +1047,25 @@ public class GruposDe4 extends javax.swing.JFrame {
         });
 
         jButton27.setText("Iniciar Partido 2");
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton27ActionPerformed(evt);
+            }
+        });
 
-        jlbFecha16.setText("jLabel4");
+        jlbFecha16.setText("Fecha");
 
         J3G3.setText("jLabel6");
 
         jLabel8.setText("Programacion de Partidos");
 
-        jlbFecha17.setText("jLabel4");
+        jlbFecha17.setText("Fecha");
 
         jLabel9.setText("Arbitro :");
 
         J4G3.setText("jLabel9");
 
-        jlbFecha18.setText("jLabel4");
+        jlbFecha18.setText("Fecha");
 
         jcbxArbitro2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar Arbitro", "Nuevo Arbitro" }));
 
@@ -1027,6 +1098,11 @@ public class GruposDe4 extends javax.swing.JFrame {
         jLabel30.setText("VS");
 
         jButton30.setText("Iniciar Partido 6");
+        jButton30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton30ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -1282,9 +1358,9 @@ public class GruposDe4 extends javax.swing.JFrame {
             }
         });
 
-        jlbFecha1.setText("jLabel4");
+        jlbFecha1.setText("Fecha");
 
-        jlbHora1.setText("jLabel5");
+        jlbHora1.setText("Hora");
 
         jButton1.setText("Definir Partido 2");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -1294,10 +1370,15 @@ public class GruposDe4 extends javax.swing.JFrame {
         });
 
         jButton2.setText("Iniciar Partido 2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
-        jlbFecha2.setText("jLabel4");
+        jlbFecha2.setText("Fecha");
 
-        jlbHora2.setText("jLabel5");
+        jlbHora2.setText("Hora");
 
         jButton3.setText("Definir Partido3");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -1307,14 +1388,19 @@ public class GruposDe4 extends javax.swing.JFrame {
         });
 
         jButton4.setText("Iniciar Partido 3");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
-        jlbFecha3.setText("jLabel4");
+        jlbFecha3.setText("Fecha");
 
-        jlbHora3.setText("jLabel5");
+        jlbHora3.setText("Hora");
 
-        jlbFecha4.setText("jLabel4");
+        jlbFecha4.setText("Fecha");
 
-        jlbHora4.setText("jLabel5");
+        jlbHora4.setText("Hora");
 
         jButton5.setText("Definir Partido 4");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -1324,6 +1410,11 @@ public class GruposDe4 extends javax.swing.JFrame {
         });
 
         jButton6.setText("Iniciar Partido 4");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton7.setText("Definir Partido 5");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -1332,11 +1423,16 @@ public class GruposDe4 extends javax.swing.JFrame {
             }
         });
 
-        jlbFecha5.setText("jLabel4");
+        jlbFecha5.setText("Fecha");
 
-        jlbHora5.setText("jLabel5");
+        jlbHora5.setText("Hora");
 
         jButton8.setText("Iniciar Partido 5");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setText("Definir Partido 6");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -1345,11 +1441,16 @@ public class GruposDe4 extends javax.swing.JFrame {
             }
         });
 
-        jlbFecha6.setText("jLabel4");
+        jlbFecha6.setText("Fecha");
 
-        jlbHora6.setText("jLabel5");
+        jlbHora6.setText("Hora");
 
         jButton10.setText("Iniciar Partido 6");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1573,20 +1674,27 @@ public class GruposDe4 extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 1420, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 795, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 10, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane5)
+            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
-        Game g = new Game();
-        g.setVisible(true);
+        
+        if(jlbFecha1.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora1.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J1G1.getText());
+            g.lbl_jugador2.setText(J222G1.getText());
+        }
     }//GEN-LAST:event_btnIniciarActionPerformed
 
     private void btnPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPartidoActionPerformed
@@ -1653,22 +1761,29 @@ public class GruposDe4 extends javax.swing.JFrame {
     private void btnPartido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPartido1ActionPerformed
         partido p = new partido();
         p.setVisible(true);
-        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
-        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.LbNumMesa.setText((String) JbxNumMesa1.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro1.getSelectedItem());
         p.jlbJugador1.setText(J1G2.getText());
         p.jlbJugador2.setText(J222G2.getText());
         p.n = 7;
     }//GEN-LAST:event_btnPartido1ActionPerformed
 
     private void btnIniciar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciar1ActionPerformed
-        // TODO add your handling code here:
+        if(jlbFecha7.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora7.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J1G2.getText());
+            g.lbl_jugador2.setText(J222G2.getText());
+        }
     }//GEN-LAST:event_btnIniciar1ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         partido p = new partido();
         p.setVisible(true);
-        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
-        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.LbNumMesa.setText((String) JbxNumMesa1.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro1.getSelectedItem());
         p.jlbJugador1.setText(J11G2.getText());
         p.jlbJugador2.setText(J33G2.getText());
         p.n = 8;
@@ -1677,8 +1792,8 @@ public class GruposDe4 extends javax.swing.JFrame {
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         partido p = new partido();
         p.setVisible(true);
-        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
-        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.LbNumMesa.setText((String) JbxNumMesa1.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro1.getSelectedItem());
         p.jlbJugador1.setText(J111G2.getText());
         p.jlbJugador2.setText(J4G2.getText());
         p.n = 9;
@@ -1687,8 +1802,8 @@ public class GruposDe4 extends javax.swing.JFrame {
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         partido p = new partido();
         p.setVisible(true);
-        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
-        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.LbNumMesa.setText((String) JbxNumMesa1.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro1.getSelectedItem());
         p.jlbJugador1.setText(J2G2.getText());
         p.jlbJugador2.setText(J333G2.getText());
         p.n = 10;
@@ -1697,8 +1812,8 @@ public class GruposDe4 extends javax.swing.JFrame {
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         partido p = new partido();
         p.setVisible(true);
-        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
-        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.LbNumMesa.setText((String) JbxNumMesa1.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro1.getSelectedItem());
         p.jlbJugador1.setText(J22G2.getText());
         p.jlbJugador2.setText(J44G2.getText());
         p.n = 11;
@@ -1707,8 +1822,8 @@ public class GruposDe4 extends javax.swing.JFrame {
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
         partido p = new partido();
         p.setVisible(true);
-        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
-        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.LbNumMesa.setText((String) JbxNumMesa1.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro1.getSelectedItem());
         p.jlbJugador1.setText(J3G2.getText());
         p.jlbJugador2.setText(J444G2.getText());
         p.n = 12;
@@ -1717,8 +1832,8 @@ public class GruposDe4 extends javax.swing.JFrame {
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         partido p = new partido();
         p.setVisible(true);
-        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
-        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.LbNumMesa.setText((String) JbxNumMesa2.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro2.getSelectedItem());
         p.jlbJugador1.setText(J3G3.getText());
         p.jlbJugador2.setText(J444G3.getText());
         p.n = 18;
@@ -1727,22 +1842,29 @@ public class GruposDe4 extends javax.swing.JFrame {
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
         partido p = new partido();
         p.setVisible(true);
-        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
-        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.LbNumMesa.setText((String) JbxNumMesa2.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro2.getSelectedItem());
         p.jlbJugador1.setText(J111G3.getText());
         p.jlbJugador2.setText(J4G3.getText());
         p.n = 15;
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void btnIniciar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciar2ActionPerformed
-        // TODO add your handling code here:
+        if(jlbFecha16.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora14.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J1G3.getText());
+            g.lbl_jugador2.setText(J222G3.getText());
+        }
     }//GEN-LAST:event_btnIniciar2ActionPerformed
 
     private void btnPartido2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPartido2ActionPerformed
         partido p = new partido();
         p.setVisible(true);
-        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
-        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.LbNumMesa.setText((String) JbxNumMesa2.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro2.getSelectedItem());
         p.jlbJugador1.setText(J1G3.getText());
         p.jlbJugador2.setText(J222G3.getText());
         p.n = 13;
@@ -1751,8 +1873,8 @@ public class GruposDe4 extends javax.swing.JFrame {
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
         partido p = new partido();
         p.setVisible(true);
-        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
-        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.LbNumMesa.setText((String) JbxNumMesa2.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro2.getSelectedItem());
         p.jlbJugador1.setText(J22G3.getText());
         p.jlbJugador2.setText(J44G3.getText());
         p.n = 17;
@@ -1761,8 +1883,8 @@ public class GruposDe4 extends javax.swing.JFrame {
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
         partido p = new partido();
         p.setVisible(true);
-        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
-        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.LbNumMesa.setText((String) JbxNumMesa2.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro2.getSelectedItem());
         p.jlbJugador1.setText(J11G3.getText());
         p.jlbJugador2.setText(J33G3.getText());
         p.n = 14;
@@ -1771,8 +1893,8 @@ public class GruposDe4 extends javax.swing.JFrame {
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
         partido p = new partido();
         p.setVisible(true);
-        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
-        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.LbNumMesa.setText((String) JbxNumMesa2.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro2.getSelectedItem());
         p.jlbJugador1.setText(J2G3.getText());
         p.jlbJugador2.setText(J333G3.getText());
         p.n = 16;
@@ -1781,8 +1903,8 @@ public class GruposDe4 extends javax.swing.JFrame {
     private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
         partido p = new partido();
         p.setVisible(true);
-        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
-        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.LbNumMesa.setText((String) JbxNumMesa3.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro3.getSelectedItem());
         p.jlbJugador1.setText(J3G4.getText());
         p.jlbJugador2.setText(J444G4.getText());
         p.n = 24;
@@ -1799,14 +1921,21 @@ public class GruposDe4 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton32ActionPerformed
 
     private void btnIniciar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciar3ActionPerformed
-        // TODO add your handling code here:
+        if(jlbFecha22.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora20.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J1G4.getText());
+            g.lbl_jugador2.setText(J222G4.getText());
+        }
     }//GEN-LAST:event_btnIniciar3ActionPerformed
 
     private void btnPartido3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPartido3ActionPerformed
         partido p = new partido();
         p.setVisible(true);
-        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
-        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.LbNumMesa.setText((String) JbxNumMesa3.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro3.getSelectedItem());
         p.jlbJugador1.setText(J1G4.getText());
         p.jlbJugador2.setText(J222G4.getText());
         p.n = 19;
@@ -1815,8 +1944,8 @@ public class GruposDe4 extends javax.swing.JFrame {
     private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
         partido p = new partido();
         p.setVisible(true);
-        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
-        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.LbNumMesa.setText((String) JbxNumMesa3.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro3.getSelectedItem());
         p.jlbJugador1.setText(J22G4.getText());
         p.jlbJugador2.setText(J44G4.getText());
         p.n = 23;
@@ -1825,8 +1954,8 @@ public class GruposDe4 extends javax.swing.JFrame {
     private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
         partido p = new partido();
         p.setVisible(true);
-        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
-        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.LbNumMesa.setText((String) JbxNumMesa3.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro3.getSelectedItem());
         p.jlbJugador1.setText(J11G4.getText());
         p.jlbJugador2.setText(J33G4.getText());
         p.n = 20;
@@ -1835,12 +1964,232 @@ public class GruposDe4 extends javax.swing.JFrame {
     private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
         partido p = new partido();
         p.setVisible(true);
-        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
-        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.LbNumMesa.setText((String) JbxNumMesa3.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro3.getSelectedItem());
         p.jlbJugador1.setText(J2G4.getText());
         p.jlbJugador2.setText(J333G4.getText());
         p.n = 22;
     }//GEN-LAST:event_jButton39ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        if(jlbFecha2.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora2.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J11G1.getText());
+            g.lbl_jugador2.setText(J33G1.getText());
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        if(jlbFecha3.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora3.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J111G1.getText());
+            g.lbl_jugador2.setText(J4G1.getText());
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        if(jlbFecha4.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora4.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J2G1.getText());
+            g.lbl_jugador2.setText(J333G1.getText());
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        if(jlbFecha5.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora5.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J22G1.getText());
+            g.lbl_jugador2.setText(J44G1.getText());
+        }
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        if(jlbFecha6.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora6.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J3G1.getText());
+            g.lbl_jugador2.setText(J444G1.getText());
+        }
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        if(jlbFecha8.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora8.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J11G2.getText());
+            g.lbl_jugador2.setText(J33G2.getText());
+        }
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        if(jlbFecha9.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora9.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J111G2.getText());
+            g.lbl_jugador2.setText(J4G2.getText());
+        }
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        if(jlbFecha10.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora10.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J2G2.getText());
+            g.lbl_jugador2.setText(J333G2.getText());
+        }
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        if(jlbFecha11.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora11.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J22G2.getText());
+            g.lbl_jugador2.setText(J44G2.getText());
+        }
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        if(jlbFecha12.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora12.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J3G2.getText());
+            g.lbl_jugador2.setText(J444G2.getText());
+        }
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+        if(jlbFecha17.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora18.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J11G3.getText());
+            g.lbl_jugador2.setText(J33G3.getText());
+        }
+    }//GEN-LAST:event_jButton27ActionPerformed
+
+    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+        if(jlbFecha18.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora16.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J111G3.getText());
+            g.lbl_jugador2.setText(J4G3.getText());
+        }
+    }//GEN-LAST:event_jButton25ActionPerformed
+
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+        if(jlbFecha15.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora13.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J2G3.getText());
+            g.lbl_jugador2.setText(J333G3.getText());
+        }
+    }//GEN-LAST:event_jButton24ActionPerformed
+
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+        if(jlbFecha14.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora15.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J22G3.getText());
+            g.lbl_jugador2.setText(J44G3.getText());
+        }
+    }//GEN-LAST:event_jButton23ActionPerformed
+
+    private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
+        if(jlbFecha13.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora17.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J3G3.getText());
+            g.lbl_jugador2.setText(J444G3.getText());
+        }
+    }//GEN-LAST:event_jButton30ActionPerformed
+
+    private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
+        if(jlbFecha23.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora24.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J11G4.getText());
+            g.lbl_jugador2.setText(J33G4.getText());
+        }
+    }//GEN-LAST:event_jButton37ActionPerformed
+
+    private void jButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35ActionPerformed
+        if(jlbFecha24.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora22.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J111G4.getText());
+            g.lbl_jugador2.setText(J4G4.getText());
+        }
+    }//GEN-LAST:event_jButton35ActionPerformed
+
+    private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
+        if(jlbFecha21.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora19.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J2G4.getText());
+            g.lbl_jugador2.setText(J333G4.getText());
+        }
+    }//GEN-LAST:event_jButton34ActionPerformed
+
+    private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
+        if(jlbFecha20.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora21.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J22G4.getText());
+            g.lbl_jugador2.setText(J44G4.getText());
+        }
+    }//GEN-LAST:event_jButton33ActionPerformed
+
+    private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
+        if(jlbFecha19.getText().equals("Fecha")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else if(jlbHora23.getText().equals("Hora")){JOptionPane.showMessageDialog(null,"Porfavor defina\n Fecha y Hora");}
+        else{
+            Game g = new Game();
+            g.setVisible(true);
+            g.lbl_jugador1.setText(J3G4.getText());
+            g.lbl_jugador2.setText(J444G4.getText());
+        }
+    }//GEN-LAST:event_jButton40ActionPerformed
 
     void Llenarlista(){
         DefaultListModel lista1 = new DefaultListModel();
@@ -1953,10 +2302,10 @@ public class GruposDe4 extends javax.swing.JFrame {
     
     private String extraerNombre(String nombre){
         //0000016    - carlos andrade - 16
-        int n1 = nombre.indexOf('-',0)+2;
+        int n1 =nombre.indexOf('-',0)+2;
         int n2 = nombre.indexOf('-',n1+1);
         //System.out.println(nombre.substring(n1,n2));
-        return nombre.substring(n1,n2);
+        return nombre.substring(0,n2);
     }
     
      private void llenarCombo2(){
@@ -1966,6 +2315,9 @@ public class GruposDe4 extends javax.swing.JFrame {
         try {
             while(rs.next()){
                 jcbxArbitro.addItem(rs.getString(1)+" - "+rs.getString(2));
+                jcbxArbitro1.addItem(rs.getString(1)+" - "+rs.getString(2));
+                jcbxArbitro2.addItem(rs.getString(1)+" - "+rs.getString(2));
+                jcbxArbitro3.addItem(rs.getString(1)+" - "+rs.getString(2));
             }
         } catch (Exception e) {
             Logger.getLogger(partido.class.getName()).log(Level.SEVERE, null, e);
@@ -1983,9 +2335,33 @@ public class GruposDe4 extends javax.swing.JFrame {
                       ar.setVisible(true);
                   }
                 }
+                if(jcbxArbitro1.getSelectedItem().equals(ie.getItem())){
+                  if(ie.getItem().toString().equals("Nuevo Arbitro")){
+                      // Instancia al formulario arbitro
+                      arbitro ar = new arbitro();
+                      ar.setVisible(true);
+                  }
+                }
+                if(jcbxArbitro2.getSelectedItem().equals(ie.getItem())){
+                  if(ie.getItem().toString().equals("Nuevo Arbitro")){
+                      // Instancia al formulario arbitro
+                      arbitro ar = new arbitro();
+                      ar.setVisible(true);
+                  }
+                }
+                if(jcbxArbitro3.getSelectedItem().equals(ie.getItem())){
+                  if(ie.getItem().toString().equals("Nuevo Arbitro")){
+                      // Instancia al formulario arbitro
+                      arbitro ar = new arbitro();
+                      ar.setVisible(true);
+                  }
+                }
             }
         };
         this.jcbxArbitro.addItemListener(changeClick);
+        this.jcbxArbitro1.addItemListener(changeClick);
+        this.jcbxArbitro2.addItemListener(changeClick);
+        this.jcbxArbitro3.addItemListener(changeClick);
     }
      
     

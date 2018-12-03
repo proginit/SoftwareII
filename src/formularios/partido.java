@@ -29,7 +29,7 @@ public class partido extends javax.swing.JFrame {
         
         initComponents();
         this.setLocationRelativeTo(null);
-        //llenarCombo1();
+        llenarCombo1();
         //llenarCombo2();
         //llenarCombo3();
        // llenarCombo4();
@@ -104,7 +104,7 @@ public class partido extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Torneo:");
 
-        cbxFase.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sin Fase", "Final", "Semi-Final", "Cuartos_Final", "Octavos_Final", "16_Final", "32_Final" }));
+        cbxFase.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sin Fase", "Eliminatorias", "Final", "Semi-Final", "Cuartos_Final", "Octavos_Final", "16_Final", "32_Final" }));
 
         try {
             ftxtFecha.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
@@ -177,15 +177,14 @@ public class partido extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(78, 78, 78)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(78, 78, 78)
+                        .addGap(156, 156, 156)
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
+                        .addGap(100, 100, 100)
                         .addComponent(jLabel3)
                         .addGap(20, 20, 20)
                         .addComponent(ftxtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -196,13 +195,28 @@ public class partido extends javax.swing.JFrame {
                         .addGap(39, 39, 39)
                         .addComponent(btnGuardar))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
+                        .addGap(79, 79, 79)
                         .addComponent(jLabel5)
                         .addGap(24, 24, 24)
                         .addComponent(txtDirec, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39)
                         .addComponent(btnNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(103, 103, 103)
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(LbNumMesa)
+                        .addGap(63, 63, 63)
+                        .addComponent(jLabel6)
+                        .addGap(20, 20, 20)
+                        .addComponent(cbxFase, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(218, 218, 218)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 205, Short.MAX_VALUE)
+                        .addComponent(btn_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(78, 78, 78)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(13, 13, 13)
@@ -217,21 +231,7 @@ public class partido extends javax.swing.JFrame {
                             .addComponent(jlbJugador2)
                             .addComponent(jlbJugador1)
                             .addComponent(jlbArbitro)
-                            .addComponent(cbxTorneo, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(LbNumMesa)
-                        .addGap(63, 63, 63)
-                        .addComponent(jLabel6)
-                        .addGap(20, 20, 20)
-                        .addComponent(cbxFase, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 205, Short.MAX_VALUE)
-                        .addComponent(btn_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(cbxTorneo, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(

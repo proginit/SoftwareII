@@ -45,16 +45,15 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
                           <Component id="jLabel8" min="-2" pref="93" max="-2" attributes="0"/>
                           <EmptySpace min="57" pref="57" max="-2" attributes="0"/>
                           <Component id="jLabel9" min="-2" pref="124" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
                           <Component id="ftxtFecha" min="-2" pref="93" max="-2" attributes="0"/>
@@ -66,7 +65,7 @@
                           <Component id="btnGuardar" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
                           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
                           <Component id="txtDirec" min="-2" pref="274" max="-2" attributes="0"/>
@@ -74,6 +73,23 @@
                           <Component id="btnNuevo" min="-2" pref="76" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                          <Component id="LbNumMesa" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="63" pref="63" max="-2" attributes="0"/>
+                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                          <Component id="cbxFase" min="-2" pref="127" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="218" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="205" max="32767" attributes="0"/>
+                          <Component id="btn_salir" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
@@ -93,22 +109,6 @@
                               <Component id="jlbArbitro" min="-2" max="-2" attributes="0"/>
                               <Component id="cbxTorneo" min="-2" pref="274" max="-2" attributes="0"/>
                           </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                          <Component id="LbNumMesa" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="63" pref="63" max="-2" attributes="0"/>
-                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                          <Component id="cbxFase" min="-2" pref="127" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" pref="180" max="-2" attributes="0"/>
-                          <EmptySpace pref="205" max="32767" attributes="0"/>
-                          <Component id="btn_salir" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -288,14 +288,15 @@
         <Component class="javax.swing.JComboBox" name="cbxFase">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="7">
+              <StringArray count="8">
                 <StringItem index="0" value="Sin Fase"/>
-                <StringItem index="1" value="Final"/>
-                <StringItem index="2" value="Semi-Final"/>
-                <StringItem index="3" value="Cuartos_Final"/>
-                <StringItem index="4" value="Octavos_Final"/>
-                <StringItem index="5" value="16_Final"/>
-                <StringItem index="6" value="32_Final"/>
+                <StringItem index="1" value="Eliminatorias"/>
+                <StringItem index="2" value="Final"/>
+                <StringItem index="3" value="Semi-Final"/>
+                <StringItem index="4" value="Cuartos_Final"/>
+                <StringItem index="5" value="Octavos_Final"/>
+                <StringItem index="6" value="16_Final"/>
+                <StringItem index="7" value="32_Final"/>
               </StringArray>
             </Property>
           </Properties>

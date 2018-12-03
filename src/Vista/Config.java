@@ -112,7 +112,7 @@ public class Config extends javax.swing.JFrame {
     private void btn_iniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_iniciarActionPerformed
         Game g = new Game();
         g.setVisible(true);
-        g.iniciarCronometro();
+        //g.iniciarCronometro();
         String juga1 = lbl_jug1.getText();
         String juga2 = lbl_jug2.getText();
         g.lbl_jugador1.setText(juga1);
