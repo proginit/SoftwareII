@@ -319,6 +319,126 @@ public class partido extends javax.swing.JFrame {
                 this.dispose();
                 break;
             }
+            case 7 : {
+                GruposDe4.jlbFecha7.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora7.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            case 8 : {
+                GruposDe4.jlbFecha8.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora8.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            case 9 : {
+                GruposDe4.jlbFecha9.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora9.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            case 10 : {
+                GruposDe4.jlbFecha10.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora10.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            case 11 : {
+                GruposDe4.jlbFecha11.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora11.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            case 12 : {
+                GruposDe4.jlbFecha12.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora12.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            
+            case 13 : {
+                GruposDe4.jlbFecha16.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora14.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            
+            case 14 : {
+                GruposDe4.jlbFecha17.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora18.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            
+            case 15 : {
+                GruposDe4.jlbFecha18.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora16.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            
+            case 16 : {
+                GruposDe4.jlbFecha15.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora13.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            
+            case 17 : {
+                GruposDe4.jlbFecha14.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora15.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            
+            case 18 : {
+                GruposDe4.jlbFecha13.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora17.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            
+            case 19 : {
+                GruposDe4.jlbFecha22.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora20.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            
+            case 20 : {
+                GruposDe4.jlbFecha23.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora24.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            
+            case 21 : {
+                GruposDe4.jlbFecha24.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora22.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            
+            case 22 : {
+                GruposDe4.jlbFecha21.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora19.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            
+            case 23 : {
+                GruposDe4.jlbFecha20.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora21.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
+            
+            case 24 : {
+                GruposDe4.jlbFecha19.setText(ftxtFecha.getText());
+                GruposDe4.jlbHora23.setText(FtxtHora.getText());
+                this.dispose();
+                break;
+            }
         }
         
     }//GEN-LAST:event_btnGuardarActionPerformed

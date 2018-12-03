@@ -14,6 +14,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
+import static jdk.nashorn.internal.objects.NativeString.indexOf;
 
 /**
  *
@@ -42,6 +43,158 @@ public class GruposDe4 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        listaG2 = new javax.swing.JList<>();
+        J1G2 = new javax.swing.JLabel();
+        J11G2 = new javax.swing.JLabel();
+        J111G2 = new javax.swing.JLabel();
+        J2G2 = new javax.swing.JLabel();
+        J22G2 = new javax.swing.JLabel();
+        J3G2 = new javax.swing.JLabel();
+        J222G2 = new javax.swing.JLabel();
+        J33G2 = new javax.swing.JLabel();
+        J4G2 = new javax.swing.JLabel();
+        J333G2 = new javax.swing.JLabel();
+        J44G2 = new javax.swing.JLabel();
+        J444G2 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jcbxArbitro1 = new javax.swing.JComboBox<>();
+        jLabel5 = new javax.swing.JLabel();
+        JbxNumMesa1 = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
+        btnPartido1 = new javax.swing.JButton();
+        btnIniciar1 = new javax.swing.JButton();
+        jlbFecha7 = new javax.swing.JLabel();
+        jlbHora7 = new javax.swing.JLabel();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jlbFecha8 = new javax.swing.JLabel();
+        jlbHora8 = new javax.swing.JLabel();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jlbFecha9 = new javax.swing.JLabel();
+        jlbHora9 = new javax.swing.JLabel();
+        jlbFecha10 = new javax.swing.JLabel();
+        jlbHora10 = new javax.swing.JLabel();
+        jButton15 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jlbFecha11 = new javax.swing.JLabel();
+        jlbHora11 = new javax.swing.JLabel();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jlbFecha12 = new javax.swing.JLabel();
+        jlbHora12 = new javax.swing.JLabel();
+        jButton20 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        listaG4 = new javax.swing.JList<>();
+        jlbFecha19 = new javax.swing.JLabel();
+        jlbFecha20 = new javax.swing.JLabel();
+        jlbHora19 = new javax.swing.JLabel();
+        jlbHora20 = new javax.swing.JLabel();
+        jButton31 = new javax.swing.JButton();
+        jButton32 = new javax.swing.JButton();
+        jButton33 = new javax.swing.JButton();
+        J222G4 = new javax.swing.JLabel();
+        J444G4 = new javax.swing.JLabel();
+        J22G4 = new javax.swing.JLabel();
+        jlbHora21 = new javax.swing.JLabel();
+        jlbFecha21 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        btnIniciar3 = new javax.swing.JButton();
+        J111G4 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jlbHora22 = new javax.swing.JLabel();
+        jButton34 = new javax.swing.JButton();
+        jlbHora23 = new javax.swing.JLabel();
+        btnPartido3 = new javax.swing.JButton();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jlbHora24 = new javax.swing.JLabel();
+        J33G4 = new javax.swing.JLabel();
+        J1G4 = new javax.swing.JLabel();
+        jButton35 = new javax.swing.JButton();
+        jButton36 = new javax.swing.JButton();
+        jButton37 = new javax.swing.JButton();
+        jlbFecha22 = new javax.swing.JLabel();
+        J3G4 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jlbFecha23 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        J4G4 = new javax.swing.JLabel();
+        jlbFecha24 = new javax.swing.JLabel();
+        jcbxArbitro3 = new javax.swing.JComboBox<>();
+        jLabel35 = new javax.swing.JLabel();
+        JbxNumMesa3 = new javax.swing.JComboBox<>();
+        J2G4 = new javax.swing.JLabel();
+        J333G4 = new javax.swing.JLabel();
+        J44G4 = new javax.swing.JLabel();
+        J11G4 = new javax.swing.JLabel();
+        jButton38 = new javax.swing.JButton();
+        jButton39 = new javax.swing.JButton();
+        jLabel36 = new javax.swing.JLabel();
+        jButton40 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        listaG3 = new javax.swing.JList<>();
+        jlbFecha13 = new javax.swing.JLabel();
+        jlbFecha14 = new javax.swing.JLabel();
+        jlbHora13 = new javax.swing.JLabel();
+        jlbHora14 = new javax.swing.JLabel();
+        jButton21 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
+        jButton23 = new javax.swing.JButton();
+        J222G3 = new javax.swing.JLabel();
+        J444G3 = new javax.swing.JLabel();
+        J22G3 = new javax.swing.JLabel();
+        jlbHora15 = new javax.swing.JLabel();
+        jlbFecha15 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        btnIniciar2 = new javax.swing.JButton();
+        J111G3 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jlbHora16 = new javax.swing.JLabel();
+        jButton24 = new javax.swing.JButton();
+        jlbHora17 = new javax.swing.JLabel();
+        btnPartido2 = new javax.swing.JButton();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jlbHora18 = new javax.swing.JLabel();
+        J33G3 = new javax.swing.JLabel();
+        J1G3 = new javax.swing.JLabel();
+        jButton25 = new javax.swing.JButton();
+        jButton26 = new javax.swing.JButton();
+        jButton27 = new javax.swing.JButton();
+        jlbFecha16 = new javax.swing.JLabel();
+        J3G3 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jlbFecha17 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        J4G3 = new javax.swing.JLabel();
+        jlbFecha18 = new javax.swing.JLabel();
+        jcbxArbitro2 = new javax.swing.JComboBox<>();
+        jLabel29 = new javax.swing.JLabel();
+        JbxNumMesa2 = new javax.swing.JComboBox<>();
+        J2G3 = new javax.swing.JLabel();
+        J333G3 = new javax.swing.JLabel();
+        J44G3 = new javax.swing.JLabel();
+        J11G3 = new javax.swing.JLabel();
+        jButton28 = new javax.swing.JButton();
+        jButton29 = new javax.swing.JButton();
+        jLabel30 = new javax.swing.JLabel();
+        jButton30 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         listaG1 = new javax.swing.JList<>();
@@ -92,17 +245,978 @@ public class GruposDe4 extends javax.swing.JFrame {
         jlbFecha6 = new javax.swing.JLabel();
         jlbHora6 = new javax.swing.JLabel();
         jButton10 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        listaG3 = new javax.swing.JList<>();
-        jPanel3 = new javax.swing.JPanel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        listaG4 = new javax.swing.JList<>();
-        jPanel4 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        listaG2 = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Grupo 2"));
+
+        jScrollPane2.setViewportView(listaG2);
+
+        J1G2.setText("jLabel1");
+
+        J11G2.setText("jLabel2");
+
+        J111G2.setText("jLabel3");
+
+        J2G2.setText("jLabel4");
+
+        J22G2.setText("jLabel5");
+
+        J3G2.setText("jLabel6");
+
+        J222G2.setText("jLabel7");
+
+        J33G2.setText("jLabel8");
+
+        J4G2.setText("jLabel9");
+
+        J333G2.setText("jLabel10");
+
+        J44G2.setText("jLabel11");
+
+        J444G2.setText("jLabel12");
+
+        jLabel19.setText("VS");
+
+        jLabel20.setText("VS");
+
+        jLabel21.setText("VS");
+
+        jLabel22.setText("VS");
+
+        jLabel23.setText("VS");
+
+        jLabel24.setText("VS");
+
+        jLabel4.setText("Arbitro :");
+
+        jcbxArbitro1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar Arbitro", "Nuevo Arbitro" }));
+
+        jLabel5.setText("Mesa :");
+
+        JbxNumMesa1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+
+        jLabel6.setText("Programacion de Partidos");
+
+        btnPartido1.setText("Definir Partido 1");
+        btnPartido1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPartido1ActionPerformed(evt);
+            }
+        });
+
+        btnIniciar1.setText("Iniciar Partido 1");
+        btnIniciar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIniciar1ActionPerformed(evt);
+            }
+        });
+
+        jlbFecha7.setText("jLabel4");
+
+        jlbHora7.setText("jLabel5");
+
+        jButton11.setText("Definir Partido 2");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+
+        jButton12.setText("Iniciar Partido 2");
+
+        jlbFecha8.setText("jLabel4");
+
+        jlbHora8.setText("jLabel5");
+
+        jButton13.setText("Definir Partido3");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
+        jButton14.setText("Iniciar Partido 3");
+
+        jlbFecha9.setText("jLabel4");
+
+        jlbHora9.setText("jLabel5");
+
+        jlbFecha10.setText("jLabel4");
+
+        jlbHora10.setText("jLabel5");
+
+        jButton15.setText("Definir Partido 4");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+
+        jButton16.setText("Iniciar Partido 4");
+
+        jButton17.setText("Definir Partido 5");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+
+        jlbFecha11.setText("jLabel4");
+
+        jlbHora11.setText("jLabel5");
+
+        jButton18.setText("Iniciar Partido 5");
+
+        jButton19.setText("Definir Partido 6");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+
+        jlbFecha12.setText("jLabel4");
+
+        jlbHora12.setText("jLabel5");
+
+        jButton20.setText("Iniciar Partido 6");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jcbxArbitro1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(JbxNumMesa1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(J1G2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel19)
+                                .addGap(18, 18, 18)
+                                .addComponent(J222G2))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jlbFecha7)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlbHora7)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnPartido1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnIniciar1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(J2G2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel22)
+                        .addGap(18, 18, 18)
+                        .addComponent(J333G2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton15))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(J11G2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel24)
+                                .addGap(18, 18, 18)
+                                .addComponent(J33G2))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jlbFecha11)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlbHora11))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(J111G2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel23)
+                                .addGap(18, 18, 18)
+                                .addComponent(J4G2))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jlbFecha9)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlbHora9))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jlbFecha8)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlbHora8))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(40, 40, 40)
+                                .addComponent(jLabel6))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(J22G2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel21)
+                                .addGap(18, 18, 18)
+                                .addComponent(J44G2)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jlbFecha10)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlbHora10))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(J3G2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel20)
+                                .addGap(18, 18, 18)
+                                .addComponent(J444G2))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jlbFecha12)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlbHora12)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jcbxArbitro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addComponent(JbxNumMesa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(J1G2)
+                    .addComponent(J222G2)
+                    .addComponent(jLabel19)
+                    .addComponent(btnPartido1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbFecha7)
+                    .addComponent(jlbHora7)
+                    .addComponent(btnIniciar1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(J11G2)
+                    .addComponent(J33G2)
+                    .addComponent(jLabel24)
+                    .addComponent(jButton11))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbFecha8)
+                    .addComponent(jlbHora8)
+                    .addComponent(jButton12))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(J111G2)
+                    .addComponent(J4G2)
+                    .addComponent(jLabel23)
+                    .addComponent(jButton13))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbFecha9)
+                    .addComponent(jlbHora9)
+                    .addComponent(jButton14))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(J2G2)
+                    .addComponent(J333G2)
+                    .addComponent(jLabel22)
+                    .addComponent(jButton15))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbFecha10)
+                    .addComponent(jlbHora10)
+                    .addComponent(jButton16))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(J22G2)
+                    .addComponent(J44G2)
+                    .addComponent(jLabel21)
+                    .addComponent(jButton17))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbFecha11)
+                    .addComponent(jlbHora11)
+                    .addComponent(jButton18))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(J3G2)
+                    .addComponent(J444G2)
+                    .addComponent(jLabel20)
+                    .addComponent(jButton19))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbFecha12)
+                    .addComponent(jlbHora12)
+                    .addComponent(jButton20))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Grupo 4"));
+
+        jScrollPane4.setViewportView(listaG4);
+
+        jlbFecha19.setText("jLabel4");
+
+        jlbFecha20.setText("jLabel4");
+
+        jlbHora19.setText("jLabel5");
+
+        jlbHora20.setText("jLabel5");
+
+        jButton31.setText("Definir Partido 6");
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton31ActionPerformed(evt);
+            }
+        });
+
+        jButton32.setText("Definir Partido3");
+        jButton32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton32ActionPerformed(evt);
+            }
+        });
+
+        jButton33.setText("Iniciar Partido 5");
+
+        J222G4.setText("jLabel7");
+
+        J444G4.setText("jLabel12");
+
+        J22G4.setText("jLabel5");
+
+        jlbHora21.setText("jLabel5");
+
+        jlbFecha21.setText("jLabel4");
+
+        jLabel31.setText("VS");
+
+        jLabel32.setText("VS");
+
+        btnIniciar3.setText("Iniciar Partido 1");
+        btnIniciar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIniciar3ActionPerformed(evt);
+            }
+        });
+
+        J111G4.setText("jLabel3");
+
+        jLabel10.setText("Mesa :");
+
+        jlbHora22.setText("jLabel5");
+
+        jButton34.setText("Iniciar Partido 4");
+
+        jlbHora23.setText("jLabel5");
+
+        btnPartido3.setText("Definir Partido 1");
+        btnPartido3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPartido3ActionPerformed(evt);
+            }
+        });
+
+        jLabel33.setText("VS");
+
+        jLabel34.setText("VS");
+
+        jlbHora24.setText("jLabel5");
+
+        J33G4.setText("jLabel8");
+
+        J1G4.setText("jLabel1");
+
+        jButton35.setText("Iniciar Partido 3");
+
+        jButton36.setText("Definir Partido 5");
+        jButton36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton36ActionPerformed(evt);
+            }
+        });
+
+        jButton37.setText("Iniciar Partido 2");
+
+        jlbFecha22.setText("jLabel4");
+
+        J3G4.setText("jLabel6");
+
+        jLabel11.setText("Programacion de Partidos");
+
+        jlbFecha23.setText("jLabel4");
+
+        jLabel12.setText("Arbitro :");
+
+        J4G4.setText("jLabel9");
+
+        jlbFecha24.setText("jLabel4");
+
+        jcbxArbitro3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar Arbitro", "Nuevo Arbitro" }));
+
+        jLabel35.setText("VS");
+
+        JbxNumMesa3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+
+        J2G4.setText("jLabel4");
+
+        J333G4.setText("jLabel10");
+
+        J44G4.setText("jLabel11");
+
+        J11G4.setText("jLabel2");
+
+        jButton38.setText("Definir Partido 2");
+        jButton38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton38ActionPerformed(evt);
+            }
+        });
+
+        jButton39.setText("Definir Partido 4");
+        jButton39.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton39ActionPerformed(evt);
+            }
+        });
+
+        jLabel36.setText("VS");
+
+        jButton40.setText("Iniciar Partido 6");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane4)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel12))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jcbxArbitro3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(JbxNumMesa3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(J1G4)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel36)
+                                .addGap(18, 18, 18)
+                                .addComponent(J222G4))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jlbFecha22)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlbHora20)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnPartido3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnIniciar3, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(J2G4)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel34)
+                        .addGap(18, 18, 18)
+                        .addComponent(J333G4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton39))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(J11G4)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel32)
+                                .addGap(18, 18, 18)
+                                .addComponent(J33G4))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jlbFecha20)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlbHora21))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(J111G4)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel33)
+                                .addGap(18, 18, 18)
+                                .addComponent(J4G4))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jlbFecha24)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlbHora22))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jlbFecha23)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlbHora24))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(40, 40, 40)
+                                .addComponent(jLabel11))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(J22G4)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel35)
+                                .addGap(18, 18, 18)
+                                .addComponent(J44G4)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton32, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton35, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jlbFecha21)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlbHora19))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(J3G4)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel31)
+                                .addGap(18, 18, 18)
+                                .addComponent(J444G4))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jlbFecha19)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlbHora23)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton33, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton36, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton34, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton40, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(jcbxArbitro3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10)
+                    .addComponent(JbxNumMesa3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(J1G4)
+                    .addComponent(J222G4)
+                    .addComponent(jLabel36)
+                    .addComponent(btnPartido3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbFecha22)
+                    .addComponent(jlbHora20)
+                    .addComponent(btnIniciar3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(J11G4)
+                    .addComponent(J33G4)
+                    .addComponent(jLabel32)
+                    .addComponent(jButton38))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbFecha23)
+                    .addComponent(jlbHora24)
+                    .addComponent(jButton37))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(J111G4)
+                    .addComponent(J4G4)
+                    .addComponent(jLabel33)
+                    .addComponent(jButton32))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbFecha24)
+                    .addComponent(jlbHora22)
+                    .addComponent(jButton35))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(J2G4)
+                    .addComponent(J333G4)
+                    .addComponent(jLabel34)
+                    .addComponent(jButton39))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbFecha21)
+                    .addComponent(jlbHora19)
+                    .addComponent(jButton34))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(J22G4)
+                    .addComponent(J44G4)
+                    .addComponent(jLabel35)
+                    .addComponent(jButton36))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbFecha20)
+                    .addComponent(jlbHora21)
+                    .addComponent(jButton33))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(J3G4)
+                    .addComponent(J444G4)
+                    .addComponent(jLabel31)
+                    .addComponent(jButton31))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbFecha19)
+                    .addComponent(jlbHora23)
+                    .addComponent(jButton40))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Grupo 3"));
+
+        jScrollPane3.setViewportView(listaG3);
+
+        jlbFecha13.setText("jLabel4");
+
+        jlbFecha14.setText("jLabel4");
+
+        jlbHora13.setText("jLabel5");
+
+        jlbHora14.setText("jLabel5");
+
+        jButton21.setText("Definir Partido 6");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+
+        jButton22.setText("Definir Partido3");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
+
+        jButton23.setText("Iniciar Partido 5");
+
+        J222G3.setText("jLabel7");
+
+        J444G3.setText("jLabel12");
+
+        J22G3.setText("jLabel5");
+
+        jlbHora15.setText("jLabel5");
+
+        jlbFecha15.setText("jLabel4");
+
+        jLabel25.setText("VS");
+
+        jLabel26.setText("VS");
+
+        btnIniciar2.setText("Iniciar Partido 1");
+        btnIniciar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIniciar2ActionPerformed(evt);
+            }
+        });
+
+        J111G3.setText("jLabel3");
+
+        jLabel7.setText("Mesa :");
+
+        jlbHora16.setText("jLabel5");
+
+        jButton24.setText("Iniciar Partido 4");
+
+        jlbHora17.setText("jLabel5");
+
+        btnPartido2.setText("Definir Partido 1");
+        btnPartido2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPartido2ActionPerformed(evt);
+            }
+        });
+
+        jLabel27.setText("VS");
+
+        jLabel28.setText("VS");
+
+        jlbHora18.setText("jLabel5");
+
+        J33G3.setText("jLabel8");
+
+        J1G3.setText("jLabel1");
+
+        jButton25.setText("Iniciar Partido 3");
+
+        jButton26.setText("Definir Partido 5");
+        jButton26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton26ActionPerformed(evt);
+            }
+        });
+
+        jButton27.setText("Iniciar Partido 2");
+
+        jlbFecha16.setText("jLabel4");
+
+        J3G3.setText("jLabel6");
+
+        jLabel8.setText("Programacion de Partidos");
+
+        jlbFecha17.setText("jLabel4");
+
+        jLabel9.setText("Arbitro :");
+
+        J4G3.setText("jLabel9");
+
+        jlbFecha18.setText("jLabel4");
+
+        jcbxArbitro2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar Arbitro", "Nuevo Arbitro" }));
+
+        jLabel29.setText("VS");
+
+        JbxNumMesa2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+
+        J2G3.setText("jLabel4");
+
+        J333G3.setText("jLabel10");
+
+        J44G3.setText("jLabel11");
+
+        J11G3.setText("jLabel2");
+
+        jButton28.setText("Definir Partido 2");
+        jButton28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton28ActionPerformed(evt);
+            }
+        });
+
+        jButton29.setText("Definir Partido 4");
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton29ActionPerformed(evt);
+            }
+        });
+
+        jLabel30.setText("VS");
+
+        jButton30.setText("Iniciar Partido 6");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jcbxArbitro2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(JbxNumMesa2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(J1G3)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel30)
+                                .addGap(18, 18, 18)
+                                .addComponent(J222G3))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jlbFecha16)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlbHora14)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnPartido2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnIniciar2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(J2G3)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel28)
+                        .addGap(18, 18, 18)
+                        .addComponent(J333G3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton29))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(J11G3)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel26)
+                                .addGap(18, 18, 18)
+                                .addComponent(J33G3))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jlbFecha14)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlbHora15))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(J111G3)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel27)
+                                .addGap(18, 18, 18)
+                                .addComponent(J4G3))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jlbFecha18)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlbHora16))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jlbFecha17)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlbHora18))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(40, 40, 40)
+                                .addComponent(jLabel8))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(J22G3)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel29)
+                                .addGap(18, 18, 18)
+                                .addComponent(J44G3)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jlbFecha15)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlbHora13))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(J3G3)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel25)
+                                .addGap(18, 18, 18)
+                                .addComponent(J444G3))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jlbFecha13)
+                                .addGap(18, 18, 18)
+                                .addComponent(jlbHora17)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton26, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton30, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(jcbxArbitro2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7)
+                    .addComponent(JbxNumMesa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(J1G3)
+                    .addComponent(J222G3)
+                    .addComponent(jLabel30)
+                    .addComponent(btnPartido2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbFecha16)
+                    .addComponent(jlbHora14)
+                    .addComponent(btnIniciar2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(J11G3)
+                    .addComponent(J33G3)
+                    .addComponent(jLabel26)
+                    .addComponent(jButton28))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbFecha17)
+                    .addComponent(jlbHora18)
+                    .addComponent(jButton27))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(J111G3)
+                    .addComponent(J4G3)
+                    .addComponent(jLabel27)
+                    .addComponent(jButton22))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbFecha18)
+                    .addComponent(jlbHora16)
+                    .addComponent(jButton25))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(J2G3)
+                    .addComponent(J333G3)
+                    .addComponent(jLabel28)
+                    .addComponent(jButton29))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbFecha15)
+                    .addComponent(jlbHora13)
+                    .addComponent(jButton24))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(J22G3)
+                    .addComponent(J44G3)
+                    .addComponent(jLabel29)
+                    .addComponent(jButton26))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbFecha14)
+                    .addComponent(jlbHora15)
+                    .addComponent(jButton23))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(J3G3)
+                    .addComponent(J444G3)
+                    .addComponent(jLabel25)
+                    .addComponent(jButton21))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbFecha13)
+                    .addComponent(jlbHora17)
+                    .addComponent(jButton30))
+                .addContainerGap(88, Short.MAX_VALUE))
+        );
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Grupo 1"));
 
@@ -312,7 +1426,7 @@ public class GruposDe4 extends javax.swing.JFrame {
                                 .addComponent(jLabel15)
                                 .addGap(18, 18, 18)
                                 .addComponent(J44G1)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -427,94 +1541,44 @@ public class GruposDe4 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Grupo 3"));
-
-        jScrollPane3.setViewportView(listaG3);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 299, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Grupo 4"));
-
-        jScrollPane4.setViewportView(listaG4);
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Grupo 2"));
-
-        jScrollPane2.setViewportView(listaG2);
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 299, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        jScrollPane5.setViewportView(jPanel5);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 1420, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+            .addComponent(jScrollPane5)
         );
 
         pack();
@@ -586,6 +1650,198 @@ public class GruposDe4 extends javax.swing.JFrame {
         p.n = 6;
     }//GEN-LAST:event_jButton9ActionPerformed
 
+    private void btnPartido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPartido1ActionPerformed
+        partido p = new partido();
+        p.setVisible(true);
+        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.jlbJugador1.setText(J1G2.getText());
+        p.jlbJugador2.setText(J222G2.getText());
+        p.n = 7;
+    }//GEN-LAST:event_btnPartido1ActionPerformed
+
+    private void btnIniciar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnIniciar1ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        partido p = new partido();
+        p.setVisible(true);
+        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.jlbJugador1.setText(J11G2.getText());
+        p.jlbJugador2.setText(J33G2.getText());
+        p.n = 8;
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        partido p = new partido();
+        p.setVisible(true);
+        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.jlbJugador1.setText(J111G2.getText());
+        p.jlbJugador2.setText(J4G2.getText());
+        p.n = 9;
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        partido p = new partido();
+        p.setVisible(true);
+        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.jlbJugador1.setText(J2G2.getText());
+        p.jlbJugador2.setText(J333G2.getText());
+        p.n = 10;
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        partido p = new partido();
+        p.setVisible(true);
+        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.jlbJugador1.setText(J22G2.getText());
+        p.jlbJugador2.setText(J44G2.getText());
+        p.n = 11;
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        partido p = new partido();
+        p.setVisible(true);
+        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.jlbJugador1.setText(J3G2.getText());
+        p.jlbJugador2.setText(J444G2.getText());
+        p.n = 12;
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        partido p = new partido();
+        p.setVisible(true);
+        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.jlbJugador1.setText(J3G3.getText());
+        p.jlbJugador2.setText(J444G3.getText());
+        p.n = 18;
+    }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        partido p = new partido();
+        p.setVisible(true);
+        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.jlbJugador1.setText(J111G3.getText());
+        p.jlbJugador2.setText(J4G3.getText());
+        p.n = 15;
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void btnIniciar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciar2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnIniciar2ActionPerformed
+
+    private void btnPartido2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPartido2ActionPerformed
+        partido p = new partido();
+        p.setVisible(true);
+        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.jlbJugador1.setText(J1G3.getText());
+        p.jlbJugador2.setText(J222G3.getText());
+        p.n = 13;
+    }//GEN-LAST:event_btnPartido2ActionPerformed
+
+    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
+        partido p = new partido();
+        p.setVisible(true);
+        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.jlbJugador1.setText(J22G3.getText());
+        p.jlbJugador2.setText(J44G3.getText());
+        p.n = 17;
+    }//GEN-LAST:event_jButton26ActionPerformed
+
+    private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
+        partido p = new partido();
+        p.setVisible(true);
+        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.jlbJugador1.setText(J11G3.getText());
+        p.jlbJugador2.setText(J33G3.getText());
+        p.n = 14;
+    }//GEN-LAST:event_jButton28ActionPerformed
+
+    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+        partido p = new partido();
+        p.setVisible(true);
+        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.jlbJugador1.setText(J2G3.getText());
+        p.jlbJugador2.setText(J333G3.getText());
+        p.n = 16;
+    }//GEN-LAST:event_jButton29ActionPerformed
+
+    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
+        partido p = new partido();
+        p.setVisible(true);
+        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.jlbJugador1.setText(J3G4.getText());
+        p.jlbJugador2.setText(J444G4.getText());
+        p.n = 24;
+    }//GEN-LAST:event_jButton31ActionPerformed
+
+    private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
+        partido p = new partido();
+        p.setVisible(true);
+        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.jlbJugador1.setText(J111G4.getText());
+        p.jlbJugador2.setText(J4G4.getText());
+        p.n = 21;
+    }//GEN-LAST:event_jButton32ActionPerformed
+
+    private void btnIniciar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciar3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnIniciar3ActionPerformed
+
+    private void btnPartido3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPartido3ActionPerformed
+        partido p = new partido();
+        p.setVisible(true);
+        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.jlbJugador1.setText(J1G4.getText());
+        p.jlbJugador2.setText(J222G4.getText());
+        p.n = 19;
+    }//GEN-LAST:event_btnPartido3ActionPerformed
+
+    private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
+        partido p = new partido();
+        p.setVisible(true);
+        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.jlbJugador1.setText(J22G4.getText());
+        p.jlbJugador2.setText(J44G4.getText());
+        p.n = 23;
+    }//GEN-LAST:event_jButton36ActionPerformed
+
+    private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
+        partido p = new partido();
+        p.setVisible(true);
+        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.jlbJugador1.setText(J11G4.getText());
+        p.jlbJugador2.setText(J33G4.getText());
+        p.n = 20;
+    }//GEN-LAST:event_jButton38ActionPerformed
+
+    private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
+        partido p = new partido();
+        p.setVisible(true);
+        p.LbNumMesa.setText((String) JbxNumMesa.getSelectedItem());
+        p.jlbArbitro.setText((String) jcbxArbitro.getSelectedItem());
+        p.jlbJugador1.setText(J2G4.getText());
+        p.jlbJugador2.setText(J333G4.getText());
+        p.n = 22;
+    }//GEN-LAST:event_jButton39ActionPerformed
+
     void Llenarlista(){
         DefaultListModel lista1 = new DefaultListModel();
         DefaultListModel lista2 = new DefaultListModel();
@@ -631,27 +1887,76 @@ public class GruposDe4 extends javax.swing.JFrame {
                 lista1.addElement(rs.getString(1)+" - "+rs.getString(2)+" "+rs.getString(3)+" - "+rs.getString(4));
             //}
             listaG1.setModel(lista1);
-            //System.out.println(" "+lista1.elementAt(0));
             listaG2.setModel(lista2);
             listaG3.setModel(lista3);
             listaG4.setModel(lista4);
+            //Lista de contrincantes grupo 1
+            J1G1.setText(extraerNombre((String) lista1.elementAt(0)));
+            J11G1.setText(extraerNombre((String) lista1.elementAt(0)));
+            J111G1.setText(extraerNombre((String) lista1.elementAt(0)));
+            J2G1.setText(extraerNombre((String) lista1.elementAt(1)));
+            J22G1.setText(extraerNombre((String) lista1.elementAt(1)));
+            J222G1.setText(extraerNombre((String) lista1.elementAt(1)));
+            J3G1.setText(extraerNombre((String) lista1.elementAt(2)));
+            J33G1.setText(extraerNombre((String) lista1.elementAt(2)));
+            J333G1.setText(extraerNombre((String) lista1.elementAt(2)));
+            J4G1.setText(extraerNombre((String) lista1.elementAt(3)));
+            J44G1.setText(extraerNombre((String) lista1.elementAt(3)));
+            J444G1.setText(extraerNombre((String) lista1.elementAt(3)));
             
-            J1G1.setText(((String) lista1.elementAt(0)).substring(0, 9));
-            //System.out.println(((String) lista1.elementAt(0)).);
-            J11G1.setText(((String) lista1.elementAt(0)).substring(0, 9));
-            J111G1.setText(((String) lista1.elementAt(0)).substring(0, 9));
-            J2G1.setText(((String) lista1.elementAt(1)).substring(0, 9));
-            J22G1.setText(((String) lista1.elementAt(1)).substring(0, 9));
-            J222G1.setText(((String) lista1.elementAt(1)).substring(0, 9));
-            J3G1.setText(((String) lista1.elementAt(2)).substring(0, 9));
-            J33G1.setText(((String) lista1.elementAt(2)).substring(0, 9));
-            J333G1.setText(((String) lista1.elementAt(2)).substring(0, 9));
-            J4G1.setText(((String) lista1.elementAt(3)).substring(0, 9));
-            J44G1.setText(((String) lista1.elementAt(3)).substring(0, 9));
-            J444G1.setText(((String) lista1.elementAt(3)).substring(0, 9));
+            //Lista de contrincantes grupo 2
+            J1G2.setText(extraerNombre((String) lista2.elementAt(0)));
+            J11G2.setText(extraerNombre((String) lista2.elementAt(0)));
+            J111G2.setText(extraerNombre((String) lista2.elementAt(0)));
+            J2G2.setText(extraerNombre((String) lista2.elementAt(1)));
+            J22G2.setText(extraerNombre((String) lista2.elementAt(1)));
+            J222G2.setText(extraerNombre((String) lista2.elementAt(1)));
+            J3G2.setText(extraerNombre((String) lista2.elementAt(2)));
+            J33G2.setText(extraerNombre((String) lista2.elementAt(2)));
+            J333G2.setText(extraerNombre((String) lista2.elementAt(2)));
+            J4G2.setText(extraerNombre((String) lista2.elementAt(3)));
+            J44G2.setText(extraerNombre((String) lista2.elementAt(3)));
+            J444G2.setText(extraerNombre((String) lista2.elementAt(3)));
+            
+            //Lista de contrincantes grupo 3
+            J1G3.setText(extraerNombre((String) lista3.elementAt(0)));
+            J11G3.setText(extraerNombre((String) lista3.elementAt(0)));
+            J111G3.setText(extraerNombre((String) lista3.elementAt(0)));
+            J2G3.setText(extraerNombre((String) lista3.elementAt(1)));
+            J22G3.setText(extraerNombre((String) lista3.elementAt(1)));
+            J222G3.setText(extraerNombre((String) lista3.elementAt(1)));
+            J3G3.setText(extraerNombre((String) lista3.elementAt(2)));
+            J33G3.setText(extraerNombre((String) lista3.elementAt(2)));
+            J333G3.setText(extraerNombre((String) lista3.elementAt(2)));
+            J4G3.setText(extraerNombre((String) lista3.elementAt(3)));
+            J44G3.setText(extraerNombre((String) lista3.elementAt(3)));
+            J444G3.setText(extraerNombre((String) lista3.elementAt(3)));
+            
+            //Lista de contrincantes grupo 4
+            J1G4.setText(extraerNombre((String) lista4.elementAt(0)));
+            J11G4.setText(extraerNombre((String) lista4.elementAt(0)));
+            J111G4.setText(extraerNombre((String) lista4.elementAt(0)));
+            J2G4.setText(extraerNombre((String) lista4.elementAt(1)));
+            J22G4.setText(extraerNombre((String) lista4.elementAt(1)));
+            J222G4.setText(extraerNombre((String) lista4.elementAt(1)));
+            J3G4.setText(extraerNombre((String) lista4.elementAt(2)));
+            J33G4.setText(extraerNombre((String) lista4.elementAt(2)));
+            J333G4.setText(extraerNombre((String) lista4.elementAt(2)));
+            J4G4.setText(extraerNombre((String) lista4.elementAt(3)));
+            J44G4.setText(extraerNombre((String) lista4.elementAt(3)));
+            J444G4.setText(extraerNombre((String) lista4.elementAt(3)));
+            
         } catch (SQLException ex) {
             Logger.getLogger(seleccionarJugador.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    private String extraerNombre(String nombre){
+        //0000016    - carlos andrade - 16
+        int n1 = nombre.indexOf('-',0)+2;
+        int n2 = nombre.indexOf('-',n1+1);
+        //System.out.println(nombre.substring(n1,n2));
+        return nombre.substring(n1,n2);
     }
     
      private void llenarCombo2(){
@@ -721,60 +2026,203 @@ public class GruposDe4 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel J111G1;
+    private javax.swing.JLabel J111G2;
+    private javax.swing.JLabel J111G3;
+    private javax.swing.JLabel J111G4;
     private javax.swing.JLabel J11G1;
+    private javax.swing.JLabel J11G2;
+    private javax.swing.JLabel J11G3;
+    private javax.swing.JLabel J11G4;
     private javax.swing.JLabel J1G1;
+    private javax.swing.JLabel J1G2;
+    private javax.swing.JLabel J1G3;
+    private javax.swing.JLabel J1G4;
     private javax.swing.JLabel J222G1;
+    private javax.swing.JLabel J222G2;
+    private javax.swing.JLabel J222G3;
+    private javax.swing.JLabel J222G4;
     private javax.swing.JLabel J22G1;
+    private javax.swing.JLabel J22G2;
+    private javax.swing.JLabel J22G3;
+    private javax.swing.JLabel J22G4;
     private javax.swing.JLabel J2G1;
+    private javax.swing.JLabel J2G2;
+    private javax.swing.JLabel J2G3;
+    private javax.swing.JLabel J2G4;
     private javax.swing.JLabel J333G1;
+    private javax.swing.JLabel J333G2;
+    private javax.swing.JLabel J333G3;
+    private javax.swing.JLabel J333G4;
     private javax.swing.JLabel J33G1;
+    private javax.swing.JLabel J33G2;
+    private javax.swing.JLabel J33G3;
+    private javax.swing.JLabel J33G4;
     private javax.swing.JLabel J3G1;
+    private javax.swing.JLabel J3G2;
+    private javax.swing.JLabel J3G3;
+    private javax.swing.JLabel J3G4;
     private javax.swing.JLabel J444G1;
+    private javax.swing.JLabel J444G2;
+    private javax.swing.JLabel J444G3;
+    private javax.swing.JLabel J444G4;
     private javax.swing.JLabel J44G1;
+    private javax.swing.JLabel J44G2;
+    private javax.swing.JLabel J44G3;
+    private javax.swing.JLabel J44G4;
     private javax.swing.JLabel J4G1;
+    private javax.swing.JLabel J4G2;
+    private javax.swing.JLabel J4G3;
+    private javax.swing.JLabel J4G4;
     public javax.swing.JComboBox<String> JbxNumMesa;
+    public javax.swing.JComboBox<String> JbxNumMesa1;
+    public javax.swing.JComboBox<String> JbxNumMesa2;
+    public javax.swing.JComboBox<String> JbxNumMesa3;
     private javax.swing.JButton btnIniciar;
+    private javax.swing.JButton btnIniciar1;
+    private javax.swing.JButton btnIniciar2;
+    private javax.swing.JButton btnIniciar3;
     private javax.swing.JButton btnPartido;
+    private javax.swing.JButton btnPartido1;
+    private javax.swing.JButton btnPartido2;
+    private javax.swing.JButton btnPartido3;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton24;
+    private javax.swing.JButton jButton25;
+    private javax.swing.JButton jButton26;
+    private javax.swing.JButton jButton27;
+    private javax.swing.JButton jButton28;
+    private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton30;
+    private javax.swing.JButton jButton31;
+    private javax.swing.JButton jButton32;
+    private javax.swing.JButton jButton33;
+    private javax.swing.JButton jButton34;
+    private javax.swing.JButton jButton35;
+    private javax.swing.JButton jButton36;
+    private javax.swing.JButton jButton37;
+    private javax.swing.JButton jButton38;
+    private javax.swing.JButton jButton39;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton40;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     public static javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     public javax.swing.JComboBox<String> jcbxArbitro;
+    public javax.swing.JComboBox<String> jcbxArbitro1;
+    public javax.swing.JComboBox<String> jcbxArbitro2;
+    public javax.swing.JComboBox<String> jcbxArbitro3;
     public static javax.swing.JLabel jlbFecha1;
+    public static javax.swing.JLabel jlbFecha10;
+    public static javax.swing.JLabel jlbFecha11;
+    public static javax.swing.JLabel jlbFecha12;
+    public static javax.swing.JLabel jlbFecha13;
+    public static javax.swing.JLabel jlbFecha14;
+    public static javax.swing.JLabel jlbFecha15;
+    public static javax.swing.JLabel jlbFecha16;
+    public static javax.swing.JLabel jlbFecha17;
+    public static javax.swing.JLabel jlbFecha18;
+    public static javax.swing.JLabel jlbFecha19;
     public static javax.swing.JLabel jlbFecha2;
+    public static javax.swing.JLabel jlbFecha20;
+    public static javax.swing.JLabel jlbFecha21;
+    public static javax.swing.JLabel jlbFecha22;
+    public static javax.swing.JLabel jlbFecha23;
+    public static javax.swing.JLabel jlbFecha24;
     public static javax.swing.JLabel jlbFecha3;
     public static javax.swing.JLabel jlbFecha4;
     public static javax.swing.JLabel jlbFecha5;
     public static javax.swing.JLabel jlbFecha6;
+    public static javax.swing.JLabel jlbFecha7;
+    public static javax.swing.JLabel jlbFecha8;
+    public static javax.swing.JLabel jlbFecha9;
     public static javax.swing.JLabel jlbHora1;
+    public static javax.swing.JLabel jlbHora10;
+    public static javax.swing.JLabel jlbHora11;
+    public static javax.swing.JLabel jlbHora12;
+    public static javax.swing.JLabel jlbHora13;
+    public static javax.swing.JLabel jlbHora14;
+    public static javax.swing.JLabel jlbHora15;
+    public static javax.swing.JLabel jlbHora16;
+    public static javax.swing.JLabel jlbHora17;
+    public static javax.swing.JLabel jlbHora18;
+    public static javax.swing.JLabel jlbHora19;
     public static javax.swing.JLabel jlbHora2;
+    public static javax.swing.JLabel jlbHora20;
+    public static javax.swing.JLabel jlbHora21;
+    public static javax.swing.JLabel jlbHora22;
+    public static javax.swing.JLabel jlbHora23;
+    public static javax.swing.JLabel jlbHora24;
     public static javax.swing.JLabel jlbHora3;
     public static javax.swing.JLabel jlbHora4;
     public static javax.swing.JLabel jlbHora5;
     public static javax.swing.JLabel jlbHora6;
+    public static javax.swing.JLabel jlbHora7;
+    public static javax.swing.JLabel jlbHora8;
+    public static javax.swing.JLabel jlbHora9;
     private javax.swing.JList<String> listaG1;
     private javax.swing.JList<String> listaG2;
     private javax.swing.JList<String> listaG3;
