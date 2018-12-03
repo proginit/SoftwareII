@@ -593,6 +593,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
             lbl_pelota2.setVisible(false);
          }
           
+        String r = "0";
         Punto p = new Punto();
         String a = lbl_NumDer.getText();
         int b = p.Mas(Integer.parseInt(a));
@@ -603,6 +604,10 @@ public class Game extends javax.swing.JFrame implements Runnable{
                 p2++;
                 JOptionPane.showMessageDialog(null, "PUNTO!!");
                 lbl_puntuacion2.setText(Integer.toString(p2));
+                jp_tarjetaDer.setBackground(Color.WHITE);
+                jp_tarjetaIzq.setBackground(Color.WHITE);
+                lbl_NumIzq.setText(r);
+                lbl_NumDer.setText(r);
             }
             
         }
@@ -665,6 +670,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
             lbl_pelota2.setVisible(false);
          }
         
+        String r = "0";
         Punto p = new Punto();
         String a = lbl_NumIzq.getText();
         int b = p.Mas(Integer.parseInt(a));
@@ -675,6 +681,10 @@ public class Game extends javax.swing.JFrame implements Runnable{
                 ne++;
                 JOptionPane.showMessageDialog(null, "PUNTO!!");
                 lbl_puntuacion1.setText(Integer.toString(ne));
+                jp_tarjetaDer.setBackground(Color.WHITE);
+                jp_tarjetaIzq.setBackground(Color.WHITE);
+                lbl_NumIzq.setText(r);
+                lbl_NumDer.setText(r);
             }
         }
     }//GEN-LAST:event_btn_MasIzqActionPerformed
