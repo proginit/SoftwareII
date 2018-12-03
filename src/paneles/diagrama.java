@@ -5,6 +5,8 @@
  */
 package paneles;
 
+import formularios.GruposDe4;
+
 /**
  *
  * @author ProgInit
@@ -27,19 +29,44 @@ public class diagrama extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btn_grupos = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        btn_grupos.setBackground(new java.awt.Color(0, 51, 51));
+        btn_grupos.setText("GRUPOS");
+        btn_grupos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_gruposActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(142, 142, 142)
+                .addComponent(btn_grupos)
+                .addContainerGap(179, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(127, 127, 127)
+                .addComponent(btn_grupos)
+                .addContainerGap(141, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btn_gruposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_gruposActionPerformed
+        // TODO add your handling code here:
+        GruposDe4 gd = new GruposDe4();
+        gd.setVisible(true);
+    }//GEN-LAST:event_btn_gruposActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_grupos;
     // End of variables declaration//GEN-END:variables
 }

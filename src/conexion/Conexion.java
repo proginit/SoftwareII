@@ -31,6 +31,17 @@ public class Conexion {
         return con;
     }
     
+    public static Connection conexiondb(){
+        try {
+        Connection con = null;
+        con = DriverManager.getConnection("jdbc:derby://localhost:1527/TenisMesa1");
+        return con;
+          }catch (Exception ex){
+                JOptionPane.showMessageDialog(null, "Error: "+ex.getMessage());
+                }
+        return null;
+    }
+    
     public ResultSet consulta(String consulta){
         ResultSet rs = null;
         try {

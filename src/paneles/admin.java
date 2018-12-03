@@ -28,8 +28,11 @@ public class admin extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tb_usuarios = new javax.swing.JTable();
         btn_nuevo = new javax.swing.JButton();
+        btn_editar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        btn_jugadores = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -37,8 +40,8 @@ public class admin extends javax.swing.JPanel {
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setForeground(new java.awt.Color(255, 255, 255));
 
-        jTable1.setBackground(new java.awt.Color(255, 255, 255));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tb_usuarios.setBackground(new java.awt.Color(255, 255, 255));
+        tb_usuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -49,18 +52,32 @@ public class admin extends javax.swing.JPanel {
                 "ID", "Nombre", "Usuario", "Password"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tb_usuarios);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 580, 183));
 
         btn_nuevo.setText("Nuevo");
         add(btn_nuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+
+        btn_editar.setText("Editar");
+        add(btn_editar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Poor Richard", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel1.setText("USUARIOS");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, -1, -1));
+
+        btn_jugadores.setText("Jugadores");
+        add(btn_jugadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_editar;
+    private javax.swing.JButton btn_jugadores;
     private javax.swing.JButton btn_nuevo;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tb_usuarios;
     // End of variables declaration//GEN-END:variables
 }

@@ -24,7 +24,7 @@ public class tarjetas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jInternalFrame1 = new javax.swing.JInternalFrame();
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         lbl_jugadorT1 = new javax.swing.JLabel();
@@ -44,92 +44,96 @@ public class tarjetas extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 102));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jInternalFrame1.setBackground(new java.awt.Color(153, 255, 153));
-        jInternalFrame1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jInternalFrame1.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        jInternalFrame1.setForeground(new java.awt.Color(153, 255, 153));
-        jInternalFrame1.setTitle("Menu tarjetas");
-        jInternalFrame1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jInternalFrame1.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        jInternalFrame1.setEnabled(false);
-        jInternalFrame1.setFocusCycleRoot(false);
-        jInternalFrame1.setFocusable(false);
-        jInternalFrame1.setRequestFocusEnabled(false);
-        jInternalFrame1.setVerifyInputWhenFocusTarget(false);
-        jInternalFrame1.setVisible(true);
-        jInternalFrame1.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setBackground(new java.awt.Color(0, 51, 51));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Aplicar tarjeta a:");
-        jInternalFrame1.getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 61, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 61, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Aplicar tarjeta a:");
-        jInternalFrame1.getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, -1, -1));
 
         lbl_jugadorT1.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         lbl_jugadorT1.setForeground(new java.awt.Color(0, 102, 102));
         lbl_jugadorT1.setText("jugador1");
-        jInternalFrame1.getContentPane().add(lbl_jugadorT1, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 57, -1, -1));
+        jPanel1.add(lbl_jugadorT1, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 57, -1, -1));
 
         lbl_jugadorT2.setFont(new java.awt.Font("Bell MT", 1, 18)); // NOI18N
         lbl_jugadorT2.setForeground(new java.awt.Color(0, 102, 102));
         lbl_jugadorT2.setText("jugador2");
-        jInternalFrame1.getContentPane().add(lbl_jugadorT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 256, -1, -1));
+        jPanel1.add(lbl_jugadorT2, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 256, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Arbitro:");
-        jInternalFrame1.getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 17, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 17, -1, -1));
 
         lbl_arbitroT.setFont(new java.awt.Font("Bell MT", 3, 18)); // NOI18N
         lbl_arbitroT.setForeground(new java.awt.Color(51, 153, 0));
         lbl_arbitroT.setText("jLabel6");
-        jInternalFrame1.getContentPane().add(lbl_arbitroT, new org.netbeans.lib.awtextra.AbsoluteConstraints(104, 13, -1, -1));
+        jPanel1.add(lbl_arbitroT, new org.netbeans.lib.awtextra.AbsoluteConstraints(104, 13, -1, -1));
 
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setFont(new java.awt.Font("Agency FB", 1, 48)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jInternalFrame1.getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(143, 97, 107, 141));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(143, 97, 107, 141));
 
+        jButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        jInternalFrame1.getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 97, 107, 141));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 97, 107, 141));
 
+        jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setFont(new java.awt.Font("Agency FB", 1, 48)); // NOI18N
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
-        jInternalFrame1.getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(143, 296, 107, 139));
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(143, 296, 107, 139));
 
+        jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setFont(new java.awt.Font("Agency FB", 1, 48)); // NOI18N
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
-        jInternalFrame1.getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 296, 107, 139));
+        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 296, 107, 139));
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("amarilla");
-        jInternalFrame1.getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 160, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 160, -1, -1));
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("roja");
-        jInternalFrame1.getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 163, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 163, -1, -1));
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("amarilla");
-        jInternalFrame1.getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 358, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 358, -1, -1));
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("roja");
-        jInternalFrame1.getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 360, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 360, -1, -1));
 
-        getContentPane().add(jInternalFrame1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 539, 476));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -213,7 +217,6 @@ public class tarjetas extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -221,6 +224,7 @@ public class tarjetas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
     public javax.swing.JLabel lbl_arbitroT;
     public javax.swing.JLabel lbl_jugadorT1;
     public javax.swing.JLabel lbl_jugadorT2;

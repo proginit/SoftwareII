@@ -37,19 +37,21 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
+        btn_max = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         btn_menusv = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         jp_n2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
         btn_inicio = new javax.swing.JButton();
         btn_registro = new javax.swing.JButton();
-        btn_diagrama = new javax.swing.JButton();
+        btn_administrar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        btn_diagrama1 = new javax.swing.JButton();
         jp_centro = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setFocusableWindowState(false);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -70,13 +72,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/man-jugando-ping-pong.png"))); // NOI18N
         jp_n1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 10, -1, -1));
 
-        jButton5.setBackground(new java.awt.Color(0, 51, 51));
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/menos.png"))); // NOI18N
-        jButton5.setBorder(null);
-        jButton5.setBorderPainted(false);
-        jButton5.setContentAreaFilled(false);
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jp_n1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 10, 20, 20));
+        btn_max.setBackground(new java.awt.Color(0, 51, 51));
+        btn_max.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/pantalla-completa.png"))); // NOI18N
+        btn_max.setBorder(null);
+        btn_max.setBorderPainted(false);
+        btn_max.setContentAreaFilled(false);
+        btn_max.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jp_n1.add(btn_max, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 10, 20, 20));
 
         jButton6.setBackground(new java.awt.Color(0, 51, 51));
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cancelar.png"))); // NOI18N
@@ -104,17 +106,18 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
         jp_n1.add(btn_menusv, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 40, -1));
 
+        jButton7.setBackground(new java.awt.Color(0, 51, 51));
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/menos.png"))); // NOI18N
+        jButton7.setBorder(null);
+        jButton7.setBorderPainted(false);
+        jButton7.setContentAreaFilled(false);
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jp_n1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 10, 20, 20));
+
         jPanel4.add(jp_n1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 50));
 
         jp_n2.setBackground(new java.awt.Color(0, 51, 51));
         jp_n2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 51, 51));
-        jButton1.setText("Administrar");
-        jButton1.setBorder(null);
-        jp_n2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 140, 40));
 
         btn_inicio.setBackground(new java.awt.Color(0, 51, 51));
         btn_inicio.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
@@ -150,17 +153,20 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
         jp_n2.add(btn_registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 140, 40));
 
-        btn_diagrama.setBackground(new java.awt.Color(255, 255, 255));
-        btn_diagrama.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
-        btn_diagrama.setForeground(new java.awt.Color(255, 255, 255));
-        btn_diagrama.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/diagrama.png"))); // NOI18N
-        btn_diagrama.setText("Diagrama");
-        btn_diagrama.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-        btn_diagrama.setContentAreaFilled(false);
-        btn_diagrama.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_diagrama.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btn_diagrama.setIconTextGap(15);
-        jp_n2.add(btn_diagrama, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 140, 40));
+        btn_administrar.setBackground(new java.awt.Color(255, 255, 255));
+        btn_administrar.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
+        btn_administrar.setForeground(new java.awt.Color(255, 255, 255));
+        btn_administrar.setText("Administrar");
+        btn_administrar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        btn_administrar.setContentAreaFilled(false);
+        btn_administrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_administrar.setIconTextGap(15);
+        btn_administrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_administrarActionPerformed(evt);
+            }
+        });
+        jp_n2.add(btn_administrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 140, 40));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/trabpc.png"))); // NOI18N
         jp_n2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 70, 70));
@@ -170,6 +176,23 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("ADMIN");
         jp_n2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+
+        btn_diagrama1.setBackground(new java.awt.Color(255, 255, 255));
+        btn_diagrama1.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
+        btn_diagrama1.setForeground(new java.awt.Color(255, 255, 255));
+        btn_diagrama1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/diagrama.png"))); // NOI18N
+        btn_diagrama1.setText("Diagrama");
+        btn_diagrama1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        btn_diagrama1.setContentAreaFilled(false);
+        btn_diagrama1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_diagrama1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_diagrama1.setIconTextGap(15);
+        btn_diagrama1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_diagrama1ActionPerformed(evt);
+            }
+        });
+        jp_n2.add(btn_diagrama1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 140, 40));
 
         jPanel4.add(jp_n2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 140, 390));
 
@@ -209,6 +232,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
         new CambiaPanel(jp_centro, new paneles.registro());
     }//GEN-LAST:event_btn_registroActionPerformed
 
+    private void btn_administrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_administrarActionPerformed
+        // TODO add your handling code here:
+        new CambiaPanel(jp_centro, new paneles.admin());
+    }//GEN-LAST:event_btn_administrarActionPerformed
+
+    private void btn_diagrama1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_diagrama1ActionPerformed
+        // TODO add your handling code here:
+       new CambiaPanel(jp_centro, new paneles.diagrama());
+    }//GEN-LAST:event_btn_diagrama1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -245,13 +278,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_diagrama;
+    private javax.swing.JButton btn_administrar;
+    private javax.swing.JButton btn_diagrama1;
     private javax.swing.JButton btn_inicio;
+    private javax.swing.JButton btn_max;
     private javax.swing.JButton btn_menusv;
     private javax.swing.JButton btn_registro;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

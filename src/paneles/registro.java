@@ -30,8 +30,6 @@ public class registro extends javax.swing.JPanel {
 
         btn_arbitroR = new javax.swing.JButton();
         btn_jugadorR = new javax.swing.JButton();
-        btn_partidoR = new javax.swing.JButton();
-        btn_torneoR = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -51,7 +49,7 @@ public class registro extends javax.swing.JPanel {
                 btn_arbitroRActionPerformed(evt);
             }
         });
-        add(btn_arbitroR, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 130, 50));
+        add(btn_arbitroR, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 130, 50));
 
         btn_jugadorR.setBackground(new java.awt.Color(0, 51, 51));
         btn_jugadorR.setForeground(new java.awt.Color(255, 255, 255));
@@ -64,33 +62,7 @@ public class registro extends javax.swing.JPanel {
                 btn_jugadorRActionPerformed(evt);
             }
         });
-        add(btn_jugadorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 130, 50));
-
-        btn_partidoR.setBackground(new java.awt.Color(0, 51, 51));
-        btn_partidoR.setForeground(new java.awt.Color(255, 255, 255));
-        btn_partidoR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/paleta.png"))); // NOI18N
-        btn_partidoR.setText("PARTIDO");
-        btn_partidoR.setBorder(null);
-        btn_partidoR.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_partidoR.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_partidoRActionPerformed(evt);
-            }
-        });
-        add(btn_partidoR, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 130, 50));
-
-        btn_torneoR.setBackground(new java.awt.Color(0, 51, 51));
-        btn_torneoR.setForeground(new java.awt.Color(255, 255, 255));
-        btn_torneoR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/podio.png"))); // NOI18N
-        btn_torneoR.setText("TORNEO");
-        btn_torneoR.setBorder(null);
-        btn_torneoR.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_torneoR.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_torneoRActionPerformed(evt);
-            }
-        });
-        add(btn_torneoR, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 130, 50));
+        add(btn_jugadorR, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 130, 50));
 
         jLabel1.setFont(new java.awt.Font("Poor Richard", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 51));
@@ -110,24 +82,10 @@ public class registro extends javax.swing.JPanel {
         j.setVisible(true);
     }//GEN-LAST:event_btn_jugadorRActionPerformed
 
-    private void btn_partidoRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_partidoRActionPerformed
-        // TODO add your handling code here:
-        partido p = new partido();
-        p.setVisible(true);
-    }//GEN-LAST:event_btn_partidoRActionPerformed
-
-    private void btn_torneoRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_torneoRActionPerformed
-        // TODO add your handling code here:
-        torneo t = new torneo();
-        t.setVisible(true);
-    }//GEN-LAST:event_btn_torneoRActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btn_arbitroR;
     private javax.swing.JButton btn_jugadorR;
-    private javax.swing.JButton btn_partidoR;
-    private javax.swing.JButton btn_torneoR;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

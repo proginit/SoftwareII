@@ -6,18 +6,29 @@
 package Vista;
 
 import AppPackage.AnimationClass;
+import Clases.AWTUtilities;
+import conexion.Conexion;
+import java.sql.*;
+
+import javax.swing.JOptionPane;
 /**
  *
  * @author ProgInit
  */
 public class Login extends javax.swing.JFrame {
+   
+    Connection cn = Conexion.conexiondb();
 
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
+        AWTUtilities.setOpaque(this, false);
         this.setLocationRelativeTo(null);
+        Conexion.conexiondb();
+        
+        //this.setLocationRelativeTo(null);
     }
 
     /**
@@ -34,21 +45,22 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         iconUsuario = new javax.swing.JLabel();
-        txt_user = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         btn_entrar = new javax.swing.JButton();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        txt_user = new app.bolivia.swing.JCTextField();
+        txt_contra = new jpass.JRPasswordField();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         txt_face = new javax.swing.JLabel();
         txt_whatsat = new javax.swing.JLabel();
         txt_twiterr = new javax.swing.JLabel();
+        btn_salir = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -75,13 +87,6 @@ public class Login extends javax.swing.JFrame {
         iconUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/avatar (1).png"))); // NOI18N
         jp_ingresar.add(iconUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 130, 130));
 
-        txt_user.setBackground(new java.awt.Color(0, 51, 51));
-        txt_user.setFont(new java.awt.Font("Poor Richard", 0, 18)); // NOI18N
-        txt_user.setForeground(new java.awt.Color(255, 255, 255));
-        txt_user.setText("Ingrese Usuario");
-        txt_user.setBorder(null);
-        jp_ingresar.add(txt_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 190, 30));
-
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jp_ingresar.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 220, 10));
 
@@ -106,13 +111,29 @@ public class Login extends javax.swing.JFrame {
         btn_entrar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/enter.jpg"))); // NOI18N
         btn_entrar.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/enter.jpg"))); // NOI18N
         btn_entrar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/enter.jpg"))); // NOI18N
+        btn_entrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_entrarActionPerformed(evt);
+            }
+        });
         jp_ingresar.add(btn_entrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, 80, 40));
 
-        jPasswordField2.setBackground(new java.awt.Color(0, 51, 51));
-        jPasswordField2.setForeground(new java.awt.Color(255, 255, 255));
-        jPasswordField2.setText("jPasswordField2");
-        jPasswordField2.setBorder(null);
-        jp_ingresar.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 190, 30));
+        txt_user.setBackground(new java.awt.Color(0, 51, 51));
+        txt_user.setBorder(null);
+        txt_user.setForeground(new java.awt.Color(255, 255, 255));
+        txt_user.setToolTipText("");
+        txt_user.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        txt_user.setPhColor(new java.awt.Color(255, 255, 255));
+        txt_user.setPlaceholder("Ingrese Usuario");
+        jp_ingresar.add(txt_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 190, 30));
+
+        txt_contra.setBackground(new java.awt.Color(0, 51, 51));
+        txt_contra.setBorder(null);
+        txt_contra.setToolTipText("");
+        txt_contra.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        txt_contra.setPhColor(new java.awt.Color(255, 255, 255));
+        txt_contra.setPlaceholder("Password");
+        jp_ingresar.add(txt_contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 190, 30));
 
         jp_principal.add(jp_ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 311, 490));
 
@@ -137,12 +158,57 @@ public class Login extends javax.swing.JFrame {
         txt_twiterr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/gorjeo.png"))); // NOI18N
         jPanel1.add(txt_twiterr, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 420, -1, -1));
 
+        btn_salir.setBackground(new java.awt.Color(0, 51, 51));
+        btn_salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cancelar_1.png"))); // NOI18N
+        btn_salir.setBorder(null);
+        btn_salir.setBorderPainted(false);
+        btn_salir.setContentAreaFilled(false);
+        btn_salir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_salirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 20, 20));
+
         jp_principal.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 380, 490));
 
-        getContentPane().add(jp_principal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jp_principal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_entrarActionPerformed
+        // TODO add your handling code here:
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        
+        String login = "SELECT * FROM login WHERE usuarios=? AND password=?";
+        
+        if(txt_user.getText().isEmpty()||txt_contra.getText().isEmpty()){
+            JOptionPane.showMessageDialog(this, "Llenar todo los campos POR FAVOR");
+        }else{
+            try{
+            ps = cn.prepareStatement(login);
+            ps.setString(1,txt_user.getText());
+            ps.setString(2,txt_contra.getText());
+            rs = ps.executeQuery();
+            
+            if(rs.next()){
+                dispose();
+                MenuPrincipal mp = new MenuPrincipal();
+                mp.setVisible(true);
+            }
+        }catch(SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        }
+       }     
+    }//GEN-LAST:event_btn_entrarActionPerformed
+
+    private void btn_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salirActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_btn_salirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,6 +247,7 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_entrar;
+    private javax.swing.JButton btn_salir;
     private javax.swing.JLabel iconUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -189,14 +256,14 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JPanel jp_ingresar;
     private javax.swing.JPanel jp_principal;
+    private jpass.JRPasswordField txt_contra;
     private javax.swing.JLabel txt_face;
     private javax.swing.JLabel txt_twiterr;
-    private javax.swing.JTextField txt_user;
+    private app.bolivia.swing.JCTextField txt_user;
     private javax.swing.JLabel txt_whatsat;
     // End of variables declaration//GEN-END:variables
 }
