@@ -12,7 +12,7 @@ import javax.swing.JPanel;
  * @author ProgInit
  */
 public class Game extends javax.swing.JFrame implements Runnable{
-    Thread hilo;
+    Thread hilo, hilo2;
     String hora, minutos, segundos;
     
     private int seg = 0;
@@ -33,12 +33,13 @@ public class Game extends javax.swing.JFrame implements Runnable{
         this.setLocationRelativeTo(null);
         hilo = new Thread(this);
         hilo.start();
-        setVisible(true);
-        
-        this.setTitle("Cronometro");
+        //cronometroActivo = true;
+        //this.setVisible(true);
+       
+        //this.setTitle("Cronometro");
      
-        btn_play.setEnabled(true);
-        
+        //btn_play.setEnabled(true);
+        //diah();
         if(n==0){
             lbl_pelota1.setVisible(true);
             lbl_pelota2.setVisible(false);
@@ -49,60 +50,11 @@ public class Game extends javax.swing.JFrame implements Runnable{
     //Thread hilo;
     boolean cronometroActivo;
     
-    /*public void run(){
-        Integer minutos = 0 , segundos = 0, milesimas = 0;
-        //min es minutos, seg es segundos y mil es milesimas de segundo
-        String min="", seg="", mil="";
-        Game g = new Game();
-        try
-        {
-            //Mientras cronometroActivo sea verdadero entonces seguira
-            //aumentando el tiempo
-            while( cronometroActivo )
-            {
-                Thread.sleep( 4 );
-                //Incrementamos 4 milesimas de segundo
-                milesimas += 4;
-                 
-                //Cuando llega a 1000 osea 1 segundo aumenta 1 segundo
-                //y las milesimas de segundo de nuevo a 0
-                if( milesimas == 1000 )
-                {
-                    milesimas = 0;
-                    segundos += 1;
-                    //Si los segundos llegan a 60 entonces aumenta 1 los minutos
-                    //y los segundos vuelven a 0
-                    if( segundos == 60 )
-                    {
-                        segundos = 0;
-                        minutos++;
-                    }
-                }
- 
-                //Esto solamente es estetica para que siempre este en formato
-                //00:00:000
-                if( minutos < 10 ) min = "0" + minutos;
-                else min = minutos.toString();
-                if( segundos < 10 ) seg = "0" + segundos;
-                else seg = segundos.toString();
-                 
-                if( milesimas < 10 ) mil = "00" + milesimas;
-                else if( milesimas < 100 ) mil = "0" + milesimas;
-                else mil = milesimas.toString();
-                 
-                //Colocamos en la etiqueta la informacion
-                g.lbl_horaAct1.setText(min + ":" + seg + ":" + mil);
-                //lbl_cronoPartido.setText( min + ":" + seg + ":" + mil );                
-            }
-        }catch(Exception e){}
-        //Cuando se reincie se coloca nuevamente en 00:00:000
-        g.lbl_horaAct1.setText( "00:00:000" );
-    }*/
-    
-    public void iniciarCronometro() {
+   public void iniciarCronometro() {
         cronometroActivo = true;
-        hilo = new Thread( (Runnable) this);
-        hilo.start();
+        hilo2 = new Thread(this);
+        hilo2.start();
+        //diah();
     }
     
     public void hora(){
@@ -112,6 +64,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
         hora = calendario.get(Calendar.HOUR_OF_DAY)>9?""+calendario.get(Calendar.HOUR_OF_DAY):"0"+calendario.get(Calendar.HOUR_OF_DAY);
         minutos = calendario.get(Calendar.MINUTE)>9?""+calendario.get(Calendar.MINUTE):"0"+calendario.get(Calendar.MINUTE);
         segundos = calendario.get(Calendar.SECOND)>9?""+calendario.get(Calendar.SECOND):"0"+calendario.get(Calendar.SECOND);
+        
     }
     
     public void run(){
@@ -119,12 +72,14 @@ public class Game extends javax.swing.JFrame implements Runnable{
         while(current == hilo){
             hora();
             lbl_horaAct1.setText(hora+":"+minutos+":"+segundos);
-        }
+        } 
+        
+        //Game g = new Game();
         
         Integer minutos = 0 , segundos = 0, milesimas = 0;
         //min es minutos, seg es segundos y mil es milesimas de segundo
         String min="", seg="", mil="";
-        Game g = new Game();
+        
         try
         {
             //Mientras cronometroActivo sea verdadero entonces seguira
@@ -162,12 +117,12 @@ public class Game extends javax.swing.JFrame implements Runnable{
                 else mil = milesimas.toString();
                  
                 //Colocamos en la etiqueta la informacion
-                g.lbl_cronoPartido.setText(min + ":" + seg + ":" + mil);
+                lbl_cronoPartido.setText(min + ":" + seg + ":" + mil);
                 //lbl_cronoPartido.setText( min + ":" + seg + ":" + mil );                
             }
         }catch(Exception e){}
         //Cuando se reincie se coloca nuevamente en 00:00:000
-        g.lbl_cronoPartido.setText( "00:00:000" );
+        lbl_cronoPartido.setText( "00:00:000" );
     }
 
     /**
@@ -212,6 +167,9 @@ public class Game extends javax.swing.JFrame implements Runnable{
         btn_minJ1 = new javax.swing.JButton();
         btn_minJ2 = new javax.swing.JButton();
         jpvista7 = new javax.swing.JPanel();
+        lbl_set = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        lbl_jset = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -598,18 +556,41 @@ public class Game extends javax.swing.JFrame implements Runnable{
 
         jpvista7.setBackground(new java.awt.Color(255, 255, 255));
 
+        lbl_set.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
+        lbl_set.setForeground(new java.awt.Color(0, 51, 51));
+        lbl_set.setText("jLabel4");
+
+        jLabel3.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel3.setText("SET:");
+
         javax.swing.GroupLayout jpvista7Layout = new javax.swing.GroupLayout(jpvista7);
         jpvista7.setLayout(jpvista7Layout);
         jpvista7Layout.setHorizontalGroup(
             jpvista7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 330, Short.MAX_VALUE)
+            .addGroup(jpvista7Layout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbl_set)
+                .addContainerGap(116, Short.MAX_VALUE))
         );
         jpvista7Layout.setVerticalGroup(
             jpvista7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
+            .addGroup(jpvista7Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(jpvista7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_set)
+                    .addComponent(jLabel3))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         jPanel1.add(jpvista7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 440, 330, 80));
+
+        lbl_jset.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
+        lbl_jset.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_jset.setText("JUEGOS");
+        jPanel1.add(lbl_jset, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 400, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -774,12 +755,15 @@ public class Game extends javax.swing.JFrame implements Runnable{
         
         Config c = new Config();
         c.setVisible(true);
-        btn_play.setEnabled(false);
-        this.dispose();
+        
+        //this.dispose();
         String j1 = lbl_jugador1.getText();
         String j2 = lbl_jugador2.getText();
         c.lbl_jug1.setText(j1);
         c.lbl_jug2.setText(j2);
+        //btn_play.setEnabled(false);
+        this.dispose();
+        
     }//GEN-LAST:event_btn_playActionPerformed
     //Inicializa el cronometro
     
@@ -882,6 +866,7 @@ public class Game extends javax.swing.JFrame implements Runnable{
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Game().setVisible(true);
+               
             }
         });
     }
@@ -898,29 +883,32 @@ public class Game extends javax.swing.JFrame implements Runnable{
     private javax.swing.JButton btn_salir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel3;
+    public javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     public javax.swing.JPanel jp_tarjetaDer;
     public javax.swing.JPanel jp_tarjetaIzq;
-    private javax.swing.JPanel jpvista1;
-    private javax.swing.JPanel jpvista2;
-    private javax.swing.JPanel jpvista3;
-    private javax.swing.JPanel jpvista4;
-    private javax.swing.JPanel jpvista5;
-    private javax.swing.JPanel jpvista7;
-    private javax.swing.JPanel jpvistaDerech;
+    public javax.swing.JPanel jpvista1;
+    public javax.swing.JPanel jpvista2;
+    public javax.swing.JPanel jpvista3;
+    public javax.swing.JPanel jpvista4;
+    public javax.swing.JPanel jpvista5;
+    public javax.swing.JPanel jpvista7;
+    public javax.swing.JPanel jpvistaDerech;
     public javax.swing.JPanel jpvistaIzq;
     private javax.swing.JLabel lbl_NumDer;
     private javax.swing.JLabel lbl_NumIzq;
-    private javax.swing.JLabel lbl_cronoPartido;
+    public javax.swing.JLabel lbl_cronoPartido;
     public javax.swing.JLabel lbl_horaAct1;
+    public javax.swing.JLabel lbl_jset;
     public javax.swing.JLabel lbl_jugador1;
     public javax.swing.JLabel lbl_jugador2;
-    private javax.swing.JLabel lbl_pelota1;
-    private javax.swing.JLabel lbl_pelota2;
+    public javax.swing.JLabel lbl_pelota1;
+    public javax.swing.JLabel lbl_pelota2;
     private javax.swing.JLabel lbl_puntuacion1;
     private javax.swing.JLabel lbl_puntuacion2;
+    public javax.swing.JLabel lbl_set;
     // End of variables declaration//GEN-END:variables
 }
 
