@@ -32,6 +32,8 @@ public class GruposDe4 extends javax.swing.JFrame {
         Llenarlista();
         llenarCombo2();
         actions();
+        CargarHoraFecha();
+        //System.out.println("Hola "+selectHora());
     }
     
 
@@ -1673,13 +1675,17 @@ public class GruposDe4 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 795, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 10, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 804, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -2363,7 +2369,136 @@ public class GruposDe4 extends javax.swing.JFrame {
         this.jcbxArbitro2.addItemListener(changeClick);
         this.jcbxArbitro3.addItemListener(changeClick);
     }
+    
+    private void CargarHoraFecha(){
+        jlbHora1.setText(selectHora(extraerCi(J1G1.getText()),extraerCi(J222G1.getText())));
+        jlbFecha1.setText(selectFecha(extraerCi(J1G1.getText()),extraerCi(J222G1.getText())));
+        
+        jlbHora2.setText(selectHora(extraerCi(J11G1.getText()),extraerCi(J33G1.getText())));
+        jlbFecha2.setText(selectFecha(extraerCi(J11G1.getText()),extraerCi(J33G1.getText())));
+        
+        jlbHora3.setText(selectHora(extraerCi(J111G1.getText()),extraerCi(J4G1.getText())));
+        jlbFecha3.setText(selectFecha(extraerCi(J111G1.getText()),extraerCi(J4G1.getText())));
+        
+        jlbHora4.setText(selectHora(extraerCi(J2G1.getText()),extraerCi(J333G1.getText())));
+        jlbFecha4.setText(selectFecha(extraerCi(J2G1.getText()),extraerCi(J333G1.getText())));
+        
+        jlbHora5.setText(selectHora(extraerCi(J22G1.getText()),extraerCi(J44G1.getText())));
+        jlbFecha5.setText(selectFecha(extraerCi(J22G1.getText()),extraerCi(J44G1.getText())));
+        
+        jlbHora6.setText(selectHora(extraerCi(J3G1.getText()),extraerCi(J444G1.getText())));
+        jlbFecha6.setText(selectFecha(extraerCi(J3G1.getText()),extraerCi(J444G1.getText())));
+        
+        // grupo 2 *******************************************************************************************
+        
+        jlbHora7.setText(selectHora(extraerCi(J1G2.getText()),extraerCi(J222G2.getText())));
+        jlbFecha7.setText(selectFecha(extraerCi(J1G2.getText()),extraerCi(J222G2.getText())));
+        
+        jlbHora8.setText(selectHora(extraerCi(J11G2.getText()),extraerCi(J33G2.getText())));
+        jlbFecha8.setText(selectFecha(extraerCi(J11G2.getText()),extraerCi(J33G2.getText())));
+        
+        jlbHora9.setText(selectHora(extraerCi(J111G2.getText()),extraerCi(J4G2.getText())));
+        jlbFecha9.setText(selectFecha(extraerCi(J111G2.getText()),extraerCi(J4G2.getText())));
+        
+        jlbHora10.setText(selectHora(extraerCi(J2G2.getText()),extraerCi(J333G2.getText())));
+        jlbFecha10.setText(selectFecha(extraerCi(J2G2.getText()),extraerCi(J333G2.getText())));
+        
+        jlbHora11.setText(selectHora(extraerCi(J22G2.getText()),extraerCi(J44G2.getText())));
+        jlbFecha11.setText(selectFecha(extraerCi(J22G2.getText()),extraerCi(J44G2.getText())));
+        
+        jlbHora12.setText(selectHora(extraerCi(J3G2.getText()),extraerCi(J444G2.getText())));
+        jlbFecha12.setText(selectFecha(extraerCi(J3G2.getText()),extraerCi(J444G2.getText())));
+        
+        // grupo 3 ************************************************************************************
+        
+         jlbHora14.setText(selectHora(extraerCi(J1G3.getText()),extraerCi(J222G3.getText())));
+        jlbFecha16.setText(selectFecha(extraerCi(J1G3.getText()),extraerCi(J222G3.getText())));
+        
+        jlbHora18.setText(selectHora(extraerCi(J11G3.getText()),extraerCi(J33G3.getText())));
+        jlbFecha17.setText(selectFecha(extraerCi(J11G3.getText()),extraerCi(J33G3.getText())));
+        
+        jlbHora16.setText(selectHora(extraerCi(J111G3.getText()),extraerCi(J4G3.getText())));
+        jlbFecha18.setText(selectFecha(extraerCi(J111G3.getText()),extraerCi(J4G3.getText())));
+        
+        jlbHora13.setText(selectHora(extraerCi(J2G3.getText()),extraerCi(J333G3.getText())));
+        jlbFecha15.setText(selectFecha(extraerCi(J2G3.getText()),extraerCi(J333G3.getText())));
+        
+        jlbHora15.setText(selectHora(extraerCi(J22G3.getText()),extraerCi(J44G3.getText())));
+        jlbFecha14.setText(selectFecha(extraerCi(J22G3.getText()),extraerCi(J44G3.getText())));
+        
+        jlbHora17.setText(selectHora(extraerCi(J3G3.getText()),extraerCi(J444G3.getText())));
+        jlbFecha13.setText(selectFecha(extraerCi(J3G3.getText()),extraerCi(J444G3.getText())));
+        
+        // grupo 4 ************************************************************************************
+        
+         jlbHora20.setText(selectHora(extraerCi(J1G4.getText()),extraerCi(J222G4.getText())));
+        jlbFecha22.setText(selectFecha(extraerCi(J1G4.getText()),extraerCi(J222G4.getText())));
+        
+        jlbHora24.setText(selectHora(extraerCi(J11G4.getText()),extraerCi(J33G4.getText())));
+        jlbFecha23.setText(selectFecha(extraerCi(J11G4.getText()),extraerCi(J33G4.getText())));
+        
+        jlbHora22.setText(selectHora(extraerCi(J111G4.getText()),extraerCi(J4G4.getText())));
+        jlbFecha24.setText(selectFecha(extraerCi(J111G4.getText()),extraerCi(J4G4.getText())));
+        
+        jlbHora19.setText(selectHora(extraerCi(J2G4.getText()),extraerCi(J333G4.getText())));
+        jlbFecha21.setText(selectFecha(extraerCi(J2G4.getText()),extraerCi(J333G4.getText())));
+        
+        jlbHora21.setText(selectHora(extraerCi(J22G4.getText()),extraerCi(J44G4.getText())));
+        jlbFecha20.setText(selectFecha(extraerCi(J22G4.getText()),extraerCi(J44G4.getText())));
+        
+        jlbHora23.setText(selectHora(extraerCi(J3G4.getText()),extraerCi(J444G4.getText())));
+        jlbFecha19.setText(selectFecha(extraerCi(J3G4.getText()),extraerCi(J444G4.getText())));
+        
+        
+    }
+    
+    private String extraerCi(String nombre){
+        //0000016    - carlos andrade - 16
+        int n1 =0;//nombre.indexOf('-',0)+2;
+        int n2 = nombre.indexOf(' ',n1+1);
+        //System.out.println(nombre.substring(n1,n2));
+        return nombre.substring(n1,n2);
+    }
      
+    public String selectHora(String cij1,String cij2){
+        //String cij1 = "00000016";
+        //String cij2 = "00000009";
+        String hora = "Hora";
+        cn.getConexion();
+        ResultSet rs = cn.consulta("select HORA from PARTIDO where CI_J1='"+cij1+"' and CI_J2 = '"+cij2+"'");
+        ResultSet rs1 = cn.consulta("select count(HORA) from PARTIDO where CI_J1='"+cij1+"' and CI_J2 = '"+cij2+"'");
+        try {
+            rs1.next();
+            rs.next();
+            if(rs1.getInt(1)== 1){
+                hora = rs.getString(1);
+                //System.out.println("hora ="+hora+"Num ="+rs1.getInt(1));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(GruposDe4.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return hora;
+    }
+    
+    public String selectFecha(String cij1,String cij2){
+        //String cij1 = "00000016";
+        //String cij2 = "00000009";
+        String fecha = "Fecha";
+        cn.getConexion();
+        ResultSet rs = cn.consulta("select FECHA from PARTIDO where CI_J1='"+cij1+"' and CI_J2 = '"+cij2+"'");
+        ResultSet rs1 = cn.consulta("select count(FECHA) from PARTIDO where CI_J1='"+cij1+"' and CI_J2 = '"+cij2+"'");
+        try {
+            rs1.next();
+            rs.next();
+            if(rs1.getInt(1)== 1){
+                fecha = rs.getString(1);
+                //System.out.println("hora ="+hora+"Num ="+rs1.getInt(1));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(GruposDe4.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return fecha;
+    }
     
     /**
      * @param args the command line arguments

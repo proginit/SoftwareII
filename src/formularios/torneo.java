@@ -79,7 +79,7 @@ public class torneo extends javax.swing.JFrame {
         jLabel1.setText("Datos del Torneo");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 126, -1));
 
-        jLabel2.setText("Detalle: ");
+        jLabel2.setText("Titulo: ");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
         jLabel3.setText("Modalidad: ");

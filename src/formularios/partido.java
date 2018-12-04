@@ -475,7 +475,24 @@ public class partido extends javax.swing.JFrame {
                 break;
             }
         }
-        
+        int NumMesa =Integer.parseInt(LbNumMesa.getText());
+        String fase = (String) cbxFase.getSelectedItem();
+        String fecha = ftxtFecha.getText();
+        String hora = FtxtHora.getText();
+        String direc = txtDirec.getText();
+        String ci_a = (String) jlbArbitro.getText();
+        String ci_j1 = (String) jlbJugador1.getText();
+        String ci_j2 = (String) jlbJugador2.getText();
+        String torneo = (String) cbxTorneo.getSelectedItem();
+        int numIndexA = ci_a.indexOf("-");
+        int numIndexJ1 = ci_j1.indexOf("-");
+        int numIndexJ2 = ci_j2.indexOf("-");
+        int numIndexT = torneo.indexOf("-");
+        String ci_a1 = ci_a.substring(0,numIndexA-1);
+        String ci_j11 = ci_j1.substring(0,numIndexJ1-1);
+        String ci_j21 = ci_j2.substring(0, numIndexJ2-1);
+        int torneo1 = Integer.parseInt(torneo.substring(0, numIndexT-1));
+        cn.Inseratar("insert into PARTIDO (NUMMESA,FECHA,HORA,DIRECCION,FASE,CI_A,CI_J1,CI_J2,ID_T) values("+NumMesa+",'"+fecha+"','"+hora+"','"+direc+"','"+fase+"','"+ci_a1+"','"+ci_j11+"','"+ci_j21+"',"+torneo1+")");
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btn_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salirActionPerformed
