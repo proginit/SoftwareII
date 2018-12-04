@@ -280,9 +280,21 @@ public class seleccionarJugador extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void btnGenerarGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarGActionPerformed
-        GruposDe4 g4 = new GruposDe4();
-        g4.setVisible(true);
-        this.dispose();
+        
+        cn.getConexion();
+        ResultSet rs = cn.consulta("select count(CI) from JUGADORTORNEO");
+        try {
+            rs.next();
+            if(rs.getInt(1)== 16){
+                GruposDe4 g4 = new GruposDe4();
+                g4.setVisible(true);
+                this.dispose();
+            }else{
+                JOptionPane.showMessageDialog(null, "Seleccione "+(16-rs.getInt(1))+" jugador/es mas");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(seleccionarJugador.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnGenerarGActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed

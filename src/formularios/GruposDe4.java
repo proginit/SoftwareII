@@ -2314,7 +2314,7 @@ public class GruposDe4 extends javax.swing.JFrame {
         return nombre.substring(0,n2);
     }
     
-     private void llenarCombo2(){
+     public void llenarCombo2(){
         String sql = "select CI_A,NOMBRE from Arbitro";
         cn.getConexion();
         ResultSet rs = cn.consulta(sql);
