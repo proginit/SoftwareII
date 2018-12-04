@@ -51,13 +51,16 @@ public class torneo extends javax.swing.JFrame {
         btn_salir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 51));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnGuardar.setBackground(new java.awt.Color(255, 255, 255));
         btnGuardar.setForeground(new java.awt.Color(0, 51, 51));
         btnGuardar.setText("Guardar");
+        btnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarActionPerformed(evt);
@@ -68,6 +71,7 @@ public class torneo extends javax.swing.JFrame {
         btnNuevo.setBackground(new java.awt.Color(255, 255, 255));
         btnNuevo.setForeground(new java.awt.Color(0, 51, 51));
         btnNuevo.setText("Nuevo");
+        btnNuevo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevoActionPerformed(evt);
@@ -76,20 +80,29 @@ public class torneo extends javax.swing.JFrame {
         jPanel1.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, 76, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Datos del Torneo");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 126, -1));
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Titulo: ");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Modalidad: ");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Lugar:");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
+
+        txtNombre.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 157, -1));
+
+        txtModalidad.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.add(txtModalidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 157, -1));
 
+        txtPais.setBackground(new java.awt.Color(255, 255, 255));
         txtPais.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtPaisKeyTyped(evt);
@@ -97,13 +110,16 @@ public class torneo extends javax.swing.JFrame {
         });
         jPanel1.add(txtPais, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 157, -1));
 
+        btnSelecJuga.setBackground(new java.awt.Color(0, 51, 51));
+        btnSelecJuga.setForeground(new java.awt.Color(255, 255, 255));
         btnSelecJuga.setText("Seleccionar Jugadores");
+        btnSelecJuga.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSelecJuga.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSelecJugaActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSelecJuga, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 160, -1));
+        jPanel1.add(btnSelecJuga, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 180, -1));
 
         btn_salir.setBackground(new java.awt.Color(0, 51, 51));
         btn_salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cancelar.png"))); // NOI18N

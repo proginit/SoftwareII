@@ -6,6 +6,7 @@
 package paneles;
 
 import Vista.Game;
+import Vista.MenuPrincipal;
 import formularios.torneo;
 
 /**
@@ -34,6 +35,8 @@ public class inicio extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        btn_iniciot = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -51,15 +54,33 @@ public class inicio extends javax.swing.JPanel {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/podio.png"))); // NOI18N
         jButton1.setText("INICIAR TORNEO");
+        jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 330, 170, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 80, 170, 40));
 
         jButton2.setText("Manual");
         add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 350, -1, -1));
+
+        btn_iniciot.setBackground(new java.awt.Color(0, 51, 51));
+        btn_iniciot.setForeground(new java.awt.Color(255, 255, 255));
+        btn_iniciot.setToolTipText("");
+        btn_iniciot.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_iniciot.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_iniciotMouseClicked(evt);
+            }
+        });
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/podio.png"))); // NOI18N
+        jLabel3.setText("INICIAR TORNEO");
+        btn_iniciot.add(jLabel3);
+
+        add(btn_iniciot, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 150, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -69,11 +90,21 @@ public class inicio extends javax.swing.JPanel {
         //dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void btn_iniciotMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_iniciotMouseClicked
+        // TODO add your handling code here:
+        torneo t = new torneo();
+        t.setVisible(true);
+        //this.dispose();
+        //MenuPrincipal.dispose();
+    }//GEN-LAST:event_btn_iniciotMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel btn_iniciot;
     public javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

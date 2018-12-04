@@ -104,14 +104,29 @@ public class partido extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Torneo:");
 
-        cbxFase.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sin Fase", "Eliminatorias", "Final", "Semi-Final", "Cuartos_Final", "Octavos_Final", "16_Final", "32_Final" }));
+        txtDirec.setBackground(new java.awt.Color(255, 255, 255));
+        txtDirec.setForeground(new java.awt.Color(255, 255, 255));
 
+        cbxFase.setBackground(new java.awt.Color(255, 255, 255));
+        cbxFase.setForeground(new java.awt.Color(0, 51, 51));
+        cbxFase.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sin Fase", "Eliminatorias", "Final", "Semi-Final", "Cuartos_Final", "Octavos_Final", "16_Final", "32_Final" }));
+        cbxFase.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        cbxTorneo.setBackground(new java.awt.Color(255, 255, 255));
+        cbxTorneo.setForeground(new java.awt.Color(255, 255, 255));
+
+        ftxtFecha.setBackground(new java.awt.Color(153, 153, 153));
+        ftxtFecha.setForeground(new java.awt.Color(255, 255, 255));
         try {
             ftxtFecha.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        ftxtFecha.setCaretColor(new java.awt.Color(0, 51, 51));
+        ftxtFecha.setDisabledTextColor(new java.awt.Color(0, 51, 51));
+        ftxtFecha.setSelectedTextColor(new java.awt.Color(0, 51, 51));
 
+        FtxtHora.setForeground(new java.awt.Color(255, 255, 255));
         try {
             FtxtHora.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##:##")));
         } catch (java.text.ParseException ex) {
@@ -129,6 +144,7 @@ public class partido extends javax.swing.JFrame {
         btnGuardar.setBackground(new java.awt.Color(255, 255, 255));
         btnGuardar.setForeground(new java.awt.Color(0, 51, 51));
         btnGuardar.setText("Guardar");
+        btnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarActionPerformed(evt);
@@ -138,6 +154,7 @@ public class partido extends javax.swing.JFrame {
         btnNuevo.setBackground(new java.awt.Color(255, 255, 255));
         btnNuevo.setForeground(new java.awt.Color(0, 51, 51));
         btnNuevo.setText("Nuevo");
+        btnNuevo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Arbitro:");

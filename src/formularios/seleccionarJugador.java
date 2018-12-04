@@ -80,9 +80,12 @@ public class seleccionarJugador extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Seleccionar Jugadores"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Seleccionar Jugadores", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
-        jtbJugadores.setBackground(new java.awt.Color(255, 255, 255));
+        jScrollPane1.setBackground(new java.awt.Color(0, 51, 51));
+        jScrollPane1.setForeground(new java.awt.Color(255, 255, 255));
+
         jtbJugadores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
@@ -97,21 +100,33 @@ public class seleccionarJugador extends javax.swing.JFrame {
         jtbJugadores.setComponentPopupMenu(jPopupMenu1);
         jScrollPane1.setViewportView(jtbJugadores);
 
+        btnRegistrar.setBackground(new java.awt.Color(255, 255, 255));
+        btnRegistrar.setForeground(new java.awt.Color(0, 51, 51));
         btnRegistrar.setText("Registar Jugador");
+        btnRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarActionPerformed(evt);
             }
         });
 
+        btnBuscar.setBackground(new java.awt.Color(255, 255, 255));
+        btnBuscar.setForeground(new java.awt.Color(0, 51, 51));
         btnBuscar.setText("Buscar");
+        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarActionPerformed(evt);
             }
         });
 
+        txtBuscar.setBackground(new java.awt.Color(255, 255, 255));
+        txtBuscar.setForeground(new java.awt.Color(0, 51, 51));
+
+        btnRecargar.setBackground(new java.awt.Color(255, 255, 255));
+        btnRecargar.setForeground(new java.awt.Color(0, 51, 51));
         btnRecargar.setText("Recargar");
+        btnRecargar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnRecargar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRecargarActionPerformed(evt);
@@ -153,9 +168,9 @@ public class seleccionarJugador extends javax.swing.JFrame {
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 510, -1));
 
         jPanel2.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Jugadores Seleccionados"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Jugadores Seleccionados", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
-        jtbSelecJugador.setBackground(new java.awt.Color(255, 255, 255));
         jtbSelecJugador.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
@@ -170,14 +185,20 @@ public class seleccionarJugador extends javax.swing.JFrame {
         jtbSelecJugador.setComponentPopupMenu(jPopupMenu2);
         jScrollPane2.setViewportView(jtbSelecJugador);
 
+        btnBorrar.setBackground(new java.awt.Color(255, 255, 255));
+        btnBorrar.setForeground(new java.awt.Color(0, 51, 51));
         btnBorrar.setText("Volver a seleccionar");
+        btnBorrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBorrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBorrarActionPerformed(evt);
             }
         });
 
+        btnGenerarG.setBackground(new java.awt.Color(255, 255, 255));
+        btnGenerarG.setForeground(new java.awt.Color(0, 51, 51));
         btnGenerarG.setText("Generar Grupos");
+        btnGenerarG.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGenerarG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGenerarGActionPerformed(evt);
@@ -206,12 +227,12 @@ public class seleccionarJugador extends javax.swing.JFrame {
                 .addComponent(btnBorrar)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(btnGenerarG)
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 510, -1));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 254, 510, 260));
 
         btn_salir.setBackground(new java.awt.Color(0, 51, 51));
         btn_salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cancelar_1.png"))); // NOI18N

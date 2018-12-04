@@ -18,7 +18,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     public MenuPrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
-        
+        this.setVisible(true);
         new CambiaPanel(jp_centro, new paneles.inicio());
     }
    

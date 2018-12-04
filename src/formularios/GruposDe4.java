@@ -252,158 +252,239 @@ public class GruposDe4 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        jScrollPane5.setBackground(new java.awt.Color(0, 51, 51));
+
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel4.setBackground(new java.awt.Color(0, 51, 51));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Grupo 2"));
 
         jScrollPane2.setViewportView(listaG2);
 
+        J1G2.setForeground(new java.awt.Color(255, 255, 255));
         J1G2.setText("jLabel1");
 
+        J11G2.setForeground(new java.awt.Color(255, 255, 255));
         J11G2.setText("jLabel2");
 
+        J111G2.setForeground(new java.awt.Color(255, 255, 255));
         J111G2.setText("jLabel3");
 
+        J2G2.setForeground(new java.awt.Color(255, 255, 255));
         J2G2.setText("jLabel4");
 
+        J22G2.setForeground(new java.awt.Color(255, 255, 255));
         J22G2.setText("jLabel5");
 
+        J3G2.setForeground(new java.awt.Color(255, 255, 255));
         J3G2.setText("jLabel6");
 
+        J222G2.setForeground(new java.awt.Color(255, 255, 255));
         J222G2.setText("jLabel7");
 
+        J33G2.setForeground(new java.awt.Color(255, 255, 255));
         J33G2.setText("jLabel8");
 
+        J4G2.setForeground(new java.awt.Color(255, 255, 255));
         J4G2.setText("jLabel9");
 
+        J333G2.setForeground(new java.awt.Color(255, 255, 255));
         J333G2.setText("jLabel10");
 
+        J44G2.setForeground(new java.awt.Color(255, 255, 255));
         J44G2.setText("jLabel11");
 
+        J444G2.setForeground(new java.awt.Color(255, 255, 255));
         J444G2.setText("jLabel12");
 
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("VS");
 
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("VS");
 
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("VS");
 
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("VS");
 
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("VS");
 
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("VS");
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Arbitro :");
 
+        jcbxArbitro1.setBackground(new java.awt.Color(255, 255, 255));
+        jcbxArbitro1.setForeground(new java.awt.Color(0, 51, 51));
         jcbxArbitro1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar Arbitro", "Nuevo Arbitro" }));
+        jcbxArbitro1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Mesa :");
 
+        JbxNumMesa1.setBackground(new java.awt.Color(255, 255, 255));
+        JbxNumMesa1.setForeground(new java.awt.Color(0, 51, 51));
         JbxNumMesa1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        JbxNumMesa1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Programacion de Partidos");
 
+        btnPartido1.setBackground(new java.awt.Color(255, 255, 255));
+        btnPartido1.setForeground(new java.awt.Color(0, 51, 51));
         btnPartido1.setText("Definir Partido 1");
+        btnPartido1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnPartido1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPartido1ActionPerformed(evt);
             }
         });
 
+        btnIniciar1.setBackground(new java.awt.Color(255, 255, 255));
+        btnIniciar1.setForeground(new java.awt.Color(0, 51, 51));
         btnIniciar1.setText("Iniciar Partido 1");
+        btnIniciar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnIniciar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIniciar1ActionPerformed(evt);
             }
         });
 
+        jlbFecha7.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha7.setText("Fecha");
 
+        jlbHora7.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora7.setText("Hora");
 
+        jButton11.setBackground(new java.awt.Color(255, 255, 255));
+        jButton11.setForeground(new java.awt.Color(0, 51, 51));
         jButton11.setText("Definir Partido 2");
+        jButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton11ActionPerformed(evt);
             }
         });
 
+        jButton12.setBackground(new java.awt.Color(255, 255, 255));
+        jButton12.setForeground(new java.awt.Color(0, 51, 51));
         jButton12.setText("Iniciar Partido 2");
+        jButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton12ActionPerformed(evt);
             }
         });
 
+        jlbFecha8.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha8.setText("Fecha");
 
+        jlbHora8.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora8.setText("Hora");
 
+        jButton13.setBackground(new java.awt.Color(255, 255, 255));
+        jButton13.setForeground(new java.awt.Color(0, 51, 51));
         jButton13.setText("Definir Partido3");
+        jButton13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton13ActionPerformed(evt);
             }
         });
 
+        jButton14.setBackground(new java.awt.Color(255, 255, 255));
+        jButton14.setForeground(new java.awt.Color(0, 51, 51));
         jButton14.setText("Iniciar Partido 3");
+        jButton14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton14ActionPerformed(evt);
             }
         });
 
+        jlbFecha9.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha9.setText("Fecha");
 
+        jlbHora9.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora9.setText("Hora");
 
+        jlbFecha10.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha10.setText("Fecha");
 
+        jlbHora10.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora10.setText("Hora");
 
+        jButton15.setBackground(new java.awt.Color(255, 255, 255));
+        jButton15.setForeground(new java.awt.Color(0, 51, 51));
         jButton15.setText("Definir Partido 4");
+        jButton15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton15ActionPerformed(evt);
             }
         });
 
+        jButton16.setBackground(new java.awt.Color(255, 255, 255));
+        jButton16.setForeground(new java.awt.Color(0, 51, 51));
         jButton16.setText("Iniciar Partido 4");
+        jButton16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton16ActionPerformed(evt);
             }
         });
 
+        jButton17.setBackground(new java.awt.Color(255, 255, 255));
+        jButton17.setForeground(new java.awt.Color(0, 51, 51));
         jButton17.setText("Definir Partido 5");
+        jButton17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton17ActionPerformed(evt);
             }
         });
 
+        jlbFecha11.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha11.setText("Fecha");
 
+        jlbHora11.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora11.setText("Hora");
 
+        jButton18.setBackground(new java.awt.Color(255, 255, 255));
+        jButton18.setForeground(new java.awt.Color(0, 51, 51));
         jButton18.setText("Iniciar Partido 5");
+        jButton18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton18ActionPerformed(evt);
             }
         });
 
+        jButton19.setBackground(new java.awt.Color(255, 255, 255));
+        jButton19.setForeground(new java.awt.Color(0, 51, 51));
         jButton19.setText("Definir Partido 6");
+        jButton19.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton19ActionPerformed(evt);
             }
         });
 
+        jlbFecha12.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha12.setText("Fecha");
 
+        jlbHora12.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora12.setText("Hora");
 
+        jButton20.setBackground(new java.awt.Color(255, 255, 255));
+        jButton20.setForeground(new java.awt.Color(0, 51, 51));
         jButton20.setText("Iniciar Partido 6");
+        jButton20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton20ActionPerformed(evt);
@@ -600,158 +681,234 @@ public class GruposDe4 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel3.setBackground(new java.awt.Color(0, 51, 51));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Grupo 4"));
 
         jScrollPane4.setViewportView(listaG4);
 
+        jlbFecha19.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha19.setText("Fecha");
 
+        jlbFecha20.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha20.setText("Fecha");
 
+        jlbHora19.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora19.setText("Hora");
 
+        jlbHora20.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora20.setText("Hora");
 
+        jButton31.setBackground(new java.awt.Color(255, 255, 255));
+        jButton31.setForeground(new java.awt.Color(0, 51, 51));
         jButton31.setText("Definir Partido 6");
+        jButton31.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton31ActionPerformed(evt);
             }
         });
 
+        jButton32.setBackground(new java.awt.Color(255, 255, 255));
+        jButton32.setForeground(new java.awt.Color(0, 51, 51));
         jButton32.setText("Definir Partido3");
+        jButton32.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton32ActionPerformed(evt);
             }
         });
 
+        jButton33.setBackground(new java.awt.Color(255, 255, 255));
+        jButton33.setForeground(new java.awt.Color(0, 51, 51));
         jButton33.setText("Iniciar Partido 5");
+        jButton33.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton33.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton33ActionPerformed(evt);
             }
         });
 
+        J222G4.setForeground(new java.awt.Color(255, 255, 255));
         J222G4.setText("jLabel7");
 
+        J444G4.setForeground(new java.awt.Color(255, 255, 255));
         J444G4.setText("jLabel12");
 
+        J22G4.setForeground(new java.awt.Color(255, 255, 255));
         J22G4.setText("jLabel5");
 
+        jlbHora21.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora21.setText("Hora");
 
+        jlbFecha21.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha21.setText("Fecha");
 
+        jLabel31.setForeground(new java.awt.Color(255, 255, 255));
         jLabel31.setText("VS");
 
+        jLabel32.setForeground(new java.awt.Color(255, 255, 255));
         jLabel32.setText("VS");
 
+        btnIniciar3.setBackground(new java.awt.Color(255, 255, 255));
+        btnIniciar3.setForeground(new java.awt.Color(0, 51, 51));
         btnIniciar3.setText("Iniciar Partido 1");
+        btnIniciar3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnIniciar3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIniciar3ActionPerformed(evt);
             }
         });
 
+        J111G4.setForeground(new java.awt.Color(255, 255, 255));
         J111G4.setText("jLabel3");
 
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Mesa :");
 
+        jlbHora22.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora22.setText("Hora");
 
+        jButton34.setBackground(new java.awt.Color(255, 255, 255));
+        jButton34.setForeground(new java.awt.Color(0, 51, 51));
         jButton34.setText("Iniciar Partido 4");
+        jButton34.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton34.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton34ActionPerformed(evt);
             }
         });
 
+        jlbHora23.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora23.setText("Hora");
 
+        btnPartido3.setBackground(new java.awt.Color(255, 255, 255));
+        btnPartido3.setForeground(new java.awt.Color(0, 51, 51));
         btnPartido3.setText("Definir Partido 1");
+        btnPartido3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnPartido3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPartido3ActionPerformed(evt);
             }
         });
 
+        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
         jLabel33.setText("VS");
 
+        jLabel34.setForeground(new java.awt.Color(255, 255, 255));
         jLabel34.setText("VS");
 
+        jlbHora24.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora24.setText("Hora");
 
+        J33G4.setForeground(new java.awt.Color(255, 255, 255));
         J33G4.setText("jLabel8");
 
+        J1G4.setForeground(new java.awt.Color(255, 255, 255));
         J1G4.setText("jLabel1");
 
+        jButton35.setBackground(new java.awt.Color(255, 255, 255));
+        jButton35.setForeground(new java.awt.Color(0, 51, 51));
         jButton35.setText("Iniciar Partido 3");
+        jButton35.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton35.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton35ActionPerformed(evt);
             }
         });
 
+        jButton36.setBackground(new java.awt.Color(255, 255, 255));
+        jButton36.setForeground(new java.awt.Color(0, 51, 51));
         jButton36.setText("Definir Partido 5");
+        jButton36.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton36.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton36ActionPerformed(evt);
             }
         });
 
+        jButton37.setBackground(new java.awt.Color(255, 255, 255));
+        jButton37.setForeground(new java.awt.Color(0, 51, 51));
         jButton37.setText("Iniciar Partido 2");
+        jButton37.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton37.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton37ActionPerformed(evt);
             }
         });
 
+        jlbFecha22.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha22.setText("Fecha");
 
+        J3G4.setForeground(new java.awt.Color(255, 255, 255));
         J3G4.setText("jLabel6");
 
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Programacion de Partidos");
 
+        jlbFecha23.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha23.setText("Fecha");
 
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Arbitro :");
 
+        J4G4.setForeground(new java.awt.Color(255, 255, 255));
         J4G4.setText("jLabel9");
 
+        jlbFecha24.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha24.setText("Fecha");
 
+        jcbxArbitro3.setBackground(new java.awt.Color(255, 255, 255));
+        jcbxArbitro3.setForeground(new java.awt.Color(0, 51, 51));
         jcbxArbitro3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar Arbitro", "Nuevo Arbitro" }));
+        jcbxArbitro3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
         jLabel35.setText("VS");
 
+        JbxNumMesa3.setBackground(new java.awt.Color(255, 255, 255));
+        JbxNumMesa3.setForeground(new java.awt.Color(0, 51, 51));
         JbxNumMesa3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        JbxNumMesa3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        J2G4.setForeground(new java.awt.Color(255, 255, 255));
         J2G4.setText("jLabel4");
 
+        J333G4.setForeground(new java.awt.Color(255, 255, 255));
         J333G4.setText("jLabel10");
 
+        J44G4.setForeground(new java.awt.Color(255, 255, 255));
         J44G4.setText("jLabel11");
 
+        J11G4.setForeground(new java.awt.Color(255, 255, 255));
         J11G4.setText("jLabel2");
 
+        jButton38.setBackground(new java.awt.Color(255, 255, 255));
+        jButton38.setForeground(new java.awt.Color(0, 51, 51));
         jButton38.setText("Definir Partido 2");
+        jButton38.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton38.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton38ActionPerformed(evt);
             }
         });
 
+        jButton39.setBackground(new java.awt.Color(255, 255, 255));
+        jButton39.setForeground(new java.awt.Color(0, 51, 51));
         jButton39.setText("Definir Partido 4");
+        jButton39.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton39.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton39ActionPerformed(evt);
             }
         });
 
+        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
         jLabel36.setText("VS");
 
+        jButton40.setBackground(new java.awt.Color(255, 255, 255));
+        jButton40.setForeground(new java.awt.Color(0, 51, 51));
         jButton40.setText("Iniciar Partido 6");
+        jButton40.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton40.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton40ActionPerformed(evt);
@@ -948,157 +1105,232 @@ public class GruposDe4 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel2.setBackground(new java.awt.Color(0, 51, 51));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Grupo 3"));
 
         jScrollPane3.setViewportView(listaG3);
 
+        jlbFecha13.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha13.setText("Fecha");
 
+        jlbFecha14.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha14.setText("Fecha");
 
+        jlbHora13.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora13.setText("Hora");
 
+        jlbHora14.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora14.setText("Hora");
 
+        jButton21.setBackground(new java.awt.Color(255, 255, 255));
+        jButton21.setForeground(new java.awt.Color(0, 51, 51));
         jButton21.setText("Definir Partido 6");
+        jButton21.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton21ActionPerformed(evt);
             }
         });
 
+        jButton22.setBackground(new java.awt.Color(255, 255, 255));
+        jButton22.setForeground(new java.awt.Color(0, 51, 51));
         jButton22.setText("Definir Partido3");
+        jButton22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton22ActionPerformed(evt);
             }
         });
 
+        jButton23.setBackground(new java.awt.Color(255, 255, 255));
+        jButton23.setForeground(new java.awt.Color(0, 51, 51));
         jButton23.setText("Iniciar Partido 5");
+        jButton23.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton23ActionPerformed(evt);
             }
         });
 
+        J222G3.setForeground(new java.awt.Color(255, 255, 255));
         J222G3.setText("jLabel7");
 
+        J444G3.setForeground(new java.awt.Color(255, 255, 255));
         J444G3.setText("jLabel12");
 
+        J22G3.setForeground(new java.awt.Color(255, 255, 255));
         J22G3.setText("jLabel5");
 
+        jlbHora15.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora15.setText("Hora");
 
+        jlbFecha15.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha15.setText("Fecha");
 
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("VS");
 
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
         jLabel26.setText("VS");
 
+        btnIniciar2.setBackground(new java.awt.Color(255, 255, 255));
+        btnIniciar2.setForeground(new java.awt.Color(0, 51, 51));
         btnIniciar2.setText("Iniciar Partido 1");
+        btnIniciar2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnIniciar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIniciar2ActionPerformed(evt);
             }
         });
 
+        J111G3.setForeground(new java.awt.Color(255, 255, 255));
         J111G3.setText("jLabel3");
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Mesa :");
 
+        jlbHora16.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora16.setText("Hora");
 
+        jButton24.setBackground(new java.awt.Color(255, 255, 255));
+        jButton24.setForeground(new java.awt.Color(0, 51, 51));
         jButton24.setText("Iniciar Partido 4");
+        jButton24.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton24ActionPerformed(evt);
             }
         });
 
+        jlbHora17.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora17.setText("Hora");
 
+        btnPartido2.setBackground(new java.awt.Color(255, 255, 255));
+        btnPartido2.setForeground(new java.awt.Color(0, 51, 51));
         btnPartido2.setText("Definir Partido 1");
+        btnPartido2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnPartido2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPartido2ActionPerformed(evt);
             }
         });
 
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
         jLabel27.setText("VS");
 
+        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
         jLabel28.setText("VS");
 
+        jlbHora18.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora18.setText("Hora");
 
+        J33G3.setForeground(new java.awt.Color(255, 255, 255));
         J33G3.setText("jLabel8");
 
+        J1G3.setForeground(new java.awt.Color(255, 255, 255));
         J1G3.setText("jLabel1");
 
+        jButton25.setBackground(new java.awt.Color(255, 255, 255));
+        jButton25.setForeground(new java.awt.Color(0, 51, 51));
         jButton25.setText("Iniciar Partido 3");
+        jButton25.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton25ActionPerformed(evt);
             }
         });
 
+        jButton26.setBackground(new java.awt.Color(255, 255, 255));
+        jButton26.setForeground(new java.awt.Color(0, 51, 51));
         jButton26.setText("Definir Partido 5");
+        jButton26.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton26ActionPerformed(evt);
             }
         });
 
+        jButton27.setBackground(new java.awt.Color(255, 255, 255));
+        jButton27.setForeground(new java.awt.Color(0, 51, 51));
         jButton27.setText("Iniciar Partido 2");
+        jButton27.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton27ActionPerformed(evt);
             }
         });
 
+        jlbFecha16.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha16.setText("Fecha");
 
+        J3G3.setForeground(new java.awt.Color(255, 255, 255));
         J3G3.setText("jLabel6");
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Programacion de Partidos");
 
+        jlbFecha17.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha17.setText("Fecha");
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Arbitro :");
 
+        J4G3.setForeground(new java.awt.Color(255, 255, 255));
         J4G3.setText("jLabel9");
 
+        jlbFecha18.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha18.setText("Fecha");
 
+        jcbxArbitro2.setBackground(new java.awt.Color(255, 255, 255));
+        jcbxArbitro2.setForeground(new java.awt.Color(0, 51, 51));
         jcbxArbitro2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar Arbitro", "Nuevo Arbitro" }));
+        jcbxArbitro2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
         jLabel29.setText("VS");
 
+        JbxNumMesa2.setBackground(new java.awt.Color(255, 255, 255));
+        JbxNumMesa2.setForeground(new java.awt.Color(0, 51, 51));
         JbxNumMesa2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        JbxNumMesa2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        J2G3.setForeground(new java.awt.Color(255, 255, 255));
         J2G3.setText("jLabel4");
 
+        J333G3.setForeground(new java.awt.Color(255, 255, 255));
         J333G3.setText("jLabel10");
 
+        J44G3.setForeground(new java.awt.Color(255, 255, 255));
         J44G3.setText("jLabel11");
 
+        J11G3.setForeground(new java.awt.Color(255, 255, 255));
         J11G3.setText("jLabel2");
 
+        jButton28.setBackground(new java.awt.Color(255, 255, 255));
+        jButton28.setForeground(new java.awt.Color(0, 51, 51));
         jButton28.setText("Definir Partido 2");
+        jButton28.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton28.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton28ActionPerformed(evt);
             }
         });
 
+        jButton29.setBackground(new java.awt.Color(255, 255, 255));
+        jButton29.setForeground(new java.awt.Color(0, 51, 51));
         jButton29.setText("Definir Partido 4");
+        jButton29.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton29.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton29ActionPerformed(evt);
             }
         });
 
+        jLabel30.setForeground(new java.awt.Color(255, 255, 255));
         jLabel30.setText("VS");
 
+        jButton30.setBackground(new java.awt.Color(255, 255, 255));
+        jButton30.setForeground(new java.awt.Color(0, 51, 51));
         jButton30.setText("Iniciar Partido 6");
         jButton30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1293,161 +1525,238 @@ public class GruposDe4 extends javax.swing.JFrame {
                     .addComponent(jlbFecha13)
                     .addComponent(jlbHora17)
                     .addComponent(jButton30))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(142, Short.MAX_VALUE))
         );
 
+        jPanel1.setBackground(new java.awt.Color(0, 51, 51));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Grupo 1"));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
         jScrollPane1.setViewportView(listaG1);
 
+        J1G1.setForeground(new java.awt.Color(255, 255, 255));
         J1G1.setText("jLabel1");
 
+        J11G1.setForeground(new java.awt.Color(255, 255, 255));
         J11G1.setText("jLabel2");
 
+        J111G1.setForeground(new java.awt.Color(255, 255, 255));
         J111G1.setText("jLabel3");
 
+        J2G1.setForeground(new java.awt.Color(255, 255, 255));
         J2G1.setText("jLabel4");
 
+        J22G1.setForeground(new java.awt.Color(255, 255, 255));
         J22G1.setText("jLabel5");
 
+        J3G1.setForeground(new java.awt.Color(255, 255, 255));
         J3G1.setText("jLabel6");
 
+        J222G1.setForeground(new java.awt.Color(255, 255, 255));
         J222G1.setText("jLabel7");
 
+        J33G1.setForeground(new java.awt.Color(255, 255, 255));
         J33G1.setText("jLabel8");
 
+        J4G1.setForeground(new java.awt.Color(255, 255, 255));
         J4G1.setText("jLabel9");
 
+        J333G1.setForeground(new java.awt.Color(255, 255, 255));
         J333G1.setText("jLabel10");
 
+        J44G1.setForeground(new java.awt.Color(255, 255, 255));
         J44G1.setText("jLabel11");
 
+        J444G1.setForeground(new java.awt.Color(255, 255, 255));
         J444G1.setText("jLabel12");
 
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("VS");
 
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("VS");
 
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("VS");
 
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("VS");
 
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("VS");
 
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("VS");
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Arbitro :");
 
+        jcbxArbitro.setBackground(new java.awt.Color(255, 255, 255));
+        jcbxArbitro.setForeground(new java.awt.Color(0, 51, 51));
         jcbxArbitro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar Arbitro", "Nuevo Arbitro" }));
+        jcbxArbitro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Mesa :");
 
+        JbxNumMesa.setBackground(new java.awt.Color(255, 255, 255));
+        JbxNumMesa.setForeground(new java.awt.Color(0, 51, 51));
         JbxNumMesa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        JbxNumMesa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Programacion de Partidos");
 
+        btnPartido.setBackground(new java.awt.Color(255, 255, 255));
+        btnPartido.setForeground(new java.awt.Color(0, 51, 51));
         btnPartido.setText("Definir Partido 1");
+        btnPartido.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnPartido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPartidoActionPerformed(evt);
             }
         });
 
+        btnIniciar.setBackground(new java.awt.Color(255, 255, 255));
+        btnIniciar.setForeground(new java.awt.Color(0, 51, 51));
         btnIniciar.setText("Iniciar Partido 1");
+        btnIniciar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIniciarActionPerformed(evt);
             }
         });
 
+        jlbFecha1.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha1.setText("Fecha");
 
+        jlbHora1.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora1.setText("Hora");
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setForeground(new java.awt.Color(0, 51, 51));
         jButton1.setText("Definir Partido 2");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setForeground(new java.awt.Color(0, 51, 51));
         jButton2.setText("Iniciar Partido 2");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
+        jlbFecha2.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha2.setText("Fecha");
 
+        jlbHora2.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora2.setText("Hora");
 
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setForeground(new java.awt.Color(0, 51, 51));
         jButton3.setText("Definir Partido3");
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jButton4.setForeground(new java.awt.Color(0, 51, 51));
         jButton4.setText("Iniciar Partido 3");
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
 
+        jlbFecha3.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha3.setText("Fecha");
 
+        jlbHora3.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora3.setText("Hora");
 
+        jlbFecha4.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha4.setText("Fecha");
 
+        jlbHora4.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora4.setText("Hora");
 
+        jButton5.setBackground(new java.awt.Color(255, 255, 255));
+        jButton5.setForeground(new java.awt.Color(0, 51, 51));
         jButton5.setText("Definir Partido 4");
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
 
+        jButton6.setBackground(new java.awt.Color(255, 255, 255));
+        jButton6.setForeground(new java.awt.Color(0, 51, 51));
         jButton6.setText("Iniciar Partido 4");
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
 
+        jButton7.setBackground(new java.awt.Color(255, 255, 255));
+        jButton7.setForeground(new java.awt.Color(0, 51, 51));
         jButton7.setText("Definir Partido 5");
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
 
+        jlbFecha5.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha5.setText("Fecha");
 
+        jlbHora5.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora5.setText("Hora");
 
+        jButton8.setBackground(new java.awt.Color(255, 255, 255));
+        jButton8.setForeground(new java.awt.Color(0, 51, 51));
         jButton8.setText("Iniciar Partido 5");
+        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
             }
         });
 
+        jButton9.setBackground(new java.awt.Color(255, 255, 255));
+        jButton9.setForeground(new java.awt.Color(0, 51, 51));
         jButton9.setText("Definir Partido 6");
+        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
             }
         });
 
+        jlbFecha6.setForeground(new java.awt.Color(255, 255, 255));
         jlbFecha6.setText("Fecha");
 
+        jlbHora6.setForeground(new java.awt.Color(255, 255, 255));
         jlbHora6.setText("Hora");
 
+        jButton10.setBackground(new java.awt.Color(255, 255, 255));
+        jButton10.setForeground(new java.awt.Color(0, 51, 51));
         jButton10.setText("Iniciar Partido 6");
+        jButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton10ActionPerformed(evt);
@@ -1675,16 +1984,14 @@ public class GruposDe4 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 804, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 1596, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane5)
                 .addContainerGap())
         );
 

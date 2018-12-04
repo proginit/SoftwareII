@@ -51,6 +51,7 @@ public class Config extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setUndecorated(true);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosed(java.awt.event.WindowEvent evt) {
                 formWindowClosed(evt);
@@ -63,29 +64,36 @@ public class Config extends javax.swing.JFrame {
 
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Juegos");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, -1, -1));
 
+        jcb_set.setBackground(new java.awt.Color(255, 255, 255));
         jcb_set.setForeground(new java.awt.Color(0, 51, 51));
         jcb_set.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "3", "5", "7" }));
-        jPanel1.add(jcb_set, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, -1, -1));
+        jcb_set.setBorder(null);
+        jcb_set.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(jcb_set, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, -1, -1));
 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("SERVIDOR");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, -1, -1));
 
+        jcb_servidor.setBackground(new java.awt.Color(255, 255, 255));
         jcb_servidor.setForeground(new java.awt.Color(0, 51, 51));
         jcb_servidor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2" }));
-        jPanel1.add(jcb_servidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, -1, -1));
+        jcb_servidor.setBorder(null);
+        jcb_servidor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(jcb_servidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, -1, -1));
 
         btn_iniciar.setBackground(new java.awt.Color(255, 255, 255));
         btn_iniciar.setForeground(new java.awt.Color(0, 51, 51));
         btn_iniciar.setText("INICIAR");
+        btn_iniciar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_iniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_iniciarActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_iniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, -1, -1));
+        jPanel1.add(btn_iniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -102,19 +110,19 @@ public class Config extends javax.swing.JFrame {
         lbl_jug1.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
         lbl_jug1.setForeground(new java.awt.Color(255, 255, 255));
         lbl_jug1.setText("jLabel9");
-        jPanel1.add(lbl_jug1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, -1, -1));
+        jPanel1.add(lbl_jug1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, -1, -1));
 
         lbl_jug2.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
         lbl_jug2.setForeground(new java.awt.Color(255, 255, 255));
         lbl_jug2.setText("jLabel10");
-        jPanel1.add(lbl_jug2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, -1, -1));
+        jPanel1.add(lbl_jug2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("VS");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 400));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

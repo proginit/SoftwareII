@@ -106,23 +106,29 @@ public class jugador extends javax.swing.JFrame {
         jPanel1.add(txtCi, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 160, -1));
 
         txtNombre.setBackground(new java.awt.Color(255, 255, 255));
+        txtNombre.setForeground(new java.awt.Color(0, 51, 51));
         jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 160, -1));
 
         txtApellido.setBackground(new java.awt.Color(255, 255, 255));
+        txtApellido.setForeground(new java.awt.Color(0, 51, 51));
         jPanel1.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 160, -1));
 
         txtRanking.setBackground(new java.awt.Color(255, 255, 255));
+        txtRanking.setForeground(new java.awt.Color(0, 51, 51));
         jPanel1.add(txtRanking, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 160, -1));
 
         txtCategoria.setBackground(new java.awt.Color(255, 255, 255));
+        txtCategoria.setForeground(new java.awt.Color(0, 51, 51));
         jPanel1.add(txtCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 160, -1));
 
         txtTelefono.setBackground(new java.awt.Color(255, 255, 255));
+        txtTelefono.setForeground(new java.awt.Color(0, 51, 51));
         jPanel1.add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 160, -1));
 
         btnGuardar.setBackground(new java.awt.Color(255, 255, 255));
-        btnGuardar.setForeground(new java.awt.Color(0, 0, 0));
+        btnGuardar.setForeground(new java.awt.Color(0, 51, 51));
         btnGuardar.setText("Guardar");
+        btnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarActionPerformed(evt);
@@ -131,8 +137,9 @@ public class jugador extends javax.swing.JFrame {
         jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, 85, -1));
 
         btnNuevo.setBackground(new java.awt.Color(255, 255, 255));
-        btnNuevo.setForeground(new java.awt.Color(0, 0, 0));
+        btnNuevo.setForeground(new java.awt.Color(0, 51, 51));
         btnNuevo.setText("Nuevo");
+        btnNuevo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevoActionPerformed(evt);
@@ -141,6 +148,7 @@ public class jugador extends javax.swing.JFrame {
         jPanel1.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 380, 85, -1));
 
         ftxtFechaNac.setBackground(new java.awt.Color(255, 255, 255));
+        ftxtFechaNac.setForeground(new java.awt.Color(0, 51, 51));
         try {
             ftxtFechaNac.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
