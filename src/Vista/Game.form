@@ -78,7 +78,8 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                              <Component id="lbl_cronoPartido" min="-2" pref="231" max="-2" attributes="0"/>
+                              <Component id="lbl_cronoPartido" min="-2" pref="258" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -217,7 +218,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="00:00:000"/>
+                <Property name="text" type="java.lang.String" value="00:00:00:00"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -250,23 +251,24 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
-                      <Component id="lbl_jugador1" pref="213" max="32767" attributes="0"/>
-                      <EmptySpace min="-2" pref="483" max="-2" attributes="0"/>
-                      <Component id="lbl_jugador2" min="-2" pref="237" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
+                      <Component id="lbl_jugador1" min="-2" pref="98" max="-2" attributes="0"/>
+                      <EmptySpace pref="544" max="32767" attributes="0"/>
+                      <Component id="lbl_jugador2" min="-2" pref="111" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="166" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lbl_jugador1" pref="31" max="32767" attributes="0"/>
-                          <Component id="lbl_jugador2" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lbl_jugador2" alignment="3" pref="34" max="32767" attributes="0"/>
+                          <Component id="lbl_jugador1" alignment="3" pref="31" max="32767" attributes="0"/>
                       </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -281,6 +283,7 @@
                   <Color blue="33" green="33" red="0" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Jugador 1"/>
+                <Property name="horizontalTextPosition" type="int" value="2"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -855,9 +858,9 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="lbl_set" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="116" max="32767" attributes="0"/>
                   </Group>
@@ -919,7 +922,23 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="480" y="400" width="-1" height="-1"/>
+              <AbsoluteConstraints x="500" y="400" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel4">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Poor Richard" size="18" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Servidor:"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="420" y="400" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>

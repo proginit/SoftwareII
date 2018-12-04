@@ -87,28 +87,32 @@ public class Config extends javax.swing.JFrame {
         });
         jPanel1.add(btn_iniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Poor Richard", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/hombre-jugando-al-ping-pong.png"))); // NOI18N
-        jLabel7.setText("JUGADOR 1");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 130, 40));
+        jLabel7.setText("JUGADOR 1:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 140, 40));
 
         jLabel8.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/man-jugando-ping-pong.png"))); // NOI18N
-        jLabel8.setText("JUGADOR 2");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 150, -1));
+        jLabel8.setText("JUGADOR 2:");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 150, 40));
 
+        lbl_jug1.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
+        lbl_jug1.setForeground(new java.awt.Color(255, 255, 255));
         lbl_jug1.setText("jLabel9");
-        jPanel1.add(lbl_jug1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, -1, -1));
+        jPanel1.add(lbl_jug1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, -1, -1));
 
+        lbl_jug2.setFont(new java.awt.Font("Poor Richard", 1, 18)); // NOI18N
+        lbl_jug2.setForeground(new java.awt.Color(255, 255, 255));
         lbl_jug2.setText("jLabel10");
-        jPanel1.add(lbl_jug2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, -1, -1));
+        jPanel1.add(lbl_jug2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("VS");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 400));
 
@@ -138,9 +142,7 @@ public class Config extends javax.swing.JFrame {
                 g.lbl_pelota2.setVisible(true);
             }
         g.lbl_set.setText(se);
-        
-        
-        g.iniciarCronometro();
+        g.iniCrono();
         
         g.setVisible(true);
         dispose();
